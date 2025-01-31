@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^4.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "uuid": "^11.0.5"
+  }
+}
