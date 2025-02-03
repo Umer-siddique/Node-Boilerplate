@@ -1,3 +1,4 @@
+const { AppError } = require("../../core/exceptions");
 const User = require("../entities/User");
 
 class UserRepository {
@@ -8,6 +9,9 @@ class UserRepository {
 
   async findById(id) {
     const user = await User.findById(id).select("-password");
+    if (!user) {
+      throw new AppError("User not found", 404); // Throw error directly
+    }
     return user;
   }
 
@@ -21,11 +25,17 @@ class UserRepository {
       new: true,
       runValidators: true,
     }).select("-password");
+    if (!user) {
+      throw new AppError("User not found", 404); // Throw error directly
+    }
     return user;
   }
 
   async deleteUser(id) {
-    await User.findByIdAndDelete(id);
+    const user = await User.findByIdAndDelete(id);
+    if (!user) {
+      throw new AppError("User not found", 404); // Throw error directly
+    }
   }
 }
 

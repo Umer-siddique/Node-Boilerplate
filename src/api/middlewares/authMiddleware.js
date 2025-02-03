@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
-const User = require("../model/user");
-const catchAsync = require("../utils/catchAsync");
-const ErrorHandler = require("../utils/ErrorHandler");
+const User = require("../../domain/entities/User");
+const AsyncHandler = require("../../core/utils/AsyncHandler");
+const ErrorHandler = require("../../core/utils/ErrorHandler");
 
-const authMiddleware = catchAsync(async (req, res, next) => {
+const authMiddleware = AsyncHandler(async (req, res, next) => {
   // 1) Getting token and check of it's there
   let token;
   if (

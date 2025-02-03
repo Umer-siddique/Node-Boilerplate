@@ -1,9 +1,38 @@
 {
+  "name": "legacarta",
+  "version": "1.0.0",
+  "description": "src/\r │\r ├── api/                  # API-related logic\r │   ├── controllers/      # Controllers handle HTTP requests\r │   ├── middleware/       # Custom middleware (e.g., auth, validation)\r │   ├── routes/           # API routes\r │   └── validators/       # Request validation logic\r │\r ├── config/               # Configuration files (e.g., database, environment)\r │   ├── env/              # Environment-specific configurations\r │   └── constants.js      # Application-wide constants\r │\r ├── core/                 # Core application logic\r │   ├── exceptions/       # Custom exceptions/error handling\r │   ├── logging/          # Logging setup and utilities\r │   └── utils/            # Utility functions (e.g., helpers, formatters)\r │\r ├── domain/               # Domain-driven design (DDD) layer\r │   ├── entities/         # Domain entities (e.g., User, Product)\r │   ├── repositories/     # Repository interfaces (abstractions)\r │   └── services/         # Domain services (business logic)\r │\r ├── infrastructure/       # Infrastructure layer\r │   ├── database/         # Database setup and migrations\r │   ├── cache/            # Caching layer (e.g., Redis)\r │   ├── messaging/        # Message brokers (e.g., RabbitMQ, Kafka)\r │   └── storage/          # File storage (e.g., AWS S3, local storage)\r │\r ├── jobs/                 # Background jobs and cron tasks\r │   ├── workers/          # Worker processes (e.g., Bull, Agenda)\r │   └── schedules/        # Cron jobs\r │\r ├── public/               # Publicly accessible files (e.g., images, CSS)\r │\r ├── scripts/              # Utility scripts (e.g., seeders, migrations)\r │\r ├── tests/                # Test suites\r │   ├── unit/             # Unit tests\r │   ├── integration/      # Integration tests\r │   └── e2e/              # End-to-end tests\r │\r ├── app.js                # Main application entry point\r └── server.js             # Server setup and configuration",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "Humdullah Siddique",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bull": "^4.16.5",
+    "compression": "^1.7.5",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "hpp": "^0.2.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.5",
-    "uuid": "^11.0.5"
+    "mongoose": "^8.9.6",
+    "node-cron": "^3.0.3",
+    "redis": "^4.7.0",
+    "uuid": "^11.0.5",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

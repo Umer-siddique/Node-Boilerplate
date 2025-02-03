@@ -34,5 +34,16 @@ module.exports = {
     SERVICE_UNAVAILABLE: "Service Unavailable",
     NOT_IMPLEMENTED: "Not Implemented",
     DATABASE_ERROR: "Database Error",
+    TOKEN_EXPIRED: "Token Expired. Please login again!",
+    INVALID_TOKEN: "Invalid Token or has expired.",
+  },
+
+  // Error Names
+  ERROR_NAMES: {
+    CAST_ERROR: "CastError",
+    VALIDATION_ERROR: "ValidationError",
+    DUPLICATE_ERROR: 11000,
+    JWT_ERROR: "JsonWebTokenError",
+    TOKEN_EXPIRED_ERROR: "TokenExpiredError",
   },
 };
