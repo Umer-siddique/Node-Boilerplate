@@ -12,6 +12,7 @@ const countrySchema = new mongoose.Schema(
     iso2: {
       type: String,
       required: [true, "Please enter a 2-letter ISO code"],
+      minlength: [2, "Please enter a 2-letter ISO code"],
     },
     iso3: {
       type: String,
