@@ -17,6 +17,7 @@ const regionSchema = new mongoose.Schema({
     required: [true, "Region type is required"],
   },
   regionCode: {
+    required: [true, "Region code is required"],
     type: String,
     match: [/^\d+$/, "Region Code must be numeric"],
   },
