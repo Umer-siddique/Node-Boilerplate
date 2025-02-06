@@ -46,7 +46,7 @@ const countrySchema = new mongoose.Schema(
     deleted_at: {
       type: Date,
       default: null,
-      select: false,
+      // select: false,
     },
   },
   { timestamps: true }
