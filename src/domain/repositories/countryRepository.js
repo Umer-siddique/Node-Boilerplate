@@ -8,7 +8,7 @@ class CountryRepository {
   }
 
   async findAll() {
-    const countries = await Country.find({});
+    const countries = await Country.find().populate("regions", "name type");
     return countries;
   }
 

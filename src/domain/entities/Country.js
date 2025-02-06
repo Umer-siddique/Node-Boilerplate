@@ -73,5 +73,17 @@ countrySchema.index(
   }
 );
 
+// Add a virtual field to fetch associated regions
+countrySchema.virtual("regions", {
+  ref: "Region", // Reference the Region model
+  localField: "_id", // Field in the Country model
+  foreignField: "countries", // Field in the Region model
+  justOne: false, // Set to true if a country belongs to only one region
+});
+
+// Enable virtuals to be included in JSON responses
+countrySchema.set("toJSON", { virtuals: true });
+countrySchema.set("toObject", { virtuals: true });
+
 const Country = mongoose.model("Country", countrySchema);
 module.exports = Country;
