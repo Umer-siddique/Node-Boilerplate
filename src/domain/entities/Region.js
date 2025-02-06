@@ -5,6 +5,7 @@ const regionSchema = new mongoose.Schema({
     type: String,
     required: [true, "Region name is required"],
     unique: true, // Ensure region names are unique
+    index: true,
   },
   type: {
     type: String,
@@ -23,6 +24,7 @@ const regionSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Region", // Self-referencing for hierarchical structure
     default: null, // Null for top-level regions
+    index: true,
   },
   countries: [
     {
@@ -52,10 +54,6 @@ const regionSchema = new mongoose.Schema({
     // select: false,
   },
 });
-
-// Indexes for faster queries
-regionSchema.index({ name: 1 }); // Index on name for quick lookups
-regionSchema.index({ parent: 1 }); // Index on parent for hierarchical queries
 
 const Region = mongoose.model("Region", regionSchema);
 

@@ -1,4 +1,4 @@
-const { AppError } = require("../../core/exceptions");
+const { AppError, NotFoundError } = require("../../core/exceptions");
 const Region = require("../entities/Region");
 
 class RegionRepository {
@@ -15,7 +15,7 @@ class RegionRepository {
   async findById(id) {
     const region = await Region.findById(id);
     if (!region) {
-      throw new AppError("Region not found", 404); // Throw error directly
+      throw new NotFoundError("Region not found");
     }
     return region;
   }
@@ -26,7 +26,7 @@ class RegionRepository {
       runValidators: true,
     });
     if (!region) {
-      throw new AppError("Region not found", 404); // Throw error directly
+      return new AppError("Region not found", 404);
     }
     return region;
   }
@@ -43,7 +43,7 @@ class RegionRepository {
       }
     );
     if (!region) {
-      throw new AppError("Region not found", 404); // Throw error directly
+      throw new NotFoundError("Region not found", 404);
     }
     return region;
   }

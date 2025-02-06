@@ -6,13 +6,13 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(RegionController.getCountries)
-  .post(RegionController.addCountry);
+  .get(RegionController.getRegions)
+  .post(RegionController.addRegion);
 
 router
   .route("/:id")
-  .get(RegionController.getCountry)
-  .patch(RegionController.updateCountry)
-  .delete(RegionController.deleteCountry);
+  .get(RegionController.getRegion)
+  .patch(RegionController.updateRegion)
+  .delete(RegionController.deleteRegion);
 
 module.exports = router;

@@ -80,19 +80,25 @@ const ErrorHandler = (err, req, res, next) => {
   } else if (process.env.NODE_ENV === "production") {
     let error = { ...err };
 
+    // Handle specific error types
     if (err.name === ERROR_NAMES.CAST_ERROR) {
       error = handleCastErrorDB(error);
+      sendErrProd(error, res);
     } else if (err.code === ERROR_NAMES.DUPLICATE_ERROR) {
       error = handleDuplicateErrorDB(error);
+      sendErrProd(error, res);
     } else if (err.name === ERROR_NAMES.VALIDATION_ERROR) {
       error = handleValidationErrorDB(error);
+      sendErrProd(error, res);
     } else if (err.name === ERROR_NAMES.JWT_ERROR) {
       error = handleJwtTokenError();
+      sendErrProd(error, res);
     } else if (err.name === ERROR_NAMES.TOKEN_EXPIRED_ERROR) {
       error = handleJwtExpiredError();
+      sendErrProd(error, res);
+    } else {
+      sendErrProd(err, res);
     }
-
-    sendErrProd(error, res);
   }
 };
 
