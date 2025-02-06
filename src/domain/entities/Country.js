@@ -4,35 +4,44 @@ const countrySchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Please enter a country name"],
+      required: [true, "Country name is required"],
+      minlength: [2, "Country name must have at least 2 characters"],
       unique: true,
       trim: true,
       index: true,
     },
-    iso2: {
+
+    iso_02: {
       type: String,
-      required: [true, "Please enter a 2-letter ISO code"],
-      minlength: [2, "Please enter a 2-letter ISO code"],
+      required: [true, "ISO 02 code is required"],
+      minlength: [2, "ISO 02 code must be exactly 2 characters"],
+      maxlength: [2, "ISO 02 code must be exactly 2 characters"],
     },
-    iso3: {
+    iso_03: {
       type: String,
-      required: [true, "Please enter a 3-letter ISO code"],
+      minlength: [3, "ISO 03 code must be exactly 3 characters"],
+      maxlength: [3, "ISO 03 code must be exactly 3 characters"],
     },
-    iso3_Num: {
-      type: Number,
-      required: [true, "Please enter a numeric ISO code"],
+    iso_03_num: {
+      type: String,
+      match: [/^\d+$/, "ISO 03 Numeric code must be numeric"],
     },
     continent: {
       type: String,
-      required: [true, "Please enter a continent"],
+      required: [true, "Continent is required"],
     },
     parent: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Country",
+      default: null,
     },
     status: {
-      type: String,
-      default: "No",
+      type: Boolean,
+      default: false,
+      enum: {
+        values: [true, false], // 0: Inactive, 1: Active
+        message: "Status must be either false (Inactive) or true (Active)",
+      },
     },
     deleted_at: {
       type: Date,
@@ -41,6 +50,27 @@ const countrySchema = new mongoose.Schema(
     },
   },
   { timestamps: true }
+);
+
+// Index for faster lookups by name, continent, and country code
+countrySchema.index(
+  { name: 1, continent: 1, iso_02: 1 },
+  { name: "name_continent_iso_02_index" }
+);
+
+// Unique index to prevent duplicate country names with the same code
+countrySchema.index(
+  { name: 1, iso_02: 1 },
+  { unique: true, name: "unique_name_iso_02_index" }
+);
+
+// Case-insensitive collation for name-based queries
+countrySchema.index(
+  { name: 1 },
+  {
+    collation: { locale: "en", strength: 2 },
+    name: "case_insensitive_name_index",
+  }
 );
 
 const Country = mongoose.model("Country", countrySchema);
