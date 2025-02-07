@@ -5,6 +5,7 @@ const userRoutes = require("./userRoutes");
 const countryRoutes = require("./countryRoutes");
 const regionRoutes = require("./regionRoutes");
 const groupRoutes = require("./groupRoutes");
+const categoryRoutes = require("./categoryRoutes");
 const instrumentTypeRoutes = require("./instrumentTypeRoutes");
 
 const routes = [
@@ -12,6 +13,7 @@ const routes = [
   { path: "/countries", route: countryRoutes },
   { path: "/regions", route: regionRoutes },
   { path: "/groups", route: groupRoutes },
+  { path: "/categories", route: categoryRoutes },
   { path: "/instrument-types", route: instrumentTypeRoutes },
 ];
 
