@@ -1,29 +1,38 @@
 const mongoose = require("mongoose");
 
-const instrumentTypeSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "Instrument type name is required"],
-    unique: true,
-    index: true,
-  },
-  order: {
-    type: Number,
-    required: [true, "Order is required"],
-    validate: {
-      validator: Number.isInteger,
-      message: "Order must be an integer.",
+const instrumentTypeSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "Instrument type name is required"],
+      unique: true,
+      index: true,
+    },
+    order: {
+      type: Number,
+      default: 0,
+      validate: {
+        validator: Number.isInteger,
+        message: "Order must be an integer.",
+      },
+    },
+    status: {
+      type: Boolean,
+      default: false,
+      enum: {
+        values: [true, false], // false: Inactive, true: Active
+        message: "Status must be either false (Inactive) or true (Active)",
+      },
+    },
+
+    deleted_at: {
+      type: Date,
+      default: null,
+      // select: false,
     },
   },
-  status: {
-    type: Boolean,
-    default: false,
-    enum: {
-      values: [true, false], // false: Inactive, true: Active
-      message: "Status must be either false (Inactive) or true (Active)",
-    },
-  },
-});
+  { timestamps: true }
+);
 
 const InstrumentType = mongoose.model("InstrumentType", instrumentTypeSchema);
 module.exports = InstrumentType;

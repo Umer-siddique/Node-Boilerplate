@@ -1,4 +1,4 @@
-const { AppError, NotFoundError } = require("../../core/exceptions");
+const { NotFoundError } = require("../../core/exceptions");
 const Region = require("../entities/Region");
 
 class RegionRepository {
@@ -26,7 +26,7 @@ class RegionRepository {
       runValidators: true,
     });
     if (!region) {
-      return new AppError("Region not found", 404);
+      throw new NotFoundError("Region not found");
     }
     return region;
   }
@@ -43,7 +43,7 @@ class RegionRepository {
       }
     );
     if (!region) {
-      throw new NotFoundError("Region not found", 404);
+      throw new NotFoundError("Region not found");
     }
     return region;
   }
