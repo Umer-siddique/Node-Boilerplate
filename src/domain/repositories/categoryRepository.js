@@ -8,7 +8,7 @@ class CategoryRepository {
   }
 
   async findAll() {
-    const categories = await Category.find({});
+    const categories = await Category.find({}).populate("parent", "name");
     return categories;
   }
 
