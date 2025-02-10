@@ -9,14 +9,10 @@ class RegionRepository {
   }
 
   async findAll(queryStr) {
-    let query = Region.find();
+    let query = Region.find().populate("parent", "name");
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, [
-      "name",
-      "regionCode",
-      "parent",
-    ])
+    const features = new APIFeatures(query, queryStr, ["name", "regionCode"])
       .filter()
       .sort()
       .limitFields();

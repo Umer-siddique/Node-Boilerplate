@@ -12,11 +12,7 @@ class CategoryRepository {
     let query = Category.find().populate("parent", "name");
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, [
-      "name",
-      "code",
-      "parent",
-    ])
+    const features = new APIFeatures(query, queryStr, ["name", "code"])
       .filter()
       .sort()
       .limitFields();
