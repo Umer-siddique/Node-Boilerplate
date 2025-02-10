@@ -9,8 +9,16 @@ class RegionController {
   });
 
   static getRegions = AsyncHandler(async (req, res, next) => {
-    const regions = await RegionService.getAllRegion(req.query);
-    sendResponse(res, 200, "Regions fetched successfully", regions);
+    const { regions, totalDocuments } = await RegionService.getAllRegion(
+      req.query
+    );
+    sendResponse(
+      res,
+      200,
+      "Regions fetched successfully",
+      regions,
+      totalDocuments
+    );
   });
 
   static getRegion = AsyncHandler(async (req, res, next) => {

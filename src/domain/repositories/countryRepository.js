@@ -11,14 +11,22 @@ class CountryRepository {
   async findAll(queryStr) {
     let query = Country.find().populate("regions", "name type");
 
-    // Apply API Features for filtering, sorting, pagination, and field limiting
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name", "iso_02"])
       .filter()
       .sort()
-      .limitFields()
-      .paginate(); // Example: Searching by 'name' & 'iso_02'
+      .limitFields();
 
-    return await features.query;
+    // Get total count **before applying pagination**
+    const totalDocuments = await Country.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const countries = await features.query;
+    return { countries, totalDocuments };
   }
 
   async findById(id) {

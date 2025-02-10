@@ -9,8 +9,16 @@ class CategoryController {
   });
 
   static getCategories = AsyncHandler(async (req, res, next) => {
-    const categories = await CategoryService.getAllCategory(req.query);
-    sendResponse(res, 200, "Categories fetched successfully", categories);
+    const { categories, totalDocuments } = await CategoryService.getAllCategory(
+      req.query
+    );
+    sendResponse(
+      res,
+      200,
+      "Categories fetched successfully",
+      categories,
+      totalDocuments
+    );
   });
 
   static getCategory = AsyncHandler(async (req, res, next) => {

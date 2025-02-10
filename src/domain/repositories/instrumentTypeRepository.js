@@ -11,13 +11,22 @@ class InstrumentTypeRepository {
   async findAll(queryStr) {
     let query = InstrumentType.find();
 
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name"])
       .filter()
       .sort()
-      .limitFields()
-      .paginate(); // Example: Searching by 'name'
+      .limitFields();
 
-    return await features.query;
+    // Get total count **before applying pagination**
+    const totalDocuments = await InstrumentType.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const instrumentTypes = await features.query;
+    return { instrumentTypes, totalDocuments };
   }
 
   async findById(id) {

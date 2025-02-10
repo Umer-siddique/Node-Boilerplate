@@ -11,6 +11,7 @@ class RegionRepository {
   async findAll(queryStr) {
     let query = Region.find();
 
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, [
       "name",
       "regionCode",
@@ -18,10 +19,18 @@ class RegionRepository {
     ])
       .filter()
       .sort()
-      .limitFields()
-      .paginate(); // Example: Searching by 'name.regionCode,parent'
+      .limitFields();
 
-    return await features.query;
+    // Get total count **before applying pagination**
+    const totalDocuments = await Region.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const regions = await features.query;
+    return { regions, totalDocuments };
   }
 
   async findById(id) {

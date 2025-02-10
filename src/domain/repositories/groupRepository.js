@@ -11,13 +11,22 @@ class GroupRepository {
   async findAll(queryStr) {
     let query = Group.find();
 
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name"])
       .filter()
       .sort()
-      .limitFields()
-      .paginate(); // Example: Searching by 'name'
+      .limitFields();
 
-    return await features.query;
+    // Get total count **before applying pagination**
+    const totalDocuments = await Group.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const groups = await features.query;
+    return { groups, totalDocuments };
   }
 
   async findById(id) {

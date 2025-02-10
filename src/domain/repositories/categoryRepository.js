@@ -11,6 +11,7 @@ class CategoryRepository {
   async findAll(queryStr) {
     let query = Category.find().populate("parent", "name");
 
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, [
       "name",
       "code",
@@ -18,10 +19,18 @@ class CategoryRepository {
     ])
       .filter()
       .sort()
-      .limitFields()
-      .paginate(); // Example: Searching by 'name' & 'code'
+      .limitFields();
 
-    return await features.query;
+    // Get total count **before applying pagination**
+    const totalDocuments = await Category.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const categories = await features.query;
+    return { categories, totalDocuments };
   }
 
   async findById(id) {
