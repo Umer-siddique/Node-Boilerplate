@@ -1,5 +1,6 @@
 const { NotFoundError } = require("../../core/exceptions");
 const Group = require("../entities/Group");
+const APIFeatures = require("../../core/utils/APIFeatures");
 
 class GroupRepository {
   async add(groupData) {
@@ -7,9 +8,16 @@ class GroupRepository {
     return group;
   }
 
-  async findAll() {
-    const groups = await Group.find({});
-    return groups;
+  async findAll(queryStr) {
+    let query = await Group.find();
+
+    const features = new APIFeatures(query, queryStr, ["name"])
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate(); // Example: Searching by 'name'
+
+    return await features.query;
   }
 
   async findById(id) {

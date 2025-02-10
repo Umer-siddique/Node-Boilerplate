@@ -1,5 +1,6 @@
 const { NotFoundError } = require("../../core/exceptions");
 const InstrumentType = require("../entities/InstrumentType");
+const APIFeatures = require("../../core/utils/APIFeatures");
 
 class InstrumentTypeRepository {
   async add(instrumentTypeData) {
@@ -7,9 +8,16 @@ class InstrumentTypeRepository {
     return instrumentType;
   }
 
-  async findAll() {
-    const instrumentTypes = await InstrumentType.find({});
-    return instrumentTypes;
+  async findAll(queryStr) {
+    let query = await InstrumentType.find();
+
+    const features = new APIFeatures(query, queryStr, ["name"])
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate(); // Example: Searching by 'name'
+
+    return await features.query;
   }
 
   async findById(id) {

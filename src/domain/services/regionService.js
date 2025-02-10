@@ -7,8 +7,8 @@ class RegionService {
     return await regionRepository.add(regionData);
   }
 
-  static async getAllRegion() {
-    return await regionRepository.findAll();
+  static async getAllRegion(queryStr) {
+    return await regionRepository.findAll(queryStr);
   }
 
   static async getRegionById(regionId) {

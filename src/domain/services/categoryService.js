@@ -7,8 +7,8 @@ class CategoryService {
     return await categoryRepository.add(categoryData);
   }
 
-  static async getAllCategory() {
-    return await categoryRepository.findAll();
+  static async getAllCategory(queryStr) {
+    return await categoryRepository.findAll(queryStr);
   }
 
   static async getCategoryById(categoryId) {

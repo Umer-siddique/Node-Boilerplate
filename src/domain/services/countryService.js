@@ -7,8 +7,8 @@ class CountryService {
     return await countryRepository.add(countryData);
   }
 
-  static async getAllCountry() {
-    return await countryRepository.findAll();
+  static async getAllCountry(queryStr) {
+    return await countryRepository.findAll(queryStr);
   }
 
   static async getCountryById(countryId) {

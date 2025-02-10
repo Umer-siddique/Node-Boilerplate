@@ -9,7 +9,7 @@ class CountryController {
   });
 
   static getCountries = AsyncHandler(async (req, res, next) => {
-    const countries = await CountryService.getAllCountry();
+    const countries = await CountryService.getAllCountry(req.query);
     sendResponse(res, 200, "Countries fetched successfully", countries);
   });
 

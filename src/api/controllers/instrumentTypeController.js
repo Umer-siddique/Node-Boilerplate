@@ -11,7 +11,9 @@ class InstrumentTypeController {
   });
 
   static getInstrumentTypes = AsyncHandler(async (req, res, next) => {
-    const instrumentTypes = await InstrumentTypeService.getAllInstrumentType();
+    const instrumentTypes = await InstrumentTypeService.getAllInstrumentType(
+      req.query
+    );
     sendResponse(
       res,
       200,

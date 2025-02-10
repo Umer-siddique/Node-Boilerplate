@@ -12,6 +12,7 @@ const categorySchema = new mongoose.Schema(
     code: {
       type: String,
       required: [true, "Category code is required"],
+      index: true,
     },
     type: {
       type: String,

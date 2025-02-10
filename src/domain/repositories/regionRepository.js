@@ -1,5 +1,6 @@
 const { NotFoundError } = require("../../core/exceptions");
 const Region = require("../entities/Region");
+const APIFeatures = require("../../core/utils/APIFeatures");
 
 class RegionRepository {
   async add(regionData) {
@@ -7,9 +8,20 @@ class RegionRepository {
     return region;
   }
 
-  async findAll() {
-    const regions = await Region.find({});
-    return regions;
+  async findAll(queryStr) {
+    let query = await Region.find();
+
+    const features = new APIFeatures(query, queryStr, [
+      "name",
+      "regionCode",
+      "parent",
+    ])
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate(); // Example: Searching by 'name.regionCode,parent'
+
+    return await features.query;
   }
 
   async findById(id) {

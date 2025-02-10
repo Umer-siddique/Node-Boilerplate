@@ -9,7 +9,7 @@ class GroupController {
   });
 
   static getGroups = AsyncHandler(async (req, res, next) => {
-    const groups = await GroupService.getAllGroup();
+    const groups = await GroupService.getAllGroup(req.query);
     sendResponse(res, 200, "Groups fetched successfully", groups);
   });
 

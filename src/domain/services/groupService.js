@@ -7,8 +7,8 @@ class GroupService {
     return await groupRepository.add(groupData);
   }
 
-  static async getAllGroup() {
-    return await groupRepository.findAll();
+  static async getAllGroup(queryStr) {
+    return await groupRepository.findAll(queryStr);
   }
 
   static async getGroupById(groupId) {

@@ -1,5 +1,6 @@
 const { AppError } = require("../../core/exceptions");
 const Country = require("../entities/Country");
+const APIFeatures = require("../../core/utils/APIFeatures");
 
 class CountryRepository {
   async add(countryData) {
@@ -7,9 +8,17 @@ class CountryRepository {
     return country;
   }
 
-  async findAll() {
-    const countries = await Country.find().populate("regions", "name type");
-    return countries;
+  async findAll(queryStr) {
+    let query = Country.find().populate("regions", "name type");
+
+    // Apply API Features for filtering, sorting, pagination, and field limiting
+    const features = new APIFeatures(query, queryStr, ["name", "iso_02"])
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate(); // Example: Searching by 'name' & 'iso_02'
+
+    return await features.query;
   }
 
   async findById(id) {

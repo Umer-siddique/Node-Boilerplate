@@ -1,4 +1,5 @@
 const { NotFoundError } = require("../../core/exceptions");
+const APIFeatures = require("../../core/utils/APIFeatures");
 const Category = require("../entities/Category");
 
 class CategoryRepository {
@@ -7,9 +8,20 @@ class CategoryRepository {
     return category;
   }
 
-  async findAll() {
-    const categories = await Category.find({}).populate("parent", "name");
-    return categories;
+  async findAll(queryStr) {
+    let query = await Category.find().populate("parent", "name");
+
+    const features = new APIFeatures(query, queryStr, [
+      "name",
+      "code",
+      "parent",
+    ])
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate(); // Example: Searching by 'name' & 'code'
+
+    return await features.query;
   }
 
   async findById(id) {

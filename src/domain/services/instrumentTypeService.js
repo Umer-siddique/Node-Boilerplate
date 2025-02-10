@@ -7,8 +7,8 @@ class InstrumentTypeService {
     return await instrumentTypeRepository.add(instrumentTypeData);
   }
 
-  static async getAllInstrumentType() {
-    return await instrumentTypeRepository.findAll();
+  static async getAllInstrumentType(queryStr) {
+    return await instrumentTypeRepository.findAll(queryStr);
   }
 
   static async getInstrumentTypeById(instrumentTypeId) {

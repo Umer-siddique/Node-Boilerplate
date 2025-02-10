@@ -9,7 +9,7 @@ class RegionController {
   });
 
   static getRegions = AsyncHandler(async (req, res, next) => {
-    const regions = await RegionService.getAllRegion();
+    const regions = await RegionService.getAllRegion(req.query);
     sendResponse(res, 200, "Regions fetched successfully", regions);
   });
 
