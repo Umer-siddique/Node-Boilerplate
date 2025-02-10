@@ -9,7 +9,7 @@ class InstrumentTypeRepository {
   }
 
   async findAll(queryStr) {
-    let query = await InstrumentType.find();
+    let query = InstrumentType.find();
 
     const features = new APIFeatures(query, queryStr, ["name"])
       .filter()

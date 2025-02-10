@@ -9,7 +9,7 @@ class CategoryRepository {
   }
 
   async findAll(queryStr) {
-    let query = await Category.find().populate("parent", "name");
+    let query = Category.find().populate("parent", "name");
 
     const features = new APIFeatures(query, queryStr, [
       "name",

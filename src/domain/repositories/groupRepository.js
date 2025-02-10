@@ -9,7 +9,7 @@ class GroupRepository {
   }
 
   async findAll(queryStr) {
-    let query = await Group.find();
+    let query = Group.find();
 
     const features = new APIFeatures(query, queryStr, ["name"])
       .filter()

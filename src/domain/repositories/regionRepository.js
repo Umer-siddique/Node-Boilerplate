@@ -9,7 +9,7 @@ class RegionRepository {
   }
 
   async findAll(queryStr) {
-    let query = await Region.find();
+    let query = Region.find();
 
     const features = new APIFeatures(query, queryStr, [
       "name",
