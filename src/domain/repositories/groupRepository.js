@@ -64,6 +64,14 @@ class GroupRepository {
     }
     return group;
   }
+
+  async delete(id) {
+    const group = await Group.findByIdAndDelete(id);
+    if (!group) {
+      throw new NotFoundError("Group not found");
+    }
+    return group;
+  }
 }
 
 module.exports = GroupRepository;
