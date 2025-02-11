@@ -71,6 +71,14 @@ class RegionRepository {
     }
     return region;
   }
+
+  async delete(id) {
+    const region = await Region.findByIdAndDelete(id);
+    if (!region) {
+      throw new NotFoundError("Region not found");
+    }
+    return region;
+  }
 }
 
 module.exports = RegionRepository;

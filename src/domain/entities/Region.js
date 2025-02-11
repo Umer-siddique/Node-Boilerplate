@@ -33,13 +33,13 @@ const regionSchema = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: "Country", // Reference to the Country collection
         default: [], // Empty for parent regions
-        validate: {
-          validator: function (countries) {
-            // Countries can only be added for sub-regions
-            return this.type === "sub-region" || countries.length === 0;
-          },
-          message: "Countries can only be added for sub-regions.",
-        },
+        // validate: {
+        //   validator: function (countries) {
+        //     // Countries can only be added for sub-regions
+        //     return this.type === "sub-region";
+        //   },
+        //   message: "Countries can only be added for sub-regions.",
+        // },
       },
     ],
     status: {
