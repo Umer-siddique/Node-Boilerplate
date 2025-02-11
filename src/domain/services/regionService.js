@@ -11,6 +11,13 @@ class RegionService {
     return await regionRepository.findAll(queryStr);
   }
 
+  static async getParentRegions() {
+    return await regionRepository.findRegions();
+  }
+  static async getChildRegions() {
+    return await regionRepository.findSubRegions();
+  }
+
   static async getRegionById(regionId) {
     return await regionRepository.findById(regionId);
   }

@@ -9,7 +9,7 @@ class RegionRepository {
   }
 
   async findAll(queryStr) {
-    let query = Region.find().populate("parent", "name");
+    let query = Region.find({ deleted_at: null }).populate("parent", "name");
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name", "regionCode"])
@@ -27,6 +27,13 @@ class RegionRepository {
 
     const regions = await features.query;
     return { regions, totalDocuments };
+  }
+
+  async findRegions() {
+    return await Region.find({ parent: null });
+  }
+  async findSubRegions() {
+    return await Region.find({ parent: { $ne: null } });
   }
 
   async findById(id) {

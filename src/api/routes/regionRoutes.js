@@ -4,6 +4,9 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
+router.get("/parents", RegionController.getParentRegions);
+router.get("/childs", RegionController.getChildRegions);
+
 router
   .route("/")
   .get(RegionController.getRegions)

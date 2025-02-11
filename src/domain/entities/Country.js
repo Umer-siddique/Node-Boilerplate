@@ -24,7 +24,7 @@ const countrySchema = new mongoose.Schema(
     },
     iso_03_num: {
       type: String,
-      match: [/^\d+$/, "ISO 03 Numeric code must be numeric"],
+      match: [/^\d+$/, "ISO 03 code must be numeric"],
     },
     continent: {
       type: String,

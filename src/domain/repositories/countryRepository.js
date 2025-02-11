@@ -9,7 +9,10 @@ class CountryRepository {
   }
 
   async findAll(queryStr) {
-    let query = Country.find().populate("regions", "name type");
+    let query = Country.find({ deleted_at: null }).populate(
+      "regions",
+      "name type"
+    );
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name", "iso_02"])
@@ -48,7 +51,7 @@ class CountryRepository {
     return country;
   }
 
-  async delete(id) {
+  async softDelete(id) {
     const country = await Country.findByIdAndUpdate(
       id,
       {
@@ -61,6 +64,14 @@ class CountryRepository {
     );
     if (!country) {
       throw new AppError("Country not found", 404); // Throw error directly
+    }
+    return country;
+  }
+
+  async delete(id) {
+    const country = await Country.findByIdAndDelete(id);
+    if (!country) {
+      throw new NotFoundError("Country not found");
     }
     return country;
   }

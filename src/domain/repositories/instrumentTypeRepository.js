@@ -9,7 +9,7 @@ class InstrumentTypeRepository {
   }
 
   async findAll(queryStr) {
-    let query = InstrumentType.find();
+    let query = InstrumentType.find({ deleted_at: null });
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name"])
@@ -52,7 +52,7 @@ class InstrumentTypeRepository {
     return instrumentType;
   }
 
-  async delete(id) {
+  async softdelete(id) {
     const instrumentType = await InstrumentType.findByIdAndUpdate(
       id,
       {
@@ -63,6 +63,14 @@ class InstrumentTypeRepository {
         runValidators: true,
       }
     );
+    if (!instrumentType) {
+      throw new NotFoundError("InstrumentType not found");
+    }
+    return instrumentType;
+  }
+
+  async delete(id) {
+    const instrumentType = await InstrumentType.findByIdAndDelete(id);
     if (!instrumentType) {
       throw new NotFoundError("InstrumentType not found");
     }

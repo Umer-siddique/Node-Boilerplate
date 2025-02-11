@@ -21,6 +21,16 @@ class RegionController {
     );
   });
 
+  static getParentRegions = AsyncHandler(async (req, res, next) => {
+    const regions = await RegionService.getParentRegions();
+    sendResponse(res, 200, "Regions fetched successfully", regions);
+  });
+
+  static getChildRegions = AsyncHandler(async (req, res, next) => {
+    const subRegions = await RegionService.getChildRegions();
+    sendResponse(res, 200, "Sub Regions fetched successfully", subRegions);
+  });
+
   static getRegion = AsyncHandler(async (req, res, next) => {
     const region = await RegionService.getRegionById(req.params.id);
     sendResponse(res, 200, "Region fetched successfully", region);

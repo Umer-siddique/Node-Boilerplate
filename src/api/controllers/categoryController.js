@@ -21,6 +21,21 @@ class CategoryController {
     );
   });
 
+  static getParentCategories = AsyncHandler(async (req, res, next) => {
+    const categories = await CategoryService.getParentCategories();
+    sendResponse(res, 200, "Categories fetched successfully", categories);
+  });
+
+  static getChildCategories = AsyncHandler(async (req, res, next) => {
+    const subCategories = await CategoryService.getChildCategories();
+    sendResponse(
+      res,
+      200,
+      "Sub Categories fetched successfully",
+      subCategories
+    );
+  });
+
   static getCategory = AsyncHandler(async (req, res, next) => {
     const category = await CategoryService.getCategoryById(req.params.id);
     sendResponse(res, 200, "Category fetched successfully", category);

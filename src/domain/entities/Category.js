@@ -5,7 +5,6 @@ const categorySchema = new mongoose.Schema(
     name: {
       type: String,
       required: [true, "Category name is required"],
-      unique: true,
       trim: true,
       index: true,
     },
@@ -23,7 +22,6 @@ const categorySchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category", // Self-referencing for hierarchical structure
       default: null, // Null for top-level regions
-      index: true,
     },
     status: {
       type: Boolean,
@@ -42,6 +40,9 @@ const categorySchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+// Add a compound index to enforce uniqueness of `name` within the same `parent`
+// categorySchema.index({ name: 1, parent: 1 }, { unique: true });
 
 const Category = mongoose.model("Category", categorySchema);
 

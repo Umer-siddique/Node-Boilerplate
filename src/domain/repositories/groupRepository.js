@@ -9,7 +9,7 @@ class GroupRepository {
   }
 
   async findAll(queryStr) {
-    let query = Group.find();
+    let query = Group.find({ deleted_at: null });
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name"])

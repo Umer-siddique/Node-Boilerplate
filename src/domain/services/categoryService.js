@@ -11,6 +11,13 @@ class CategoryService {
     return await categoryRepository.findAll(queryStr);
   }
 
+  static async getParentCategories() {
+    return await categoryRepository.findCategories();
+  }
+  static async getChildCategories() {
+    return await categoryRepository.findSubCategories();
+  }
+
   static async getCategoryById(categoryId) {
     return await categoryRepository.findById(categoryId);
   }

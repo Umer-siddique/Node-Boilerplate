@@ -9,7 +9,7 @@ class CategoryRepository {
   }
 
   async findAll(queryStr) {
-    let query = Category.find().populate("parent", "name");
+    let query = Category.find({ deleted_at: null }).populate("parent", "name");
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name", "code"])
@@ -27,6 +27,13 @@ class CategoryRepository {
 
     const categories = await features.query;
     return { categories, totalDocuments };
+  }
+
+  async findCategories() {
+    return await Category.find({ parent: null });
+  }
+  async findSubCategories() {
+    return await Category.find({ parent: { $ne: null } });
   }
 
   async findById(id) {
