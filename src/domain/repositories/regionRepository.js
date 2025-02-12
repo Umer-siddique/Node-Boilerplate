@@ -55,7 +55,7 @@ class RegionRepository {
     return region;
   }
 
-  async delete(id) {
+  async softDelete(id) {
     const region = await Region.findByIdAndUpdate(
       id,
       {

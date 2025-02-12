@@ -48,7 +48,7 @@ class GroupRepository {
     return group;
   }
 
-  async delete(id) {
+  async softDelete(id) {
     const group = await Group.findByIdAndUpdate(
       id,
       {

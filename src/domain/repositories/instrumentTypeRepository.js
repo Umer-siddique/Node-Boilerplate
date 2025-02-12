@@ -52,7 +52,7 @@ class InstrumentTypeRepository {
     return instrumentType;
   }
 
-  async softdelete(id) {
+  async softDelete(id) {
     const instrumentType = await InstrumentType.findByIdAndUpdate(
       id,
       {

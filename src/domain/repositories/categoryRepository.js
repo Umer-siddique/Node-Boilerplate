@@ -55,7 +55,7 @@ class CategoryRepository {
     return category;
   }
 
-  async delete(id) {
+  async sofDelete(id) {
     const category = await Category.findByIdAndUpdate(
       id,
       {
@@ -66,6 +66,14 @@ class CategoryRepository {
         runValidators: true,
       }
     );
+    if (!category) {
+      throw new NotFoundError("Category not found");
+    }
+    return category;
+  }
+
+  async delete(id) {
+    const category = await Category.findByIdAndDelete(id);
     if (!category) {
       throw new NotFoundError("Category not found");
     }

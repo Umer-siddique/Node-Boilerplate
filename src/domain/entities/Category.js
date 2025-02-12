@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const categorySchema = new mongoose.Schema(
   {
@@ -21,7 +22,14 @@ const categorySchema = new mongoose.Schema(
     parent: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category", // Self-referencing for hierarchical structure
-      default: null, // Null for top-level regions
+      default: null, // Null for top-level categories
+      validate: {
+        validator: function (value) {
+          // Parent is required only if the type is 'sub-category'
+          return this.type === "sub-category" ? value !== null : true;
+        },
+        message: "Parent is required for sub-categories",
+      },
     },
     status: {
       type: Boolean,
@@ -31,18 +39,60 @@ const categorySchema = new mongoose.Schema(
         message: "Status must be either false (Inactive) or true (Active)",
       },
     },
-
+    slug: {
+      type: String,
+      unique: true,
+      index: true,
+    },
+    depth: {
+      type: Number,
+      default: 0,
+    },
     deleted_at: {
       type: Date,
       default: null,
-      // select: false,
     },
   },
   { timestamps: true }
 );
 
+// Middleware to generate slug and set depth before saving
+categorySchema.pre("save", function (next) {
+  if (this.isModified("name")) {
+    this.slug = slugify(this.name, { lower: true, strict: true });
+  }
+
+  if (this.type === "sub-category" && this.parent) {
+    // Calculate depth based on parent's depth
+    this.constructor.findById(this.parent).then((parentCategory) => {
+      this.depth = parentCategory ? parentCategory.depth + 1 : 0;
+      next();
+    });
+  } else {
+    this.depth = 0; // Top-level category
+    next();
+  }
+});
+
+// Middleware to handle updates (e.g., findByIdAndUpdate)
+categorySchema.pre("findOneAndUpdate", async function (next) {
+  const update = this.getUpdate();
+  if (update.name) {
+    update.slug = slugify(update.name, { lower: true, strict: true });
+  }
+
+  if (update.type === "sub-category" && update.parent) {
+    const parentCategory = await this.model.findById(update.parent);
+    update.depth = parentCategory ? parentCategory.depth + 1 : 0;
+  } else if (update.type === "category") {
+    update.depth = 0; // Reset depth for top-level categories
+  }
+
+  next();
+});
+
 // Add a compound index to enforce uniqueness of `name` within the same `parent`
-// categorySchema.index({ name: 1, parent: 1 }, { unique: true });
+categorySchema.index({ name: 1, parent: 1 }, { unique: true });
 
 const Category = mongoose.model("Category", categorySchema);
 
