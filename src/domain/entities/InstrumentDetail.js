@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const instrumentSchema = new mongoose.Schema(
+const instrumentDetailSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -59,58 +59,12 @@ const instrumentSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    relatedTreaties: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Instrument",
-        default: [],
-      },
-    ],
-    groups: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Group",
-        default: [],
-      },
-    ],
-    countryRatifications: {
-      type: [
-        {
-          countryName: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Country",
-            required: [true, "Please provide a country"],
-          },
-          ratified: {
-            type: Boolean,
-            enum: [true, false],
-            // required: [true, "Ratification status is required"],
-            default: false,
-          },
-          ratificationDate: {
-            type: Date,
-            required: function () {
-              return this.ratified === true;
-            }, // Required only if ratified
-            default: null,
-          },
-          statusChangeDate: {
-            type: Date,
-            required: true, // Tracks when the ratification status changed
-          },
-        },
-      ],
-      // default: [],
-    },
-
-    deleted_at: {
-      type: Date,
-      default: null,
-      // select: false,
-    },
   },
   { timestamps: true }
 );
 
-const Instrument = mongoose.model("Instrument", instrumentSchema);
-module.exports = Instrument;
+const InstrumentDetail = mongoose.model(
+  "InstrumentDetail",
+  instrumentDetailSchema
+);
+module.exports = InstrumentDetail;
