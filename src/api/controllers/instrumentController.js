@@ -6,25 +6,6 @@ const Instrument = require("../../domain/entities/Instrument");
 const { default: mongoose } = require("mongoose");
 
 class InstrumentController {
-  // static addInstrumentDetail = AsyncHandler(async (req, res, next) => {
-  //   const instrument = await InstrumentService.addInstrumentDetail(req.body);
-  //   sendResponse(res, 201, "Instrument saved successfully", instrument);
-  // });
-
-  // static addRelatedTreaty = AsyncHandler(async (req, res, next) => {
-  //   const relatedTreaty = await InstrumentService.addRelatedTreaty(req.body);
-  //   sendResponse(res, 201, "Treaties saved successfully", relatedTreaty);
-  // });
-  // static addGroups = AsyncHandler(async (req, res, next) => {
-  //   const groups = await InstrumentService.addGroups(req.body);
-  //   sendResponse(res, 201, "Groups saved successfully", groups);
-  // });
-
-  // static getInstrumentsDetail = AsyncHandler(async (req, res, next) => {
-  //   const instruments = await InstrumentService.getInstrumentsDetails();
-  //   sendResponse(res, 200, "Instruments fetched successfully", instruments);
-  // });
-
   static addInstrument = AsyncHandler(async (req, res, next) => {
     const instrument = await InstrumentService.addInstrument(req.body);
     sendResponse(res, 201, "Instrument added successfully", instrument);
@@ -145,11 +126,11 @@ class InstrumentController {
           $project: {
             countryName: "$countryDetails.name",
             ratified: "$countryRatifications.ratified",
-            statusChangeDate: "$countryRatifications.statusChangeDate",
+            ratificationDate: "$countryRatifications.ratificationDate",
             signedDate: "$signedDate",
           },
         },
-        { $sort: { statusChangeDate: 1 } },
+        { $sort: { ratificationDate: 1 } },
         {
           $group: {
             _id: "$countryName",
@@ -169,7 +150,7 @@ class InstrumentController {
                   },
                 },
                 period: {
-                  start: "$statusChangeDate",
+                  start: "$ratificationDate",
                   end: null,
                 },
               },
