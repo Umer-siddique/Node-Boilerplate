@@ -25,7 +25,11 @@ class InstrumentRepository {
   }
 
   async findAll(queryStr) {
-    let query = Instrument.find({ deleted_at: null });
+    let query = Instrument.find({ deleted_at: null })
+      .populate("category", "name")
+      .populate("instrumentType", "name")
+      .populate("relatedTreaties", "name")
+      .populate("groups", "name");
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
     const features = new APIFeatures(query, queryStr, ["name"])

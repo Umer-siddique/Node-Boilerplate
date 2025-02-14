@@ -105,42 +105,55 @@ class InstrumentController {
     }
   );
 
-  static getRatificationHistoryByCountry = AsyncHandler(
+  static getRatificationHistoryByCountries = AsyncHandler(
     async (req, res, next) => {
-      const { id, countryId } = req.params;
+      const { id } = req.params;
+      let { countryIds } = req.query; // Get from query params
+
+      if (!countryIds) {
+        return res
+          .status(400)
+          .json({ message: "countryIds query parameter is required" });
+      }
+
+      // Convert comma-separated string back to an array
+      countryIds = countryIds.split(",");
+
+      // Convert countryIds to ObjectId
+      const countryObjectIds = countryIds.map(
+        (id) => new mongoose.Types.ObjectId(id)
+      );
 
       const history = await Instrument.aggregate([
         { $match: { _id: new mongoose.Types.ObjectId(id) } },
         { $unwind: "$countryRatifications" },
         {
           $match: {
-            "countryRatifications.countryName": new mongoose.Types.ObjectId(
-              countryId
-            ),
+            "countryRatifications.countryName": { $in: countryObjectIds }, // Match multiple countries
           },
         },
         {
           $lookup: {
-            from: "countries", // Replace with the actual collection name for countries
+            from: "countries", // Ensure this matches the actual collection name
             localField: "countryRatifications.countryName",
             foreignField: "_id",
             as: "countryDetails",
           },
         },
-        { $unwind: "$countryDetails" }, // Unwind the countryDetails array
+        { $unwind: "$countryDetails" },
         {
           $project: {
-            countryName: "$countryDetails.name", // Use the country name instead of ID
+            countryName: "$countryDetails.name",
             ratified: "$countryRatifications.ratified",
             statusChangeDate: "$countryRatifications.statusChangeDate",
-            signedDate: "$signedDate", // Include the instrument's signedDate
+            signedDate: "$signedDate",
           },
         },
-        { $sort: { statusChangeDate: 1 } }, // Sort changes by time
+        { $sort: { statusChangeDate: 1 } },
         {
           $group: {
             _id: "$countryName",
-            signedDate: { $first: "$signedDate" }, // Include the signedDate in the group
+            signedDate: { $first: "$signedDate" },
             history: {
               $push: {
                 status: {
@@ -157,7 +170,7 @@ class InstrumentController {
                 },
                 period: {
                   start: "$statusChangeDate",
-                  end: null, // Will be updated in the next step
+                  end: null,
                 },
               },
             },
@@ -174,9 +187,7 @@ class InstrumentController {
                     status: "Not Ratified",
                     period: {
                       start: "$signedDate",
-                      end: {
-                        $arrayElemAt: ["$history.period.start", 0],
-                      },
+                      end: { $arrayElemAt: ["$history.period.start", 0] },
                     },
                   },
                 ],

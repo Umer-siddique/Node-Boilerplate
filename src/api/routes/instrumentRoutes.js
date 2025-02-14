@@ -10,8 +10,8 @@ const router = express.Router();
 // router.post("/add-groups", InstrumentController.addGroups);
 
 router.get(
-  "/:id/ratification-history/:countryId",
-  InstrumentController.getRatificationHistoryByCountry
+  "/:id/ratification-history",
+  InstrumentController.getRatificationHistoryByCountries
 );
 
 router.get(
