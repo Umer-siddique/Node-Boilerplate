@@ -1,11 +1,14 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
+const validator = require("validator");
+const { ROLES } = require("../../config/constants");
 
 const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: [true, "Name is required"],
+      minlength: [2, "Name must be at least 2 character"],
       trim: true,
     },
     email: {
@@ -14,17 +17,31 @@ const userSchema = new mongoose.Schema(
       unique: true,
       trim: true,
       lowercase: true,
-      match: [/.+\@.+\..+/, "Please provide a valid email address"],
+      validate: {
+        validator: (value) => validator.isEmail(value),
+        message: "Please provide a valid email address",
+      },
     },
     password: {
       type: String,
       required: [true, "Password is required"],
-      minlength: [6, "Password must be at least 6 characters long"],
       select: false, // Prevents password from being returned in queries
+      validate: {
+        validator: (value) =>
+          validator.isStrongPassword(value, {
+            minLength: 6,
+            minUppercase: 1,
+            minNumbers: 1,
+            minSymbols: 1,
+          }),
+        message:
+          "Password must be at least 6 characters, with one uppercase, one number, and one symbol.",
+      },
     },
     role: {
       type: String,
-      enum: ["user", "admin"],
+      required: [true, "Please select a role"],
+      enum: [ROLES.SUPERADMIN, ROLES.ADMIN, ROLES.DATAMANAGER, ROLES.USER],
       default: "user",
     },
     isActive: {
