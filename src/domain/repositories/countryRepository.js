@@ -15,7 +15,12 @@ class CountryRepository {
     );
 
     // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name", "iso_02"])
+    const features = new APIFeatures(query, queryStr, [
+      "name",
+      "iso_02",
+      "iso_03",
+      "continent",
+    ])
       .filter()
       .sort()
       .limitFields();

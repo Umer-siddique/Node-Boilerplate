@@ -11,6 +11,7 @@ const instrumentTypeSchema = new mongoose.Schema(
     order: {
       type: Number,
       default: 0,
+      required: [true, "Order is required"],
       validate: {
         validator: Number.isInteger,
         message: "Order must be an integer.",
@@ -19,6 +20,7 @@ const instrumentTypeSchema = new mongoose.Schema(
     status: {
       type: Boolean,
       default: false,
+      required: [true, "Please select status"],
       enum: {
         values: [true, false], // false: Inactive, true: Active
         message: "Status must be either false (Inactive) or true (Active)",
