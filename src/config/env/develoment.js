@@ -10,5 +10,9 @@ module.exports = {
     redis_port: process.env.REDIS_PORT,
     redis_password: process.env.REDIS_PASSWORD, // Optional, if using Redis with password
   },
-  jwtSecret: process.env.JWT_SECRET,
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES_IN,
+    cookieExpiresIn: process.env.JWT_COOKIE_EXPIRES_IN,
+  },
 };

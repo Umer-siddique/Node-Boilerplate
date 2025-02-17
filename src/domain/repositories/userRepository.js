@@ -1,40 +1,60 @@
-const { AppError } = require("../../core/exceptions");
+const { NotFoundError } = require("../../core/exceptions");
+const APIFeatures = require("../../core/utils/APIFeatures");
 const User = require("../entities/User");
 
 class UserRepository {
   async create(userData) {
-    const user = await User.create(userData);
-    return user;
+    return await User.create(userData);
+  }
+
+  async findAll(queryStr) {
+    let query = User.find({ deleted_at: null });
+
+    // Create an instance of APIFeatures but DO NOT apply pagination before counting
+    const features = new APIFeatures(query, queryStr, ["name", "email"])
+      .filter()
+      .sort()
+      .limitFields();
+
+    // Get total count **before applying pagination**
+    const totalDocuments = await User.countDocuments(
+      features.query.getFilter()
+    );
+
+    // Now apply pagination
+    features.paginate();
+
+    const users = await features.query;
+    return { users, totalDocuments };
   }
 
   async findById(id) {
     const user = await User.findById(id).select("-password");
     if (!user) {
-      throw new AppError("User not found", 404); // Throw error directly
+      throw new NotFoundError("User not found"); // Throw error directly
     }
     return user;
   }
 
   async findByEmail(email) {
-    const user = await User.findOne({ email }).select("+password");
-    return user;
+    return await User.findOne({ email }).select("+password");
   }
 
-  async updateUser(id, updateData) {
+  async update(id, updateData) {
     const user = await User.findByIdAndUpdate(id, updateData, {
       new: true,
       runValidators: true,
     }).select("-password");
     if (!user) {
-      throw new AppError("User not found", 404); // Throw error directly
+      throw new NotFoundError("User not found"); // Throw error directly
     }
     return user;
   }
 
-  async deleteUser(id) {
+  async delete(id) {
     const user = await User.findByIdAndDelete(id);
     if (!user) {
-      throw new AppError("User not found", 404); // Throw error directly
+      throw new NotFoundError("User not found", 404); // Throw error directly
     }
   }
 }

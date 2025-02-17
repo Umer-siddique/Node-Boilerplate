@@ -35,12 +35,13 @@ const userSchema = new mongoose.Schema(
             minSymbols: 1,
           }),
         message:
-          "Password must be at least 6 characters, with one uppercase, one number, and one symbol.",
+          "Password must be at least 6 characters, with one uppercase, one number, and one symbol",
       },
     },
     role: {
       type: String,
       required: [true, "Please select a role"],
+      lowercase: true,
       enum: [ROLES.SUPERADMIN, ROLES.ADMIN, ROLES.DATAMANAGER, ROLES.USER],
       default: "user",
     },
@@ -56,6 +57,8 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
+
+    passwordChangedAt: Date,
   },
   {
     timestamps: true, // Automatically manages createdAt and updatedAt fields
@@ -64,9 +67,20 @@ const userSchema = new mongoose.Schema(
 
 // Hash password before saving to the database
 userSchema.pre("save", async function (next) {
+  // Only run this function if password was actually modified
   if (!this.isModified("password")) return next();
 
+  // Hash the password with cost of 12
   this.password = await bcrypt.hash(this.password, 12);
+
+  next();
+});
+
+// Add password update to the database
+userSchema.pre("save", function (next) {
+  if (!this.isModified("password") || this.isNew) return next();
+
+  this.passwordChangedAt = Date.now() - 1000;
   next();
 });
 
@@ -74,6 +88,14 @@ userSchema.pre("save", async function (next) {
 userSchema.methods.comparePassword = async function (candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
+
+// Mongoose query middleware
+// Will show all the user who are acitve/non blocked or deleted
+userSchema.pre(/^find/, function (next) {
+  // this points to the current query
+  this.find({ status: { $ne: false }, role: { $ne: "super admin" } });
+  next();
+});
 
 // Remove sensitive fields from the JSON output
 userSchema.methods.toJSON = function () {

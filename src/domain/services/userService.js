@@ -10,24 +10,42 @@ class UserService {
       throw new BadRequestError("Email already in use"); // Throw error directly
     }
 
-    const user = await userRepository.create(userData);
-    return user;
-  }
-
-  static async getUserById(id) {
-    const user = await userRepository.findById(id);
-    if (!user) {
-      throw new BadRequestError("User not found"); // Throw error directly
-    }
-    return user;
+    return await userRepository.create(userData);
   }
 
   static async loginUser(email, password) {
-    const user = await userRepository.findByEmail(email);
-    if (!user || !(await user.comparePassword(password))) {
-      throw new UnauthorizedError("Invalid email or password"); // Throw error directly
+    // 1) Check if email and password exist
+    if (!email || !password) {
+      throw new BadRequestError("Please provide email and password!");
     }
+
+    // 2) Check if user exists && password is correct
+    const user = await userRepository.findByEmail(email);
+
+    if (!user || !(await user.comparePassword(password))) {
+      throw new UnauthorizedError("Incorrect email or password"); // Throw error directly
+    }
+
+    // Check if user deleted or blocked
+    if (!user.status) {
+      throw new BadRequestError("User may have been deleted or blocked!");
+    }
+
     return user;
+  }
+
+  static async getAllUser(queryStr) {
+    return await userRepository.findAll(queryStr);
+  }
+
+  static async getUser(id) {
+    return await userRepository.findById(id);
+  }
+  static async updateUser(userId, updateData) {
+    return await userRepository.update(userId, updateData);
+  }
+  static async deleteUser(userId) {
+    return await userRepository.delete(userId);
   }
 }
 

@@ -11,6 +11,7 @@ const seedData = async (model, data) => {
 
     // Insert the data into the collection
     const result = await model.insertMany(data);
+    // console.log("Groups", data);
 
     console.log(
       `${result.length} documents seeded successfully in ${model.modelName}.`

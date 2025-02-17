@@ -5,12 +5,13 @@ const groupSchema = new mongoose.Schema(
     name: {
       type: String,
       required: [true, "Group name must be required"],
-      index: true,
       unique: true,
+      index: true,
     },
     status: {
       type: Boolean,
       default: false,
+      required: [true, "Please select status"],
       enum: {
         values: [true, false], // false: Inactive, true: Active
         message: "Status must be either false (Inactive) or true (Active)",
