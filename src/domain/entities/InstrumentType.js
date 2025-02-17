@@ -10,7 +10,6 @@ const instrumentTypeSchema = new mongoose.Schema(
     },
     order: {
       type: Number,
-      default: 0,
       required: [true, "Order is required"],
       validate: {
         validator: Number.isInteger,

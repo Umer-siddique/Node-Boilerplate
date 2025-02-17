@@ -12,6 +12,7 @@ const cors = require("cors");
 
 // Files and directories
 const { logger } = require("./core/logging/logger");
+const config = require("./config/env/develoment");
 const ErrorHandler = require("./core/utils/ErrorHandler");
 const { AppError } = require("./core/exceptions/index");
 const routes = require("./api/routes");
@@ -23,7 +24,9 @@ const app = express();
 app.use(helmet());
 
 // Logger middleware
-app.use(logger);
+if (config.node_env === "development") {
+  app.use(logger);
+}
 
 // Limit requests from same API
 // const limiter = rateLimit({

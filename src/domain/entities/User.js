@@ -44,9 +44,17 @@ const userSchema = new mongoose.Schema(
       enum: [ROLES.SUPERADMIN, ROLES.ADMIN, ROLES.DATAMANAGER, ROLES.USER],
       default: "user",
     },
-    isActive: {
+    status: {
       type: Boolean,
-      default: true,
+      default: false,
+      enum: {
+        values: [true, false], // 0: Inactive, 1: Active
+        message: "Status must be either false (Inactive) or true (Active)",
+      },
+    },
+    deleted_at: {
+      type: Date,
+      default: null,
     },
   },
   {
