@@ -93,7 +93,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 // Will show all the user who are acitve/non blocked or deleted
 userSchema.pre(/^find/, function (next) {
   // this points to the current query
-  this.find({ status: { $ne: false }, role: { $ne: "super admin" } });
+  this.find({ status: { $ne: false } });
   next();
 });
 
