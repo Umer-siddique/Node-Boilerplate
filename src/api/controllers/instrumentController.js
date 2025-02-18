@@ -143,8 +143,8 @@ class InstrumentController {
                       { case: { $eq: ["$ratified", true] }, then: "Ratified" },
                       {
                         case: { $eq: ["$ratified", false] },
-                        then: "De-Ratified",
-                      },
+                        then: "Not Ratified",
+                      }, // Replace "De-Ratified" with "Not Ratified"
                     ],
                     default: "Not Ratified",
                   },
