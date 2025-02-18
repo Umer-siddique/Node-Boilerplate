@@ -10,6 +10,9 @@ class CountryService {
   static async getAllCountry(queryStr) {
     return await countryRepository.findAll(queryStr);
   }
+  static async getAllCountries(queryStr) {
+    return await countryRepository.findAllWithoutFilters(queryStr);
+  }
 
   static async getCountryById(countryId) {
     return await countryRepository.findById(countryId);

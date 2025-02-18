@@ -14,27 +14,39 @@ class CountryRepository {
       "name type"
     );
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, [
-      "name",
-      "iso_02",
-      "iso_03",
-      "continent",
-    ])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures only if queryStr exists
+      const features = new APIFeatures(query, queryStr, [
+        "name",
+        "iso_02",
+        "iso_03",
+        "continent",
+      ])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await Country.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count before applying pagination
+      const totalDocuments = await Country.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Apply pagination
+      features.paginate();
 
-    const countries = await features.query;
-    return { countries, totalDocuments };
+      const countries = await features.query;
+      return { countries, totalDocuments };
+    } else {
+      // If queryStr is empty, return all countries without filtering
+      const countries = await query;
+      const totalDocuments = await Country.countDocuments({ deleted_at: null });
+
+      return { countries, totalDocuments };
+    }
+  }
+
+  async findAllWithoutFilters() {
+    return await Country.find({ parent: null });
   }
 
   async findById(id) {

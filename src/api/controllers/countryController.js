@@ -22,6 +22,11 @@ class CountryController {
     );
   });
 
+  static getAllCountries = AsyncHandler(async (req, res, next) => {
+    const countries = await CountryService.getAllCountries();
+    sendResponse(res, 200, "Countries fetched successfully", countries);
+  });
+
   static getCountry = AsyncHandler(async (req, res, next) => {
     const country = await CountryService.getCountryById(req.params.id);
     sendResponse(res, 200, "Country fetched successfully", country);

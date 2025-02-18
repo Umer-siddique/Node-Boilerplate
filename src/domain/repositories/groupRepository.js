@@ -11,22 +11,30 @@ class GroupRepository {
   async findAll(queryStr) {
     let query = Group.find({ deleted_at: null });
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name"])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures only if queryStr exists
+      const features = new APIFeatures(query, queryStr, ["name"])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await Group.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count **before applying pagination**
+      const totalDocuments = await Group.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Now apply pagination
+      features.paginate();
 
-    const groups = await features.query;
-    return { groups, totalDocuments };
+      const groups = await features.query;
+      return { groups, totalDocuments };
+    } else {
+      // If queryStr is empty, return all groups without filtering
+      const groups = await query;
+      const totalDocuments = await Group.countDocuments({ deleted_at: null });
+
+      return { groups, totalDocuments };
+    }
   }
 
   async findById(id) {
