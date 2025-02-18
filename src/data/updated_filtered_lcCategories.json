@@ -1,0 +1,387 @@
+[
+    {
+        "parent": "1",
+        "name": "Agency",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "4",
+        "name": "Air",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "13",
+        "name": "Air transport",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "13",
+        "name": "Aircrafts and civil aviation ",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "3",
+        "name": "Arbitration",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "5",
+        "name": "Assignment of receivables",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "5",
+        "name": "Bankruptcy and insolvency",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "5",
+        "name": "Bills of exchange and promissory notes",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "8",
+        "name": "Broadcasting",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "4",
+        "name": "Chemicals",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "5",
+        "name": "Cheques",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "1",
+        "name": "Conflict of laws",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "8",
+        "name": "Copyright",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "6",
+        "name": "Corruption",
+        "parentName": "Good Governance "
+    },
+    {
+        "parent": "5",
+        "name": "Credit transfers",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "6",
+        "name": "Cultural Property",
+        "parentName": "Good Governance "
+    },
+    {
+        "parent": "2",
+        "name": "Customs Codification",
+        "parentName": "Customs"
+    },
+    {
+        "parent": "2",
+        "name": "Customs Cooperation",
+        "parentName": "Customs"
+    },
+    {
+        "parent": "7",
+        "name": "Dispute Resolution",
+        "parentName": "Institutional Participation"
+    },
+    {
+        "parent": "5",
+        "name": "Documentary credit",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "6",
+        "name": "Drugs",
+        "parentName": "Good Governance "
+    },
+    {
+        "parent": "1",
+        "name": "E-commerce",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "4",
+        "name": "Energy",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "2",
+        "name": "Exemption from Duties",
+        "parentName": "Customs"
+    },
+    {
+        "parent": "4",
+        "name": "Flora and fauna",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "10",
+        "name": "Food",
+        "parentName": "Products"
+    },
+    {
+        "parent": "4",
+        "name": "Foodstuff",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "1",
+        "name": "Franchising",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "4",
+        "name": "General",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "14",
+        "name": "General",
+        "parentName": "Treaties law"
+    },
+    {
+        "parent": "11",
+        "name": "General",
+        "parentName": "Tax"
+    },
+    {
+        "parent": "9",
+        "name": "Guides, guidelines and practices",
+        "parentName": "Investments"
+    },
+    {
+        "parent": "8",
+        "name": "Industrial designs",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "6",
+        "name": "Insider Trading",
+        "parentName": "Good Governance "
+    },
+    {
+        "parent": "8",
+        "name": "Integrated circuits",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "5",
+        "name": "International guarantees",
+        "parentName": "Finance, payments and insolvency"
+    },
+    {
+        "parent": "7",
+        "name": "International Trade Law ",
+        "parentName": "Institutional Participation"
+    },
+    {
+        "parent": "4",
+        "name": "International watercourses",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "9",
+        "name": "Investment disputes",
+        "parentName": "Investments"
+    },
+    {
+        "parent": "9",
+        "name": "Investment guaranty",
+        "parentName": "Investments"
+    },
+    {
+        "parent": "3",
+        "name": "Judicial cooperation",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "1",
+        "name": "Leasing/Factoring",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "10",
+        "name": "Marine Resources",
+        "parentName": "Products"
+    },
+    {
+        "parent": "4",
+        "name": "Maritime and Law of the Sea",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "13",
+        "name": "Maritime shipping and load lines ",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "13",
+        "name": "Maritime transport",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "13",
+        "name": "Multi modal transport ",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "8",
+        "name": "Neighboring Rights",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "6",
+        "name": "Organized crime",
+        "parentName": "Good Governance "
+    },
+    {
+        "parent": "8",
+        "name": "Origin",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "8",
+        "name": "Patents",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "15",
+        "name": "Plurilateral Agreements",
+        "parentName": "WTO"
+    },
+    {
+        "parent": "1",
+        "name": "Principles, trade usages and standards",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "1",
+        "name": "Procurement",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "4",
+        "name": "Protected geographical areas ",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "13",
+        "name": "Rail transport",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "3",
+        "name": "Recognition of foreign judgments",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "13",
+        "name": "Road transport",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "1",
+        "name": "Sale of Goods",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "13",
+        "name": "Space",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "3",
+        "name": "State court jurisdiction",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "3",
+        "name": "State court procedure",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "3",
+        "name": "State immunities ",
+        "parentName": "Dispute resolution"
+    },
+    {
+        "parent": "9",
+        "name": "Tax",
+        "parentName": "Investments"
+    },
+    {
+        "parent": "13",
+        "name": "Telecommunications",
+        "parentName": "Transport and telecommunications"
+    },
+    {
+        "parent": "2",
+        "name": "Temporary Admission",
+        "parentName": "Customs"
+    },
+    {
+        "parent": "10",
+        "name": "Timber",
+        "parentName": "Products"
+    },
+    {
+        "parent": "7",
+        "name": "Trade support institutions",
+        "parentName": "Institutional Participation"
+    },
+    {
+        "parent": "8",
+        "name": "Trademarks",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "2",
+        "name": "Transit",
+        "parentName": "Customs"
+    },
+    {
+        "parent": "1",
+        "name": "Travel contracts",
+        "parentName": "Contracts"
+    },
+    {
+        "parent": "8",
+        "name": "Varieties of plants",
+        "parentName": "Intellectual property"
+    },
+    {
+        "parent": "4",
+        "name": "Waste",
+        "parentName": "Environment and products"
+    },
+    {
+        "parent": "15",
+        "name": "WTO Agreements",
+        "parentName": "WTO"
+    },
+    {
+        "parent": "10",
+        "name": "General",
+        "parentName": "Products"
+    },
+    {
+        "parent": "95",
+        "name": "Human Rights",
+        "parentName": "Human Rights and Labour Standards"
+    },
+    {
+        "parent": "95",
+        "name": "Labour Standards",
+        "parentName": "Human Rights and Labour Standards"
+    }
+]

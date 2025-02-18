@@ -1,0 +1,2046 @@
+[{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79908"
+  },
+  "name": "Contracts",
+  "code": "5",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.700Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.700Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79909"
+  },
+  "name": "Customs",
+  "code": "10",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990a"
+  },
+  "name": "Dispute resolution",
+  "code": "6",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990b"
+  },
+  "name": "Environment and products",
+  "code": "2",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990c"
+  },
+  "name": "Finance, payments and insolvency",
+  "code": "1",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990d"
+  },
+  "name": "Good Governance",
+  "code": "3",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990e"
+  },
+  "name": "Institutional Participation",
+  "code": "16",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7990f"
+  },
+  "name": "Intellectual property",
+  "code": "4",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79910"
+  },
+  "name": "Investments",
+  "code": "7",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79911"
+  },
+  "name": "Products",
+  "code": "9",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79912"
+  },
+  "name": "Tax",
+  "code": "13",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79913"
+  },
+  "name": "Transport and telecommunications",
+  "code": "11",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79914"
+  },
+  "name": "Treaties law",
+  "code": "8",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79915"
+  },
+  "name": "WTO",
+  "code": "15",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79916"
+  },
+  "name": "Agency",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79917"
+  },
+  "name": "Air",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79918"
+  },
+  "name": "Air transport",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79919"
+  },
+  "name": "Aircrafts and civil aviation",
+  "code": "N",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991a"
+  },
+  "name": "Arbitration",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991b"
+  },
+  "name": "Assignment of receivables",
+  "code": "H",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991c"
+  },
+  "name": "Bankruptcy and insolvency",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991d"
+  },
+  "name": "Bills of exchange and promissory notes",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991e"
+  },
+  "name": "Broadcasting",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7991f"
+  },
+  "name": "Chemicals",
+  "code": "H",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79920"
+  },
+  "name": "Cheques",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79921"
+  },
+  "name": "Conflict of laws",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79922"
+  },
+  "name": "Copyright",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79923"
+  },
+  "name": "Corruption",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79924"
+  },
+  "name": "Credit transfers",
+  "code": "G",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79925"
+  },
+  "name": "Cultural Property",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79926"
+  },
+  "name": "Customs Codification",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79927"
+  },
+  "name": "Customs Cooperation",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79928"
+  },
+  "name": "Dispute Resolution",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79929"
+  },
+  "name": "Documentary credit",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992a"
+  },
+  "name": "Drugs",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992b"
+  },
+  "name": "E-commerce",
+  "code": "H",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992c"
+  },
+  "name": "Energy",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992d"
+  },
+  "name": "Exemption from Duties",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992e"
+  },
+  "name": "Flora and fauna",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7992f"
+  },
+  "name": "Food",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79930"
+  },
+  "name": "Foodstuff",
+  "code": "I",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79931"
+  },
+  "name": "Franchising",
+  "code": "I",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79932"
+  },
+  "name": "General",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79933"
+  },
+  "name": "General",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79934"
+  },
+  "name": "General",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79935"
+  },
+  "name": "Guides, guidelines and practices",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79936"
+  },
+  "name": "Industrial designs",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79937"
+  },
+  "name": "Insider Trading",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79938"
+  },
+  "name": "Integrated circuits",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79939"
+  },
+  "name": "International guarantees",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993a"
+  },
+  "name": "International Trade Law",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993b"
+  },
+  "name": "International watercourses",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993c"
+  },
+  "name": "Investment disputes",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993d"
+  },
+  "name": "Investment guaranty",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993e"
+  },
+  "name": "Judicial cooperation",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7993f"
+  },
+  "name": "Leasing/Factoring",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79940"
+  },
+  "name": "Marine Resources",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79941"
+  },
+  "name": "Maritime and Law of the Sea",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79942"
+  },
+  "name": "Maritime shipping and load lines",
+  "code": "O",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79943"
+  },
+  "name": "Maritime transport",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79944"
+  },
+  "name": "Multi modal transport",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79945"
+  },
+  "name": "Neighboring Rights",
+  "code": "G",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79946"
+  },
+  "name": "Organized crime",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79947"
+  },
+  "name": "Origin",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79948"
+  },
+  "name": "Patents",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79949"
+  },
+  "name": "Plurilateral Agreements",
+  "code": "B",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994a"
+  },
+  "name": "Principles, trade usages and standards",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994b"
+  },
+  "name": "Procurement",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994c"
+  },
+  "name": "Protected geographical areas",
+  "code": "J",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994d"
+  },
+  "name": "Rail transport",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994e"
+  },
+  "name": "Recognition of foreign judgments",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7994f"
+  },
+  "name": "Road transport",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79950"
+  },
+  "name": "Sale of Goods",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79951"
+  },
+  "name": "Space",
+  "code": "G",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79952"
+  },
+  "name": "State court jurisdiction",
+  "code": "D",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79953"
+  },
+  "name": "State court procedure",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79954"
+  },
+  "name": "State immunities",
+  "code": "F",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79955"
+  },
+  "name": "Tax",
+  "code": "C",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79956"
+  },
+  "name": "Telecommunications",
+  "code": "H",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79957"
+  },
+  "name": "Temporary Admission",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79958"
+  },
+  "name": "Timber",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79959"
+  },
+  "name": "Trade support institutions",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995a"
+  },
+  "name": "Trademarks",
+  "code": "H",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995b"
+  },
+  "name": "Transit",
+  "code": "E",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995c"
+  },
+  "name": "Travel contracts",
+  "code": "G",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995d"
+  },
+  "name": "Varieties of plants",
+  "code": "I",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995e"
+  },
+  "name": "Waste",
+  "code": "G",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad7995f"
+  },
+  "name": "WTO Agreements",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79960"
+  },
+  "name": "General",
+  "code": "A",
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79961"
+  },
+  "name": "Human Rights and Labour Standards",
+  "code": null,
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79962"
+  },
+  "name": "Human Rights",
+  "code": null,
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79963"
+  },
+  "name": "Labour Standards",
+  "code": null,
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a99de3740e786ad79964"
+  },
+  "name": "Gender and Trade Discrimination",
+  "code": null,
+  "type": "category",
+  "weight": 0,
+  "instruments": 0,
+  "parent": null,
+  "status": true,
+  "slug": "",
+  "depth": 0,
+  "deleted_at": null,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:39:09.704Z"
+  }
+}]

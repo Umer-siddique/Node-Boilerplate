@@ -11,13 +11,21 @@ const categorySchema = new mongoose.Schema(
     },
     code: {
       type: String,
-      required: [true, "Category code is required"],
+      default: null,
       index: true,
     },
     type: {
       type: String,
       enum: ["category", "sub-category"],
       required: true,
+    },
+    weight: {
+      type: Number,
+      default: 0,
+    },
+    instruments: {
+      type: Number,
+      default: 0,
     },
     parent: {
       type: mongoose.Schema.Types.ObjectId,
@@ -41,8 +49,7 @@ const categorySchema = new mongoose.Schema(
     },
     slug: {
       type: String,
-      unique: true,
-      index: true,
+      default: "",
     },
     depth: {
       type: Number,
@@ -92,7 +99,7 @@ categorySchema.pre("findOneAndUpdate", async function (next) {
 });
 
 // Add a compound index to enforce uniqueness of `name` within the same `parent`
-categorySchema.index({ name: 1, parent: 1 }, { unique: true });
+// categorySchema.index({ name: 1, parent: 1 }, { unique: true });
 
 const Category = mongoose.model("Category", categorySchema);
 

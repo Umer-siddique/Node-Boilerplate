@@ -1,0 +1,653 @@
+[
+  {
+    "name": "Contracts",
+    "code": "5",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Customs",
+    "code": "10",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Dispute resolution",
+    "code": "6",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Environment and products",
+    "code": "2",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Finance, payments and insolvency",
+    "code": "1",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Good Governance ",
+    "code": "3",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Institutional Participation",
+    "code": "16",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Intellectual property",
+    "code": "4",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Investments",
+    "code": "7",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Products",
+    "code": "9",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Tax",
+    "code": "13",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Transport and telecommunications",
+    "code": "11",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Treaties law",
+    "code": "8",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "WTO",
+    "code": "15",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Agency",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Air",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Air transport",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Aircrafts and civil aviation ",
+    "code": "N",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Arbitration",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Assignment of receivables",
+    "code": "H",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Bankruptcy and insolvency",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Bills of exchange and promissory notes",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Broadcasting",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Chemicals",
+    "code": "H",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Cheques",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Conflict of laws",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Copyright",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Corruption",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Credit transfers",
+    "code": "G",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Cultural Property",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Customs Codification",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Customs Cooperation",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Dispute Resolution",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Documentary credit",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Drugs",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "E-commerce",
+    "code": "H",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Energy",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Exemption from Duties",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Flora and fauna",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Food",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Foodstuff",
+    "code": "I",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Franchising",
+    "code": "I",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "General",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "General",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "General",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Guides, guidelines and practices",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Industrial designs",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Insider Trading",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Integrated circuits",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "International guarantees",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "International Trade Law ",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "International watercourses",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Investment disputes",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Investment guaranty",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Judicial cooperation",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Leasing/Factoring",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Marine Resources",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Maritime and Law of the Sea",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Maritime shipping and load lines ",
+    "code": "O",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Maritime transport",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Multi modal transport ",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Neighboring Rights",
+    "code": "G",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Organized crime",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Origin",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Patents",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Plurilateral Agreements",
+    "code": "B",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Principles, trade usages and standards",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Procurement",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Protected geographical areas ",
+    "code": "J",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Rail transport",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Recognition of foreign judgments",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Road transport",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Sale of Goods",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Space",
+    "code": "G",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "State court jurisdiction",
+    "code": "D",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "State court procedure",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "State immunities ",
+    "code": "F",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Tax",
+    "code": "C",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Telecommunications",
+    "code": "H",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Temporary Admission",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Timber",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Trade support institutions",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Trademarks",
+    "code": "H",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Transit",
+    "code": "E",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Travel contracts",
+    "code": "G",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Varieties of plants",
+    "code": "I",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Waste",
+    "code": "G",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "WTO Agreements",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "General",
+    "code": "A",
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Human Rights and Labour Standards",
+    "code": null,
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Human Rights",
+    "code": null,
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Labour Standards",
+    "code": null,
+    "type": "category",
+    "parent": null,
+    "status": true
+  },
+  {
+    "name": "Gender and Trade Discrimination",
+    "code": null,
+    "type": "category",
+    "parent": null,
+    "status": true
+  }
+]
