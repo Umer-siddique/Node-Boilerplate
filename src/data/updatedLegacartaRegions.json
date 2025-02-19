@@ -1,0 +1,2160 @@
+[
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433816f"
+    },
+    "name": "World",
+    "regionCode": "001",
+    "regionType": "Geographical region and composition",
+    "type": "region",
+    "parent": null,
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c159",
+      "67b47b57cdd110d30e79c15a",
+      "67b47b57cdd110d30e79c15b",
+      "67b47b57cdd110d30e79c15c",
+      "67b47b57cdd110d30e79c15d",
+      "67b47b57cdd110d30e79c15e",
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c163",
+      "67b47b57cdd110d30e79c164",
+      "67b47b57cdd110d30e79c165",
+      "67b47b57cdd110d30e79c166",
+      "67b47b57cdd110d30e79c167",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c169",
+      "67b47b57cdd110d30e79c16a",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c16c",
+      "67b47b57cdd110d30e79c16d",
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c16f",
+      "67b47b57cdd110d30e79c170",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c174",
+      "67b47b57cdd110d30e79c175",
+      "67b47b57cdd110d30e79c176",
+      "67b47b57cdd110d30e79c177",
+      "67b47b57cdd110d30e79c178",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c17b",
+      "67b47b57cdd110d30e79c17c",
+      "67b47b57cdd110d30e79c17d",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c17f",
+      "67b47b57cdd110d30e79c180",
+      "67b47b57cdd110d30e79c181",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c183",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c187",
+      "67b47b57cdd110d30e79c188",
+      "67b47b57cdd110d30e79c189",
+      "67b47b57cdd110d30e79c18a",
+      "67b47b57cdd110d30e79c18b",
+      "67b47b57cdd110d30e79c18c",
+      "67b47b57cdd110d30e79c18d",
+      "67b47b57cdd110d30e79c18e",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c191",
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c195",
+      "67b47b57cdd110d30e79c196",
+      "67b47b57cdd110d30e79c197",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c199",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c19b",
+      "67b47b57cdd110d30e79c19c",
+      "67b47b57cdd110d30e79c19d",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c19f",
+      "67b47b57cdd110d30e79c1a0",
+      "67b47b57cdd110d30e79c1a1",
+      "67b47b57cdd110d30e79c1a2",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1a4",
+      "67b47b57cdd110d30e79c1a5",
+      "67b47b57cdd110d30e79c1a6",
+      "67b47b57cdd110d30e79c1a7",
+      "67b47b57cdd110d30e79c1a8",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1aa",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1ac",
+      "67b47b57cdd110d30e79c1ad",
+      "67b47b57cdd110d30e79c1ae",
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b0",
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1b2",
+      "67b47b57cdd110d30e79c1b3",
+      "67b47b57cdd110d30e79c1b4",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1b8",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1ba",
+      "67b47b57cdd110d30e79c1bb",
+      "67b47b57cdd110d30e79c1bc",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1c0",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c2",
+      "67b47b57cdd110d30e79c1c3",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1c7",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1c9",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1cc",
+      "67b47b57cdd110d30e79c1cd",
+      "67b47b57cdd110d30e79c1ce",
+      "67b47b57cdd110d30e79c1cf",
+      "67b47b57cdd110d30e79c1d0",
+      "67b47b57cdd110d30e79c1d1",
+      "67b47b57cdd110d30e79c1d2",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c1d6",
+      "67b47b57cdd110d30e79c1d7",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1d9",
+      "67b47b57cdd110d30e79c1da",
+      "67b47b57cdd110d30e79c1db",
+      "67b47b57cdd110d30e79c1dc",
+      "67b47b57cdd110d30e79c1dd",
+      "67b47b57cdd110d30e79c1de",
+      "67b47b57cdd110d30e79c1df",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1e1",
+      "67b47b57cdd110d30e79c1e2",
+      "67b47b57cdd110d30e79c1e3",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1e6",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1e8",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1ea",
+      "67b47b57cdd110d30e79c1eb",
+      "67b47b57cdd110d30e79c1ec",
+      "67b47b57cdd110d30e79c1ed",
+      "67b47b57cdd110d30e79c1ee",
+      "67b47b57cdd110d30e79c1ef",
+      "67b47b57cdd110d30e79c1f0",
+      "67b47b57cdd110d30e79c1f1",
+      "67b47b57cdd110d30e79c1f2",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f4",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c1f9",
+      "67b47b57cdd110d30e79c1fa",
+      "67b47b57cdd110d30e79c1fb",
+      "67b47b57cdd110d30e79c1fc",
+      "67b47b57cdd110d30e79c1fd",
+      "67b47b57cdd110d30e79c1fe",
+      "67b47b57cdd110d30e79c1ff",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c201",
+      "67b47b57cdd110d30e79c202",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c204",
+      "67b47b57cdd110d30e79c205",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c207",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c209",
+      "67b47b57cdd110d30e79c20a",
+      "67b47b57cdd110d30e79c20b",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c20d",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c20f",
+      "67b47b57cdd110d30e79c210",
+      "67b47b57cdd110d30e79c211",
+      "67b47b57cdd110d30e79c212",
+      "67b47b57cdd110d30e79c213",
+      "67b47b57cdd110d30e79c214",
+      "67b47b57cdd110d30e79c215",
+      "67b47b57cdd110d30e79c216",
+      "67b47b57cdd110d30e79c217",
+      "67b47b57cdd110d30e79c218",
+      "67b47b57cdd110d30e79c219",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.106Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.106Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338170"
+    },
+    "name": "Africa",
+    "regionCode": "002",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433816f",
+    "countries": [
+      "67b47b57cdd110d30e79c15a",
+      "67b47b57cdd110d30e79c15c",
+      "67b47b57cdd110d30e79c16a",
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c175",
+      "67b47b57cdd110d30e79c177",
+      "67b47b57cdd110d30e79c178",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c17f",
+      "67b47b57cdd110d30e79c180",
+      "67b47b57cdd110d30e79c187",
+      "67b47b57cdd110d30e79c18b",
+      "67b47b57cdd110d30e79c18d",
+      "67b47b57cdd110d30e79c18e",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c195",
+      "67b47b57cdd110d30e79c196",
+      "67b47b57cdd110d30e79c199",
+      "67b47b57cdd110d30e79c19d",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c1b0",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1ba",
+      "67b47b57cdd110d30e79c1bb",
+      "67b47b57cdd110d30e79c1c0",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1c7",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1cf",
+      "67b47b57cdd110d30e79c1d0",
+      "67b47b57cdd110d30e79c1d2",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1d9",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1ef",
+      "67b47b57cdd110d30e79c1f1",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f4",
+      "67b47b57cdd110d30e79c1f9",
+      "67b47b57cdd110d30e79c1fa",
+      "67b47b57cdd110d30e79c1fd",
+      "67b47b57cdd110d30e79c1ff",
+      "67b47b57cdd110d30e79c204",
+      "67b47b57cdd110d30e79c207",
+      "67b47b57cdd110d30e79c20a",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c218",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338171"
+    },
+    "name": "Americas",
+    "regionCode": "019",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433816f",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338172"
+    },
+    "name": "Asia",
+    "regionCode": "142",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433816f",
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c164",
+      "67b47b57cdd110d30e79c165",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c170",
+      "67b47b57cdd110d30e79c174",
+      "67b47b57cdd110d30e79c17c",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c197",
+      "67b47b57cdd110d30e79c1a5",
+      "67b47b57cdd110d30e79c1a6",
+      "67b47b57cdd110d30e79c1a7",
+      "67b47b57cdd110d30e79c1a8",
+      "67b47b57cdd110d30e79c1aa",
+      "67b47b57cdd110d30e79c1ad",
+      "67b47b57cdd110d30e79c1ae",
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b2",
+      "67b47b57cdd110d30e79c1b3",
+      "67b47b57cdd110d30e79c1b4",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1b8",
+      "67b47b57cdd110d30e79c1c2",
+      "67b47b57cdd110d30e79c1c3",
+      "67b47b57cdd110d30e79c1cd",
+      "67b47b57cdd110d30e79c1d1",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1db",
+      "67b47b57cdd110d30e79c1dc",
+      "67b47b57cdd110d30e79c1de",
+      "67b47b57cdd110d30e79c1e3",
+      "67b47b57cdd110d30e79c1e6",
+      "67b47b57cdd110d30e79c1f0",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c1fc",
+      "67b47b57cdd110d30e79c202",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c205",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c20b",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c210",
+      "67b47b57cdd110d30e79c214",
+      "67b47b57cdd110d30e79c217",
+      "67b47b57cdd110d30e79c219"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338173"
+    },
+    "name": "Europe",
+    "regionCode": "150",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433816f",
+    "countries": [
+      "67b47b57cdd110d30e79c159",
+      "67b47b57cdd110d30e79c15b",
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c167",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c16d",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c1a1",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1a4",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1bc",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1cc",
+      "67b47b57cdd110d30e79c1ce",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c1da",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1e8",
+      "67b47b57cdd110d30e79c1ee",
+      "67b47b57cdd110d30e79c1f2",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c1fb",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c201",
+      "67b47b57cdd110d30e79c20f",
+      "67b47b57cdd110d30e79c211"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338174"
+    },
+    "name": "Oceania",
+    "regionCode": "009",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433816f",
+    "countries": [
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1d6",
+      "67b47b57cdd110d30e79c1dd",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1ed",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c20d",
+      "67b47b57cdd110d30e79c215"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338175"
+    },
+    "name": "Eastern Africa",
+    "regionCode": "014",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338170",
+    "countries": [
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c187",
+      "67b47b57cdd110d30e79c18e",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c1b0",
+      "67b47b57cdd110d30e79c1c0",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1d0",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f9",
+      "67b47b57cdd110d30e79c204",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338176"
+    },
+    "name": "Middle Africa",
+    "regionCode": "017",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338170",
+    "countries": [
+      "67b47b57cdd110d30e79c15c",
+      "67b47b57cdd110d30e79c175",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c17f",
+      "67b47b57cdd110d30e79c180",
+      "67b47b57cdd110d30e79c18d",
+      "67b47b57cdd110d30e79c195",
+      "67b47b57cdd110d30e79c1ef"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338177"
+    },
+    "name": "Northern Africa",
+    "regionCode": "015",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338170",
+    "countries": [
+      "67b47b57cdd110d30e79c15a",
+      "67b47b57cdd110d30e79c18b",
+      "67b47b57cdd110d30e79c1bb",
+      "67b47b57cdd110d30e79c1cf",
+      "67b47b57cdd110d30e79c1fd",
+      "67b47b57cdd110d30e79c20a",
+      "67b47b57cdd110d30e79c218",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338178"
+    },
+    "name": "Southern Africa",
+    "regionCode": "018",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338170",
+    "countries": [
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1d2",
+      "67b47b57cdd110d30e79c1fa",
+      "67b47b57cdd110d30e79c1ff"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.107Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338179"
+    },
+    "name": "Western Africa",
+    "regionCode": "011",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338170",
+    "countries": [
+      "67b47b57cdd110d30e79c16a",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c177",
+      "67b47b57cdd110d30e79c178",
+      "67b47b57cdd110d30e79c196",
+      "67b47b57cdd110d30e79c199",
+      "67b47b57cdd110d30e79c19d",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c1ba",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1c7",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1d9",
+      "67b47b57cdd110d30e79c1f1",
+      "67b47b57cdd110d30e79c1f4",
+      "67b47b57cdd110d30e79c207"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817a"
+    },
+    "name": "Caribbean",
+    "regionCode": "029",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db43381a0",
+    "countries": [
+      "67b47b57cdd110d30e79c15d",
+      "67b47b57cdd110d30e79c163",
+      "67b47b57cdd110d30e79c166",
+      "67b47b57cdd110d30e79c183",
+      "67b47b57cdd110d30e79c188",
+      "67b47b57cdd110d30e79c189",
+      "67b47b57cdd110d30e79c19b",
+      "67b47b57cdd110d30e79c1a0",
+      "67b47b57cdd110d30e79c1ac",
+      "67b47b57cdd110d30e79c1ea",
+      "67b47b57cdd110d30e79c1eb",
+      "67b47b57cdd110d30e79c1ec",
+      "67b47b57cdd110d30e79c209"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817b"
+    },
+    "name": "Central America",
+    "regionCode": "013",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db43381a0",
+    "countries": [
+      "67b47b57cdd110d30e79c169",
+      "67b47b57cdd110d30e79c181",
+      "67b47b57cdd110d30e79c18c",
+      "67b47b57cdd110d30e79c19c",
+      "67b47b57cdd110d30e79c1a2",
+      "67b47b57cdd110d30e79c1c9",
+      "67b47b57cdd110d30e79c1d7",
+      "67b47b57cdd110d30e79c1df"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817c"
+    },
+    "name": "Northern America",
+    "regionCode": "021",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db43381a0",
+    "countries": [
+      "67b47b57cdd110d30e79c176",
+      "67b47b57cdd110d30e79c212"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817d"
+    },
+    "name": "South America",
+    "regionCode": "005",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338171",
+    "countries": [
+      "67b47b57cdd110d30e79c15e",
+      "67b47b57cdd110d30e79c16c",
+      "67b47b57cdd110d30e79c16f",
+      "67b47b57cdd110d30e79c17b",
+      "67b47b57cdd110d30e79c17d",
+      "67b47b57cdd110d30e79c18a",
+      "67b47b57cdd110d30e79c191",
+      "67b47b57cdd110d30e79c19f",
+      "67b47b57cdd110d30e79c1e1",
+      "67b47b57cdd110d30e79c1e2",
+      "67b47b57cdd110d30e79c1fe",
+      "67b47b57cdd110d30e79c213",
+      "67b47b57cdd110d30e79c216"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817e"
+    },
+    "name": "Central Asia",
+    "regionCode": "143",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338172",
+    "countries": [
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c214"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433817f"
+    },
+    "name": "Eastern Asia",
+    "regionCode": "030",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338172",
+    "countries": [
+      "67b47b57cdd110d30e79c17c",
+      "67b47b57cdd110d30e79c1ad",
+      "67b47b57cdd110d30e79c1b2",
+      "67b47b57cdd110d30e79c1b3",
+      "67b47b57cdd110d30e79c1cd"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338180"
+    },
+    "name": "South-East Asia",
+    "regionCode": "035",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338172",
+    "countries": [
+      "67b47b57cdd110d30e79c170",
+      "67b47b57cdd110d30e79c174",
+      "67b47b57cdd110d30e79c1a6",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1c2",
+      "67b47b57cdd110d30e79c1d1",
+      "67b47b57cdd110d30e79c1e3",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c205",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c217"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338181"
+    },
+    "name": "Southern Asia",
+    "regionCode": "034",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338172",
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c165",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c1a5",
+      "67b47b57cdd110d30e79c1a7",
+      "67b47b57cdd110d30e79c1c3",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1dc",
+      "67b47b57cdd110d30e79c1fc"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338182"
+    },
+    "name": "Western Asia",
+    "regionCode": "145",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338172",
+    "countries": [
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c164",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c197",
+      "67b47b57cdd110d30e79c1a8",
+      "67b47b57cdd110d30e79c1aa",
+      "67b47b57cdd110d30e79c1ae",
+      "67b47b57cdd110d30e79c1b4",
+      "67b47b57cdd110d30e79c1b8",
+      "67b47b57cdd110d30e79c1db",
+      "67b47b57cdd110d30e79c1de",
+      "67b47b57cdd110d30e79c1e6",
+      "67b47b57cdd110d30e79c1f0",
+      "67b47b57cdd110d30e79c202",
+      "67b47b57cdd110d30e79c20b",
+      "67b47b57cdd110d30e79c210",
+      "67b47b57cdd110d30e79c219"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338183"
+    },
+    "name": "Eastern Europe",
+    "regionCode": "151",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338173",
+    "countries": [
+      "67b47b57cdd110d30e79c167",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1e8",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c20f"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338184"
+    },
+    "name": "Northern Europe",
+    "regionCode": "154",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338173",
+    "countries": [
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c1a4",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1da",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c211"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338185"
+    },
+    "name": "Southern Europe",
+    "regionCode": "039",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338173",
+    "countries": [
+      "67b47b57cdd110d30e79c159",
+      "67b47b57cdd110d30e79c15b",
+      "67b47b57cdd110d30e79c16d",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c1a1",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1ee",
+      "67b47b57cdd110d30e79c1f2",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c1fb"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338186"
+    },
+    "name": "Western Europe",
+    "regionCode": "155",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338173",
+    "countries": [
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c1bc",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1cc",
+      "67b47b57cdd110d30e79c1ce",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c201"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338187"
+    },
+    "name": "Australia and New Zealand",
+    "regionCode": "053",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338174",
+    "countries": [
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c1d6"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338188"
+    },
+    "name": "Melanesia",
+    "regionCode": "054",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338174",
+    "countries": [
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c215"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338189"
+    },
+    "name": "Micronesia",
+    "regionCode": "057",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338174",
+    "countries": [
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1dd"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818a"
+    },
+    "name": "Polynesia",
+    "regionCode": "061",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338174",
+    "countries": [
+      "67b47b57cdd110d30e79c1ed",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c20d"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818b"
+    },
+    "name": "North America",
+    "regionCode": "003",
+    "regionType": "Geographical region and composition",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338171",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818c"
+    },
+    "name": "Developing levels",
+    "regionCode": "900",
+    "regionType": "Developing levels",
+    "type": "region",
+    "parent": null,
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818d"
+    },
+    "name": "Developed country",
+    "regionCode": "901",
+    "regionType": "Developing levels",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433818c",
+    "countries": [
+      "67b47b57cdd110d30e79c15b",
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c176",
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c191",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c1a1",
+      "67b47b57cdd110d30e79c1a4",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1aa",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1ad",
+      "67b47b57cdd110d30e79c1bc",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1cc",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c1d6",
+      "67b47b57cdd110d30e79c1da",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1ee",
+      "67b47b57cdd110d30e79c1fb",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c201",
+      "67b47b57cdd110d30e79c211",
+      "67b47b57cdd110d30e79c212"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818e"
+    },
+    "name": "Developing country",
+    "regionCode": "902",
+    "regionType": "Developing levels",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433818c",
+    "countries": [
+      "67b47b57cdd110d30e79c15a",
+      "67b47b57cdd110d30e79c15d",
+      "67b47b57cdd110d30e79c15e",
+      "67b47b57cdd110d30e79c163",
+      "67b47b57cdd110d30e79c164",
+      "67b47b57cdd110d30e79c166",
+      "67b47b57cdd110d30e79c169",
+      "67b47b57cdd110d30e79c16c",
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c16f",
+      "67b47b57cdd110d30e79c170",
+      "67b47b57cdd110d30e79c175",
+      "67b47b57cdd110d30e79c178",
+      "67b47b57cdd110d30e79c17b",
+      "67b47b57cdd110d30e79c17c",
+      "67b47b57cdd110d30e79c17d",
+      "67b47b57cdd110d30e79c17f",
+      "67b47b57cdd110d30e79c181",
+      "67b47b57cdd110d30e79c183",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c188",
+      "67b47b57cdd110d30e79c189",
+      "67b47b57cdd110d30e79c18a",
+      "67b47b57cdd110d30e79c18b",
+      "67b47b57cdd110d30e79c18c",
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c195",
+      "67b47b57cdd110d30e79c199",
+      "67b47b57cdd110d30e79c19b",
+      "67b47b57cdd110d30e79c19c",
+      "67b47b57cdd110d30e79c19f",
+      "67b47b57cdd110d30e79c1a2",
+      "67b47b57cdd110d30e79c1a5",
+      "67b47b57cdd110d30e79c1a6",
+      "67b47b57cdd110d30e79c1a7",
+      "67b47b57cdd110d30e79c1a8",
+      "67b47b57cdd110d30e79c1ac",
+      "67b47b57cdd110d30e79c1ae",
+      "67b47b57cdd110d30e79c1b0",
+      "67b47b57cdd110d30e79c1b2",
+      "67b47b57cdd110d30e79c1b3",
+      "67b47b57cdd110d30e79c1b4",
+      "67b47b57cdd110d30e79c1b8",
+      "67b47b57cdd110d30e79c1bb",
+      "67b47b57cdd110d30e79c1c2",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1c9",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1cf",
+      "67b47b57cdd110d30e79c1d2",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1d7",
+      "67b47b57cdd110d30e79c1d9",
+      "67b47b57cdd110d30e79c1db",
+      "67b47b57cdd110d30e79c1dc",
+      "67b47b57cdd110d30e79c1dd",
+      "67b47b57cdd110d30e79c1df",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1e1",
+      "67b47b57cdd110d30e79c1e2",
+      "67b47b57cdd110d30e79c1e3",
+      "67b47b57cdd110d30e79c1e6",
+      "67b47b57cdd110d30e79c1ea",
+      "67b47b57cdd110d30e79c1eb",
+      "67b47b57cdd110d30e79c1ec",
+      "67b47b57cdd110d30e79c1f0",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c1fa",
+      "67b47b57cdd110d30e79c1fc",
+      "67b47b57cdd110d30e79c1fe",
+      "67b47b57cdd110d30e79c1ff",
+      "67b47b57cdd110d30e79c202",
+      "67b47b57cdd110d30e79c205",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c209",
+      "67b47b57cdd110d30e79c20a",
+      "67b47b57cdd110d30e79c20b",
+      "67b47b57cdd110d30e79c210",
+      "67b47b57cdd110d30e79c213",
+      "67b47b57cdd110d30e79c216",
+      "67b47b57cdd110d30e79c217",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433818f"
+    },
+    "name": "Transition economy",
+    "regionCode": "903",
+    "regionType": "Developing levels",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433818c",
+    "countries": [
+      "67b47b57cdd110d30e79c159",
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c167",
+      "67b47b57cdd110d30e79c16d",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c197",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1cd",
+      "67b47b57cdd110d30e79c1ce",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1e8",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c20f",
+      "67b47b57cdd110d30e79c214"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338190"
+    },
+    "name": "Other",
+    "regionCode": "905",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db433818c",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338191"
+    },
+    "name": "Developed and developing regions",
+    "regionCode": "990",
+    "regionType": "Developed and developing regions",
+    "type": "region",
+    "parent": null,
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338192"
+    },
+    "name": "Developing regions",
+    "regionCode": "991",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338191",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338193"
+    },
+    "name": "Africa",
+    "regionCode": "002",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c15a",
+      "67b47b57cdd110d30e79c15c",
+      "67b47b57cdd110d30e79c16a",
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c175",
+      "67b47b57cdd110d30e79c177",
+      "67b47b57cdd110d30e79c178",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c17f",
+      "67b47b57cdd110d30e79c180",
+      "67b47b57cdd110d30e79c187",
+      "67b47b57cdd110d30e79c18b",
+      "67b47b57cdd110d30e79c18d",
+      "67b47b57cdd110d30e79c18e",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c195",
+      "67b47b57cdd110d30e79c196",
+      "67b47b57cdd110d30e79c199",
+      "67b47b57cdd110d30e79c19d",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c1b0",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1ba",
+      "67b47b57cdd110d30e79c1bb",
+      "67b47b57cdd110d30e79c1c0",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1c7",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1cf",
+      "67b47b57cdd110d30e79c1d0",
+      "67b47b57cdd110d30e79c1d2",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1d9",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1ef",
+      "67b47b57cdd110d30e79c1f1",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f4",
+      "67b47b57cdd110d30e79c1f9",
+      "67b47b57cdd110d30e79c1fa",
+      "67b47b57cdd110d30e79c1fd",
+      "67b47b57cdd110d30e79c1ff",
+      "67b47b57cdd110d30e79c204",
+      "67b47b57cdd110d30e79c207",
+      "67b47b57cdd110d30e79c20a",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c218",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338194"
+    },
+    "name": "Central America",
+    "regionCode": "013",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c169",
+      "67b47b57cdd110d30e79c181",
+      "67b47b57cdd110d30e79c18c",
+      "67b47b57cdd110d30e79c19c",
+      "67b47b57cdd110d30e79c1a2",
+      "67b47b57cdd110d30e79c1c9",
+      "67b47b57cdd110d30e79c1d7",
+      "67b47b57cdd110d30e79c1df"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338195"
+    },
+    "name": "Caribbean",
+    "regionCode": "029",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c15d",
+      "67b47b57cdd110d30e79c163",
+      "67b47b57cdd110d30e79c166",
+      "67b47b57cdd110d30e79c183",
+      "67b47b57cdd110d30e79c188",
+      "67b47b57cdd110d30e79c189",
+      "67b47b57cdd110d30e79c19b",
+      "67b47b57cdd110d30e79c1a0",
+      "67b47b57cdd110d30e79c1ac",
+      "67b47b57cdd110d30e79c1ea",
+      "67b47b57cdd110d30e79c1eb",
+      "67b47b57cdd110d30e79c1ec",
+      "67b47b57cdd110d30e79c209"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338196"
+    },
+    "name": "South America",
+    "regionCode": "015",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c15e",
+      "67b47b57cdd110d30e79c16c",
+      "67b47b57cdd110d30e79c16f",
+      "67b47b57cdd110d30e79c17b",
+      "67b47b57cdd110d30e79c17d",
+      "67b47b57cdd110d30e79c18a",
+      "67b47b57cdd110d30e79c191",
+      "67b47b57cdd110d30e79c19f",
+      "67b47b57cdd110d30e79c1e1",
+      "67b47b57cdd110d30e79c1e2",
+      "67b47b57cdd110d30e79c1fe",
+      "67b47b57cdd110d30e79c213",
+      "67b47b57cdd110d30e79c216"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338197"
+    },
+    "name": "Asia",
+    "regionCode": "142",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c164",
+      "67b47b57cdd110d30e79c165",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c170",
+      "67b47b57cdd110d30e79c174",
+      "67b47b57cdd110d30e79c17c",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c197",
+      "67b47b57cdd110d30e79c1a5",
+      "67b47b57cdd110d30e79c1a6",
+      "67b47b57cdd110d30e79c1a7",
+      "67b47b57cdd110d30e79c1a8",
+      "67b47b57cdd110d30e79c1aa",
+      "67b47b57cdd110d30e79c1ad",
+      "67b47b57cdd110d30e79c1ae",
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b2",
+      "67b47b57cdd110d30e79c1b3",
+      "67b47b57cdd110d30e79c1b4",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1b8",
+      "67b47b57cdd110d30e79c1c2",
+      "67b47b57cdd110d30e79c1c3",
+      "67b47b57cdd110d30e79c1cd",
+      "67b47b57cdd110d30e79c1d1",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1db",
+      "67b47b57cdd110d30e79c1dc",
+      "67b47b57cdd110d30e79c1de",
+      "67b47b57cdd110d30e79c1e3",
+      "67b47b57cdd110d30e79c1e6",
+      "67b47b57cdd110d30e79c1f0",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c1fc",
+      "67b47b57cdd110d30e79c202",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c205",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c20b",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c210",
+      "67b47b57cdd110d30e79c214",
+      "67b47b57cdd110d30e79c217",
+      "67b47b57cdd110d30e79c219"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338198"
+    },
+    "name": "Oceania",
+    "regionCode": "009",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338192",
+    "countries": [
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1d6",
+      "67b47b57cdd110d30e79c1dd",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1ed",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c20d",
+      "67b47b57cdd110d30e79c215"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db4338199"
+    },
+    "name": "Developed regions",
+    "regionCode": "992",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338191",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819a"
+    },
+    "name": "Northern America",
+    "regionCode": "021",
+    "regionType": "Developed and developing regions",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338199",
+    "countries": [
+      "67b47b57cdd110d30e79c176",
+      "67b47b57cdd110d30e79c212"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819b"
+    },
+    "name": "Europe",
+    "regionCode": "150",
+    "regionType": "Least developed countries",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338199",
+    "countries": [
+      "67b47b57cdd110d30e79c159",
+      "67b47b57cdd110d30e79c15b",
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c167",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c16d",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c1a1",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1a4",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1bc",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1cc",
+      "67b47b57cdd110d30e79c1ce",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c1da",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1e8",
+      "67b47b57cdd110d30e79c1ee",
+      "67b47b57cdd110d30e79c1f2",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c1fb",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c201",
+      "67b47b57cdd110d30e79c20f",
+      "67b47b57cdd110d30e79c211"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819c"
+    },
+    "name": "Japan",
+    "regionCode": "392",
+    "regionType": "Least developed countries",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338199",
+    "countries": [],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819d"
+    },
+    "name": "Australia and New Zealand",
+    "regionCode": "053",
+    "regionType": "Least developed countries",
+    "type": "sub-region",
+    "parent": "67b5a21d4d3ecc4db4338199",
+    "countries": [
+      "67b47b57cdd110d30e79c160",
+      "67b47b57cdd110d30e79c1d6"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819e"
+    },
+    "name": "Least developed countries",
+    "regionCode": "199",
+    "regionType": "Least developed countries",
+    "type": "region",
+    "parent": null,
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c15c",
+      "67b47b57cdd110d30e79c165",
+      "67b47b57cdd110d30e79c16a",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c174",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c180",
+      "67b47b57cdd110d30e79c187",
+      "67b47b57cdd110d30e79c18d",
+      "67b47b57cdd110d30e79c18e",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c196",
+      "67b47b57cdd110d30e79c19d",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c1a0",
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1ba",
+      "67b47b57cdd110d30e79c1c0",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1c7",
+      "67b47b57cdd110d30e79c1d0",
+      "67b47b57cdd110d30e79c1d1",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1ef",
+      "67b47b57cdd110d30e79c1f1",
+      "67b47b57cdd110d30e79c1f4",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c1f9",
+      "67b47b57cdd110d30e79c1fd",
+      "67b47b57cdd110d30e79c204",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c207",
+      "67b47b57cdd110d30e79c20d",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c215",
+      "67b47b57cdd110d30e79c219",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": false,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db433819f"
+    },
+    "name": "Landlocked developing countries",
+    "regionCode": "432",
+    "regionType": "Least developed countries",
+    "type": "region",
+    "parent": null,
+    "countries": [
+      "67b47b57cdd110d30e79c158",
+      "67b47b57cdd110d30e79c15f",
+      "67b47b57cdd110d30e79c162",
+      "67b47b57cdd110d30e79c16b",
+      "67b47b57cdd110d30e79c16c",
+      "67b47b57cdd110d30e79c16e",
+      "67b47b57cdd110d30e79c172",
+      "67b47b57cdd110d30e79c173",
+      "67b47b57cdd110d30e79c179",
+      "67b47b57cdd110d30e79c17a",
+      "67b47b57cdd110d30e79c190",
+      "67b47b57cdd110d30e79c1af",
+      "67b47b57cdd110d30e79c1b5",
+      "67b47b57cdd110d30e79c1b6",
+      "67b47b57cdd110d30e79c1b9",
+      "67b47b57cdd110d30e79c1bf",
+      "67b47b57cdd110d30e79c1c1",
+      "67b47b57cdd110d30e79c1c4",
+      "67b47b57cdd110d30e79c1cb",
+      "67b47b57cdd110d30e79c1cd",
+      "67b47b57cdd110d30e79c1d4",
+      "67b47b57cdd110d30e79c1d8",
+      "67b47b57cdd110d30e79c1e1",
+      "67b47b57cdd110d30e79c1e9",
+      "67b47b57cdd110d30e79c1ff",
+      "67b47b57cdd110d30e79c203",
+      "67b47b57cdd110d30e79c20c",
+      "67b47b57cdd110d30e79c20e",
+      "67b47b57cdd110d30e79c214",
+      "67b47b57cdd110d30e79c21a",
+      "67b47b57cdd110d30e79c21b",
+      "67b47b57cdd110d30e79c21c"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db43381a0"
+    },
+    "name": "Small island developing States",
+    "regionCode": "772",
+    "regionType": "Least developed countries",
+    "type": "region",
+    "parent": null,
+    "countries": [
+      "67b47b57cdd110d30e79c15d",
+      "67b47b57cdd110d30e79c163",
+      "67b47b57cdd110d30e79c166",
+      "67b47b57cdd110d30e79c169",
+      "67b47b57cdd110d30e79c177",
+      "67b47b57cdd110d30e79c17e",
+      "67b47b57cdd110d30e79c183",
+      "67b47b57cdd110d30e79c188",
+      "67b47b57cdd110d30e79c189",
+      "67b47b57cdd110d30e79c192",
+      "67b47b57cdd110d30e79c19b",
+      "67b47b57cdd110d30e79c19e",
+      "67b47b57cdd110d30e79c19f",
+      "67b47b57cdd110d30e79c1a0",
+      "67b47b57cdd110d30e79c1ac",
+      "67b47b57cdd110d30e79c1b1",
+      "67b47b57cdd110d30e79c1c3",
+      "67b47b57cdd110d30e79c1c6",
+      "67b47b57cdd110d30e79c1c8",
+      "67b47b57cdd110d30e79c1ca",
+      "67b47b57cdd110d30e79c1d3",
+      "67b47b57cdd110d30e79c1dd",
+      "67b47b57cdd110d30e79c1e0",
+      "67b47b57cdd110d30e79c1ea",
+      "67b47b57cdd110d30e79c1eb",
+      "67b47b57cdd110d30e79c1ec",
+      "67b47b57cdd110d30e79c1ed",
+      "67b47b57cdd110d30e79c1ef",
+      "67b47b57cdd110d30e79c1f3",
+      "67b47b57cdd110d30e79c1f5",
+      "67b47b57cdd110d30e79c1f8",
+      "67b47b57cdd110d30e79c1fe",
+      "67b47b57cdd110d30e79c206",
+      "67b47b57cdd110d30e79c208",
+      "67b47b57cdd110d30e79c209",
+      "67b47b57cdd110d30e79c20d",
+      "67b47b57cdd110d30e79c215"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67b5a21d4d3ecc4db43381a1"
+    },
+    "name": "Europe Union",
+    "regionCode": "995",
+    "regionType": "Least developed countries",
+    "type": "region",
+    "parent": null,
+    "countries": [
+      "67b47b57cdd110d30e79c161",
+      "67b47b57cdd110d30e79c168",
+      "67b47b57cdd110d30e79c171",
+      "67b47b57cdd110d30e79c182",
+      "67b47b57cdd110d30e79c184",
+      "67b47b57cdd110d30e79c185",
+      "67b47b57cdd110d30e79c186",
+      "67b47b57cdd110d30e79c18f",
+      "67b47b57cdd110d30e79c193",
+      "67b47b57cdd110d30e79c194",
+      "67b47b57cdd110d30e79c198",
+      "67b47b57cdd110d30e79c19a",
+      "67b47b57cdd110d30e79c1a3",
+      "67b47b57cdd110d30e79c1a9",
+      "67b47b57cdd110d30e79c1ab",
+      "67b47b57cdd110d30e79c1b7",
+      "67b47b57cdd110d30e79c1bd",
+      "67b47b57cdd110d30e79c1be",
+      "67b47b57cdd110d30e79c1c5",
+      "67b47b57cdd110d30e79c1d5",
+      "67b47b57cdd110d30e79c1e4",
+      "67b47b57cdd110d30e79c1e5",
+      "67b47b57cdd110d30e79c1e7",
+      "67b47b57cdd110d30e79c1f6",
+      "67b47b57cdd110d30e79c1f7",
+      "67b47b57cdd110d30e79c1fb",
+      "67b47b57cdd110d30e79c200",
+      "67b47b57cdd110d30e79c211"
+    ],
+    "status": true,
+    "depth": 0,
+    "deleted_at": null,
+    "__v": 0,
+    "createdAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-19T09:19:25.109Z"
+    }
+  }
+]
