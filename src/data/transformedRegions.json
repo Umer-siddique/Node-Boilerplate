@@ -1,0 +1,512 @@
+[
+  {
+    "regionId": "1",
+    "name": "World",
+    "regionCode": "001",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "2",
+    "name": "Africa",
+    "regionCode": "002",
+    "status": true,
+    "parentId": "1",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "3",
+    "name": "Americas",
+    "regionCode": "019",
+    "status": true,
+    "parentId": "1",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "4",
+    "name": "Asia",
+    "regionCode": "142",
+    "status": true,
+    "parentId": "1",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "5",
+    "name": "Europe",
+    "regionCode": "150",
+    "status": true,
+    "parentId": "1",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "6",
+    "name": "Oceania",
+    "regionCode": "009",
+    "status": true,
+    "parentId": "1",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "7",
+    "name": "Eastern Africa",
+    "regionCode": "014",
+    "status": true,
+    "parentId": "2",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "8",
+    "name": "Middle Africa",
+    "regionCode": "017",
+    "status": true,
+    "parentId": "2",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "9",
+    "name": "Northern Africa",
+    "regionCode": "015",
+    "status": true,
+    "parentId": "2",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "10",
+    "name": "Southern Africa",
+    "regionCode": "018",
+    "status": true,
+    "parentId": "2",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "11",
+    "name": "Western Africa",
+    "regionCode": "011",
+    "status": true,
+    "parentId": "2",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "12",
+    "name": "Caribbean",
+    "regionCode": "029",
+    "status": true,
+    "parentId": "53",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "13",
+    "name": "Central America",
+    "regionCode": "013",
+    "status": true,
+    "parentId": "53",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "14",
+    "name": "Northern America",
+    "regionCode": "021",
+    "status": true,
+    "parentId": "53",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "15",
+    "name": "South America",
+    "regionCode": "005",
+    "status": true,
+    "parentId": "3",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "16",
+    "name": "Central Asia",
+    "regionCode": "143",
+    "status": true,
+    "parentId": "4",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "17",
+    "name": "Eastern Asia",
+    "regionCode": "030",
+    "status": true,
+    "parentId": "4",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "18",
+    "name": "South-East Asia",
+    "regionCode": "035",
+    "status": true,
+    "parentId": "4",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "19",
+    "name": "Southern Asia",
+    "regionCode": "034",
+    "status": true,
+    "parentId": "4",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "20",
+    "name": "Western Asia",
+    "regionCode": "145",
+    "status": true,
+    "parentId": "4",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "21",
+    "name": "Eastern Europe",
+    "regionCode": "151",
+    "status": true,
+    "parentId": "5",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "22",
+    "name": "Northern Europe",
+    "regionCode": "154",
+    "status": true,
+    "parentId": "5",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "23",
+    "name": "Southern Europe",
+    "regionCode": "039",
+    "status": true,
+    "parentId": "5",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "24",
+    "name": "Western Europe",
+    "regionCode": "155",
+    "status": true,
+    "parentId": "5",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "25",
+    "name": "Australia and New Zealand",
+    "regionCode": "053",
+    "status": true,
+    "parentId": "6",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "26",
+    "name": "Melanesia",
+    "regionCode": "054",
+    "status": true,
+    "parentId": "6",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "27",
+    "name": "Micronesia",
+    "regionCode": "057",
+    "status": true,
+    "parentId": "6",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "28",
+    "name": "Polynesia",
+    "regionCode": "061",
+    "status": true,
+    "parentId": "6",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "29",
+    "name": "North America",
+    "regionCode": "003",
+    "status": true,
+    "parentId": "3",
+    "parent": null,
+    "type": "region",
+    "regionType": "Geographical region and composition"
+  },
+  {
+    "regionId": "30",
+    "name": "Developing levels",
+    "regionCode": "900",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Developing levels"
+  },
+  {
+    "regionId": "31",
+    "name": "Developed country",
+    "regionCode": "901",
+    "status": true,
+    "parentId": "30",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developing levels"
+  },
+  {
+    "regionId": "32",
+    "name": "Developing country",
+    "regionCode": "902",
+    "status": true,
+    "parentId": "30",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developing levels"
+  },
+  {
+    "regionId": "33",
+    "name": "Transition economy",
+    "regionCode": "903",
+    "status": true,
+    "parentId": "30",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developing levels"
+  },
+  {
+    "regionId": "35",
+    "name": "Other",
+    "regionCode": "905",
+    "status": true,
+    "parentId": "30",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "38",
+    "name": "Developed and developing regions",
+    "regionCode": "990",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "39",
+    "name": "Developing regions",
+    "regionCode": "991",
+    "status": true,
+    "parentId": "38",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "40",
+    "name": "Africa",
+    "regionCode": "002",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "41",
+    "name": "Central America",
+    "regionCode": "013",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "42",
+    "name": "Caribbean",
+    "regionCode": "029",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "43",
+    "name": "South America",
+    "regionCode": "015",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "44",
+    "name": "Asia",
+    "regionCode": "142",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "45",
+    "name": "Oceania",
+    "regionCode": "009",
+    "status": true,
+    "parentId": "39",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "46",
+    "name": "Developed regions",
+    "regionCode": "992",
+    "status": true,
+    "parentId": "38",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "47",
+    "name": "Northern America",
+    "regionCode": "021",
+    "status": true,
+    "parentId": "46",
+    "parent": null,
+    "type": "region",
+    "regionType": "Developed and developing regions"
+  },
+  {
+    "regionId": "48",
+    "name": "Europe",
+    "regionCode": "150",
+    "status": true,
+    "parentId": "46",
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "49",
+    "name": "Japan",
+    "regionCode": "392",
+    "status": true,
+    "parentId": "46",
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "50",
+    "name": "Australia and New Zealand",
+    "regionCode": "053",
+    "status": true,
+    "parentId": "46",
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "51",
+    "name": "Least developed countries",
+    "regionCode": "199",
+    "status": false,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "52",
+    "name": "Landlocked developing countries",
+    "regionCode": "432",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "53",
+    "name": "Small island developing States",
+    "regionCode": "772",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  },
+  {
+    "regionId": "54",
+    "name": "Europe Union",
+    "regionCode": "995",
+    "status": true,
+    "parentId": null,
+    "parent": null,
+    "type": "region",
+    "regionType": "Least developed countries"
+  }
+]

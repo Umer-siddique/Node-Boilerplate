@@ -1,0 +1,461 @@
+[
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae21" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "1" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "001",
+    "regionDescription": "World",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae22" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "2" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "002",
+    "regionDescription": "Africa",
+    "parentId": { "$numberInt": "1" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae23" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "3" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "019",
+    "regionDescription": "Americas",
+    "parentId": { "$numberInt": "1" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae24" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "4" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "142",
+    "regionDescription": "Asia",
+    "parentId": { "$numberInt": "1" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae25" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "5" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "150",
+    "regionDescription": "Europe",
+    "parentId": { "$numberInt": "1" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae26" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "6" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "009",
+    "regionDescription": "Oceania",
+    "parentId": { "$numberInt": "1" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae27" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "7" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "014",
+    "regionDescription": "Eastern Africa",
+    "parentId": { "$numberInt": "2" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae28" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "8" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "017",
+    "regionDescription": "Middle Africa",
+    "parentId": { "$numberInt": "2" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae29" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "9" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "015",
+    "regionDescription": "Northern Africa",
+    "parentId": { "$numberInt": "2" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2a" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "10" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "018",
+    "regionDescription": "Southern Africa",
+    "parentId": { "$numberInt": "2" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2b" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "11" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "011",
+    "regionDescription": "Western Africa",
+    "parentId": { "$numberInt": "2" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2c" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "12" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "029",
+    "regionDescription": "Caribbean",
+    "parentId": { "$numberInt": "53" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2d" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "13" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "013",
+    "regionDescription": "Central America",
+    "parentId": { "$numberInt": "53" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2e" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "14" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "021",
+    "regionDescription": "Northern America",
+    "parentId": { "$numberInt": "53" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae2f" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "15" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "005",
+    "regionDescription": "South America",
+    "parentId": { "$numberInt": "3" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae30" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "16" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "143",
+    "regionDescription": "Central Asia",
+    "parentId": { "$numberInt": "4" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae31" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "17" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "030",
+    "regionDescription": "Eastern Asia",
+    "parentId": { "$numberInt": "4" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae32" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "18" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "035",
+    "regionDescription": "South-East Asia",
+    "parentId": { "$numberInt": "4" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae33" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "19" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "034",
+    "regionDescription": "Southern Asia",
+    "parentId": { "$numberInt": "4" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae34" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "20" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "145",
+    "regionDescription": "Western Asia",
+    "parentId": { "$numberInt": "4" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae35" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "21" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "151",
+    "regionDescription": "Eastern Europe",
+    "parentId": { "$numberInt": "5" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae36" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "22" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "154",
+    "regionDescription": "Northern Europe",
+    "parentId": { "$numberInt": "5" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae37" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "23" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "039",
+    "regionDescription": "Southern Europe",
+    "parentId": { "$numberInt": "5" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae38" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "24" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "155",
+    "regionDescription": "Western Europe",
+    "parentId": { "$numberInt": "5" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae39" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "25" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "053",
+    "regionDescription": "Australia and New Zealand",
+    "parentId": { "$numberInt": "6" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae3a" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "26" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "054",
+    "regionDescription": "Melanesia",
+    "parentId": { "$numberInt": "6" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae3b" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "27" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "057",
+    "regionDescription": "Micronesia",
+    "parentId": { "$numberInt": "6" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae3c" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "28" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "061",
+    "regionDescription": "Polynesia",
+    "parentId": { "$numberInt": "6" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae3d" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "29" },
+    "typeRegionId": { "$numberInt": "1" },
+    "regionCode": "003",
+    "regionDescription": "North America",
+    "parentId": { "$numberInt": "3" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae3e" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "30" },
+    "typeRegionId": { "$numberInt": "2" },
+    "regionCode": "900",
+    "regionDescription": "Developing levels",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid,": "678e65060d57c31d883aae3f" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "31" },
+    "typeRegionId": { "$numberInt": "2" },
+    "regionCode": "901",
+    "regionDescription": "Developed country",
+    "parentId": { "$numberInt": "30" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae40" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "32" },
+    "typeRegionId": { "$numberInt": "2" },
+    "regionCode": "902",
+    "regionDescription": "Developing country",
+    "parentId": { "$numberInt": "30" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae41" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "33" },
+    "typeRegionId": { "$numberInt": "2" },
+    "regionCode": "903",
+    "regionDescription": "Transition economy",
+    "parentId": { "$numberInt": "30" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae42" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "35" },
+    "typeRegionId": { "$numberInt": "2" },
+    "regionCode": "905",
+    "regionDescription": "Other",
+    "parentId": { "$numberInt": "30" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae43" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "38" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "990",
+    "regionDescription": "Developed and developing regions",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid,": "678e65060d57c31d883aae44" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "39" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "991",
+    "regionDescription": "Developing regions",
+    "parentId": { "$numberInt": "38" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae45" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "40" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "002",
+    "regionDescription": "Africa",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae46" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "41" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "013",
+    "regionDescription": "Central America",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae47" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "42" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "029",
+    "regionDescription": "Caribbean",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae48" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "43" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "015",
+    "regionDescription": "South America",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae49" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "44" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "142",
+    "regionDescription": "Asia",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4a" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "45" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "009",
+    "regionDescription": "Oceania",
+    "parentId": { "$numberInt": "39" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4b" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "46" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "992",
+    "regionDescription": "Developed regions",
+    "parentId": { "$numberInt": "38" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4c" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "47" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "021",
+    "regionDescription": "Northern America",
+    "parentId": { "$numberInt": "46" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4d" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "48" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "150",
+    "regionDescription": "Europe",
+    "parentId": { "$numberInt": "46" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4e" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "49" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "392",
+    "regionDescription": "Japan",
+    "parentId": { "$numberInt": "46" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae4f" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "50" },
+    "typeRegionId": { "$numberInt": "3" },
+    "regionCode": "053",
+    "regionDescription": "Australia and New Zealand",
+    "parentId": { "$numberInt": "46" }
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae50" },
+    "active": { "$numberInt": "0" },
+    "regionId": { "$numberInt": "51" },
+    "typeRegionId": { "$numberInt": "4" },
+    "regionCode": "199",
+    "regionDescription": "Least developed countries",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid,": "678e65060d57c31d883aae51" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "52" },
+    "typeRegionId": { "$numberInt": "5" },
+    "regionCode": "432",
+    "regionDescription": "Landlocked developing countries",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae52" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "53" },
+    "typeRegionId": { "$numberInt": "6" },
+    "regionCode": "772",
+    "regionDescription": "Small island developing States",
+    "parentId": null
+  },
+  {
+    "_id": { "$oid": "678e65060d57c31d883aae53" },
+    "active": { "$numberInt": "1" },
+    "regionId": { "$numberInt": "54" },
+    "typeRegionId": { "$numberInt": "7" },
+    "regionCode": "995",
+    "regionDescription": "Europe Union",
+    "parentId": null
+  }
+]

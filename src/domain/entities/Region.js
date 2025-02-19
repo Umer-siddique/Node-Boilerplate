@@ -36,6 +36,14 @@ const regionSchema = new mongoose.Schema(
         message: "Parent is required for sub-regions",
       },
     },
+    parentId: {
+      type: String,
+      default: null,
+    },
+    regionId: {
+      type: String,
+      default: null,
+    },
     countries: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -104,7 +112,7 @@ regionSchema.pre("findOneAndUpdate", async function (next) {
 });
 
 // Add a compound index to enforce uniqueness of `name` within the same `parent`
-regionSchema.index({ name: 1, parent: 1 }, { unique: true });
+// regionSchema.index({ name: 1, parent: 1 }, { unique: true });
 
 const Region = mongoose.model("Region", regionSchema);
 
