@@ -1,0 +1,1922 @@
+[
+  {
+    "_id": { "$oid": "678e65040d57c31d883a475b" },
+    "id": { "$numberInt": "1" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a475c" },
+    "id": { "$numberInt": "2" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ab" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a475d" },
+    "id": { "$numberInt": "3" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ac" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a475e" },
+    "id": { "$numberInt": "4" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ac" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a475f" },
+    "id": { "$numberInt": "5" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ac" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4760" },
+    "id": { "$numberInt": "6" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1af" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4761" },
+    "id": { "$numberInt": "7" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cb9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1af" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4762" },
+    "id": { "$numberInt": "8" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cba" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4763" },
+    "id": { "$numberInt": "9" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4764" },
+    "id": { "$numberInt": "10" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4765" },
+    "id": { "$numberInt": "11" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4766" },
+    "id": { "$numberInt": "12" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbe" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4767" },
+    "id": { "$numberInt": "13" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ae" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4768" },
+    "id": { "$numberInt": "14" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4769" },
+    "id": { "$numberInt": "15" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476a" },
+    "id": { "$numberInt": "16" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ed" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476b" },
+    "id": { "$numberInt": "17" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476c" },
+    "id": { "$numberInt": "18" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476d" },
+    "id": { "$numberInt": "19" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476e" },
+    "id": { "$numberInt": "20" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a476f" },
+    "id": { "$numberInt": "21" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4770" },
+    "id": { "$numberInt": "22" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4771" },
+    "id": { "$numberInt": "23" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cc9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4772" },
+    "id": { "$numberInt": "24" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cca" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4773" },
+    "id": { "$numberInt": "25" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3ccb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4774" },
+    "id": { "$numberInt": "26" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3ccc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4775" },
+    "id": { "$numberInt": "27" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3ccd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4776" },
+    "id": { "$numberInt": "28" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cce" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4777" },
+    "id": { "$numberInt": "29" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3ccf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4778" },
+    "id": { "$numberInt": "30" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4779" },
+    "id": { "$numberInt": "31" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477a" },
+    "id": { "$numberInt": "32" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477b" },
+    "id": { "$numberInt": "33" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477c" },
+    "id": { "$numberInt": "34" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477d" },
+    "id": { "$numberInt": "35" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477e" },
+    "id": { "$numberInt": "36" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a477f" },
+    "id": { "$numberInt": "37" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4780" },
+    "id": { "$numberInt": "38" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4781" },
+    "id": { "$numberInt": "39" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4782" },
+    "id": { "$numberInt": "40" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cda" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4783" },
+    "id": { "$numberInt": "41" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cdb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4784" },
+    "id": { "$numberInt": "42" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cdc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4785" },
+    "id": { "$numberInt": "43" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cdd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4786" },
+    "id": { "$numberInt": "44" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cde" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4787" },
+    "id": { "$numberInt": "45" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cdf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ba" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4788" },
+    "id": { "$numberInt": "46" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ba" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4789" },
+    "id": { "$numberInt": "47" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1da" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478a" },
+    "id": { "$numberInt": "48" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ce" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478b" },
+    "id": { "$numberInt": "49" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ce" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478c" },
+    "id": { "$numberInt": "50" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478d" },
+    "id": { "$numberInt": "51" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478e" },
+    "id": { "$numberInt": "52" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a478f" },
+    "id": { "$numberInt": "53" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4790" },
+    "id": { "$numberInt": "54" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4791" },
+    "id": { "$numberInt": "55" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ce9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4792" },
+    "id": { "$numberInt": "56" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cea" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4793" },
+    "id": { "$numberInt": "57" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ceb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4794" },
+    "id": { "$numberInt": "58" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cec" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4795" },
+    "id": { "$numberInt": "59" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ced" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4796" },
+    "id": { "$numberInt": "60" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cee" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4797" },
+    "id": { "$numberInt": "61" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cef" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4798" },
+    "id": { "$numberInt": "62" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4799" },
+    "id": { "$numberInt": "63" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479a" },
+    "id": { "$numberInt": "64" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479b" },
+    "id": { "$numberInt": "65" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479c" },
+    "id": { "$numberInt": "66" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479d" },
+    "id": { "$numberInt": "67" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479e" },
+    "id": { "$numberInt": "68" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a479f" },
+    "id": { "$numberInt": "69" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a0" },
+    "id": { "$numberInt": "70" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a1" },
+    "id": { "$numberInt": "71" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cf9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a2" },
+    "id": { "$numberInt": "72" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cfa" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a3" },
+    "id": { "$numberInt": "73" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cfb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a4" },
+    "id": { "$numberInt": "74" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cfc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a5" },
+    "id": { "$numberInt": "75" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cfd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ea" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a6" },
+    "id": { "$numberInt": "76" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cfe" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a7" },
+    "id": { "$numberInt": "77" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3cff" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ea" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a8" },
+    "id": { "$numberInt": "78" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d00" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47a9" },
+    "id": { "$numberInt": "79" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d01" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47aa" },
+    "id": { "$numberInt": "80" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d02" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ab" },
+    "id": { "$numberInt": "81" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d03" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ac" },
+    "id": { "$numberInt": "82" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d04" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ad" },
+    "id": { "$numberInt": "83" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d05" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ae" },
+    "id": { "$numberInt": "84" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d06" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47af" },
+    "id": { "$numberInt": "85" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d07" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b0" },
+    "id": { "$numberInt": "86" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d08" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b1" },
+    "id": { "$numberInt": "87" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d09" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b2" },
+    "id": { "$numberInt": "88" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ea" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b3" },
+    "id": { "$numberInt": "89" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b4" },
+    "id": { "$numberInt": "90" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b5" },
+    "id": { "$numberInt": "91" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b6" },
+    "id": { "$numberInt": "92" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b7" },
+    "id": { "$numberInt": "93" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d0f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b8" },
+    "id": { "$numberInt": "94" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d10" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47b9" },
+    "id": { "$numberInt": "95" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d11" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ba" },
+    "id": { "$numberInt": "96" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d12" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47bb" },
+    "id": { "$numberInt": "97" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d13" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47bc" },
+    "id": { "$numberInt": "98" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d14" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47bd" },
+    "id": { "$numberInt": "99" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d15" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47be" },
+    "id": { "$numberInt": "100" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d16" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47bf" },
+    "id": { "$numberInt": "101" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d17" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c0" },
+    "id": { "$numberInt": "102" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d18" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c1" },
+    "id": { "$numberInt": "103" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d19" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1eb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c2" },
+    "id": { "$numberInt": "104" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c3" },
+    "id": { "$numberInt": "105" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c4" },
+    "id": { "$numberInt": "106" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c5" },
+    "id": { "$numberInt": "107" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c6" },
+    "id": { "$numberInt": "108" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d3" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c7" },
+    "id": { "$numberInt": "109" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d1f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c8" },
+    "id": { "$numberInt": "110" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d20" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47c9" },
+    "id": { "$numberInt": "111" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d21" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1de" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ca" },
+    "id": { "$numberInt": "112" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d22" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1de" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47cb" },
+    "id": { "$numberInt": "113" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d23" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1de" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47cc" },
+    "id": { "$numberInt": "114" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d24" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47cd" },
+    "id": { "$numberInt": "115" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d25" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ec" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ce" },
+    "id": { "$numberInt": "116" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d26" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47cf" },
+    "id": { "$numberInt": "117" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d27" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b3" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d0" },
+    "id": { "$numberInt": "118" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d28" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d1" },
+    "id": { "$numberInt": "119" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d29" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d2" },
+    "id": { "$numberInt": "120" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d3" },
+    "id": { "$numberInt": "121" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1aa" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d4" },
+    "id": { "$numberInt": "122" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1af" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d5" },
+    "id": { "$numberInt": "123" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d6" },
+    "id": { "$numberInt": "124" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d7" },
+    "id": { "$numberInt": "125" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d2f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ac" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d8" },
+    "id": { "$numberInt": "126" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d30" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47d9" },
+    "id": { "$numberInt": "127" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d31" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47da" },
+    "id": { "$numberInt": "128" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d32" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ca" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47db" },
+    "id": { "$numberInt": "129" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d33" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47dc" },
+    "id": { "$numberInt": "130" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d34" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47dd" },
+    "id": { "$numberInt": "131" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d35" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47de" },
+    "id": { "$numberInt": "132" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d36" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47df" },
+    "id": { "$numberInt": "133" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d37" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e0" },
+    "id": { "$numberInt": "134" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d38" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e1" },
+    "id": { "$numberInt": "135" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d39" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e2" },
+    "id": { "$numberInt": "136" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e3" },
+    "id": { "$numberInt": "137" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e4" },
+    "id": { "$numberInt": "138" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e5" },
+    "id": { "$numberInt": "139" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e6" },
+    "id": { "$numberInt": "140" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e7" },
+    "id": { "$numberInt": "141" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d3f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e8" },
+    "id": { "$numberInt": "142" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d40" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47e9" },
+    "id": { "$numberInt": "143" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d41" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ea" },
+    "id": { "$numberInt": "144" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d42" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47eb" },
+    "id": { "$numberInt": "145" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d43" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ec" },
+    "id": { "$numberInt": "146" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d44" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ed" },
+    "id": { "$numberInt": "147" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d45" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ee" },
+    "id": { "$numberInt": "148" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d46" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ef" },
+    "id": { "$numberInt": "149" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d47" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f0" },
+    "id": { "$numberInt": "150" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d48" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f1" },
+    "id": { "$numberInt": "151" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d49" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f2" },
+    "id": { "$numberInt": "152" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f3" },
+    "id": { "$numberInt": "153" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f4" },
+    "id": { "$numberInt": "154" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f5" },
+    "id": { "$numberInt": "155" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f6" },
+    "id": { "$numberInt": "156" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f7" },
+    "id": { "$numberInt": "157" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d4f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f8" },
+    "id": { "$numberInt": "158" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d50" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47f9" },
+    "id": { "$numberInt": "159" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d51" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47fa" },
+    "id": { "$numberInt": "160" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d52" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47fb" },
+    "id": { "$numberInt": "161" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d53" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47fc" },
+    "id": { "$numberInt": "162" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d54" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47fd" },
+    "id": { "$numberInt": "163" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d55" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47fe" },
+    "id": { "$numberInt": "164" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d56" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a47ff" },
+    "id": { "$numberInt": "165" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d57" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4800" },
+    "id": { "$numberInt": "166" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d58" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4801" },
+    "id": { "$numberInt": "167" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d59" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1db" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4802" },
+    "id": { "$numberInt": "168" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4803" },
+    "id": { "$numberInt": "169" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4804" },
+    "id": { "$numberInt": "170" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1da" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4805" },
+    "id": { "$numberInt": "171" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4806" },
+    "id": { "$numberInt": "172" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4807" },
+    "id": { "$numberInt": "173" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4808" },
+    "id": { "$numberInt": "174" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d60" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4809" },
+    "id": { "$numberInt": "175" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d61" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480a" },
+    "id": { "$numberInt": "176" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d62" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480b" },
+    "id": { "$numberInt": "177" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d63" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480c" },
+    "id": { "$numberInt": "178" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d64" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480d" },
+    "id": { "$numberInt": "179" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d65" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b5" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480e" },
+    "id": { "$numberInt": "180" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d66" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a480f" },
+    "id": { "$numberInt": "181" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d67" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4810" },
+    "id": { "$numberInt": "182" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d68" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ea" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4811" },
+    "id": { "$numberInt": "183" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d69" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4812" },
+    "id": { "$numberInt": "184" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4813" },
+    "id": { "$numberInt": "185" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4814" },
+    "id": { "$numberInt": "186" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4815" },
+    "id": { "$numberInt": "187" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4816" },
+    "id": { "$numberInt": "188" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4817" },
+    "id": { "$numberInt": "189" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d6f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4818" },
+    "id": { "$numberInt": "190" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d70" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4819" },
+    "id": { "$numberInt": "191" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d71" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d3" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481a" },
+    "id": { "$numberInt": "192" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d72" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481b" },
+    "id": { "$numberInt": "193" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d73" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1de" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481c" },
+    "id": { "$numberInt": "194" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d74" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481d" },
+    "id": { "$numberInt": "195" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d75" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481e" },
+    "id": { "$numberInt": "196" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d76" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a481f" },
+    "id": { "$numberInt": "197" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d77" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4820" },
+    "id": { "$numberInt": "198" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d78" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4821" },
+    "id": { "$numberInt": "199" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d79" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ee" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4822" },
+    "id": { "$numberInt": "200" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4823" },
+    "id": { "$numberInt": "201" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4824" },
+    "id": { "$numberInt": "202" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4825" },
+    "id": { "$numberInt": "203" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1da" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4826" },
+    "id": { "$numberInt": "204" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4827" },
+    "id": { "$numberInt": "205" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d7f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4828" },
+    "id": { "$numberInt": "206" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d80" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4829" },
+    "id": { "$numberInt": "207" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d81" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482a" },
+    "id": { "$numberInt": "208" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d82" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482b" },
+    "id": { "$numberInt": "209" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d83" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482c" },
+    "id": { "$numberInt": "210" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d84" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482d" },
+    "id": { "$numberInt": "211" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d85" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482e" },
+    "id": { "$numberInt": "212" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d86" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1da" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a482f" },
+    "id": { "$numberInt": "213" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d87" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4830" },
+    "id": { "$numberInt": "214" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d88" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4831" },
+    "id": { "$numberInt": "215" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d89" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4832" },
+    "id": { "$numberInt": "216" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4833" },
+    "id": { "$numberInt": "217" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4834" },
+    "id": { "$numberInt": "218" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4835" },
+    "id": { "$numberInt": "219" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4836" },
+    "id": { "$numberInt": "220" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bd" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4837" },
+    "id": { "$numberInt": "221" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4838" },
+    "id": { "$numberInt": "222" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d90" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4839" },
+    "id": { "$numberInt": "223" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d91" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483a" },
+    "id": { "$numberInt": "224" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d92" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483b" },
+    "id": { "$numberInt": "225" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d93" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483c" },
+    "id": { "$numberInt": "226" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d94" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483d" },
+    "id": { "$numberInt": "227" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d95" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483e" },
+    "id": { "$numberInt": "228" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d96" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a483f" },
+    "id": { "$numberInt": "229" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d97" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4840" },
+    "id": { "$numberInt": "230" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d98" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4841" },
+    "id": { "$numberInt": "231" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d99" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ba" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4842" },
+    "id": { "$numberInt": "232" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9a" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4843" },
+    "id": { "$numberInt": "233" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e3" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4844" },
+    "id": { "$numberInt": "234" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9c" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4845" },
+    "id": { "$numberInt": "235" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9d" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4846" },
+    "id": { "$numberInt": "236" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4847" },
+    "id": { "$numberInt": "237" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d9f" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4848" },
+    "id": { "$numberInt": "238" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4849" },
+    "id": { "$numberInt": "239" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484a" },
+    "id": { "$numberInt": "240" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484b" },
+    "id": { "$numberInt": "241" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484c" },
+    "id": { "$numberInt": "242" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484d" },
+    "id": { "$numberInt": "243" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484e" },
+    "id": { "$numberInt": "244" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a484f" },
+    "id": { "$numberInt": "245" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4850" },
+    "id": { "$numberInt": "246" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4851" },
+    "id": { "$numberInt": "247" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3da9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4852" },
+    "id": { "$numberInt": "248" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3daa" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4853" },
+    "id": { "$numberInt": "249" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dab" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4854" },
+    "id": { "$numberInt": "250" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dac" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4855" },
+    "id": { "$numberInt": "251" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dad" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4856" },
+    "id": { "$numberInt": "252" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dae" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4857" },
+    "id": { "$numberInt": "253" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3daf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4858" },
+    "id": { "$numberInt": "254" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4859" },
+    "id": { "$numberInt": "255" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485a" },
+    "id": { "$numberInt": "256" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485b" },
+    "id": { "$numberInt": "257" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485c" },
+    "id": { "$numberInt": "258" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485d" },
+    "id": { "$numberInt": "259" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ee" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485e" },
+    "id": { "$numberInt": "260" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a485f" },
+    "id": { "$numberInt": "261" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4860" },
+    "id": { "$numberInt": "262" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4861" },
+    "id": { "$numberInt": "264" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3db9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4862" },
+    "id": { "$numberInt": "265" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dba" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4863" },
+    "id": { "$numberInt": "266" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dbb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4864" },
+    "id": { "$numberInt": "267" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dbc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b4" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4865" },
+    "id": { "$numberInt": "268" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dbd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1be" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4866" },
+    "id": { "$numberInt": "269" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dbe" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1b2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4867" },
+    "id": { "$numberInt": "271" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dbf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4868" },
+    "id": { "$numberInt": "272" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4869" },
+    "id": { "$numberInt": "273" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486a" },
+    "id": { "$numberInt": "274" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486b" },
+    "id": { "$numberInt": "276" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486c" },
+    "id": { "$numberInt": "277" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486d" },
+    "id": { "$numberInt": "278" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486e" },
+    "id": { "$numberInt": "279" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a486f" },
+    "id": { "$numberInt": "280" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4870" },
+    "id": { "$numberInt": "281" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4871" },
+    "id": { "$numberInt": "282" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dc9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4872" },
+    "id": { "$numberInt": "283" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dca" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4873" },
+    "id": { "$numberInt": "284" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dcb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4874" },
+    "id": { "$numberInt": "285" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dcc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4875" },
+    "id": { "$numberInt": "287" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dcd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a8" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4876" },
+    "id": { "$numberInt": "288" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4877" },
+    "id": { "$numberInt": "290" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4878" },
+    "id": { "$numberInt": "292" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dce" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1dc" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4879" },
+    "id": { "$numberInt": "294" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dcf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1de" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487a" },
+    "id": { "$numberInt": "295" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1df" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487b" },
+    "id": { "$numberInt": "296" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e0" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487c" },
+    "id": { "$numberInt": "304" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487d" },
+    "id": { "$numberInt": "305" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de3" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487e" },
+    "id": { "$numberInt": "306" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a9" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a487f" },
+    "id": { "$numberInt": "307" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cb" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4880" },
+    "id": { "$numberInt": "308" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dde" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4881" },
+    "id": { "$numberInt": "309" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ddf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4882" },
+    "id": { "$numberInt": "310" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de0" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4883" },
+    "id": { "$numberInt": "311" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4884" },
+    "id": { "$numberInt": "312" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de1" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4885" },
+    "id": { "$numberInt": "313" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4886" },
+    "id": { "$numberInt": "314" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4887" },
+    "id": { "$numberInt": "315" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4888" },
+    "id": { "$numberInt": "316" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd9" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4889" },
+    "id": { "$numberInt": "317" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dda" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488a" },
+    "id": { "$numberInt": "318" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ddb" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488b" },
+    "id": { "$numberInt": "319" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ddd" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488c" },
+    "id": { "$numberInt": "320" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3ddc" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488d" },
+    "id": { "$numberInt": "321" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488e" },
+    "id": { "$numberInt": "322" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de2" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c1" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a488f" },
+    "id": { "$numberInt": "323" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de5" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1d6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4890" },
+    "id": { "$numberInt": "325" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dcf" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1c3" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4891" },
+    "id": { "$numberInt": "326" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d33" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1e7" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4892" },
+    "id": { "$numberInt": "327" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d56" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1cf" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4893" },
+    "id": { "$numberInt": "328" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d5b" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bf" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4894" },
+    "id": { "$numberInt": "329" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cbe" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ef" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4895" },
+    "id": { "$numberInt": "330" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3d8e" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1bf" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4896" },
+    "id": { "$numberInt": "331" },
+    "instrumentId": { "$oid": "678e65030d57c31d883a3cd6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ad" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4897" },
+    "id": { "$numberInt": "333" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de6" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f2" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4898" },
+    "id": { "$numberInt": "334" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de7" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1a6" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a4899" },
+    "id": { "$numberInt": "335" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3de8" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1ef" }
+  },
+  {
+    "_id": { "$oid": "678e65040d57c31d883a489a" },
+    "id": { "$numberInt": "336" },
+    "instrumentId": { "$oid": "678e65040d57c31d883a3dd4" },
+    "categoryId": { "$oid": "678e64ab0d57c31d882bf1f3" }
+  }
+]
