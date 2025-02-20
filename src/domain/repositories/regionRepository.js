@@ -11,22 +11,32 @@ class RegionRepository {
   async findAll(queryStr) {
     let query = Region.find({ deleted_at: null }).populate("parent", "name");
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name", "regionCode"])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures but DO NOT apply pagination before counting
+      const features = new APIFeatures(query, queryStr, ["name", "regionCode"])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await Region.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count **before applying pagination**
+      const totalDocuments = await Region.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Now apply pagination
+      features.paginate();
 
-    const regions = await features.query;
-    return { regions, totalDocuments };
+      const regions = await features.query;
+      return { regions, totalDocuments };
+    } else {
+      // If queryStr is empty, return all InstrumentTypes without filtering
+      const regions = await query;
+      const totalDocuments = await Region.countDocuments({
+        deleted_at: null,
+      });
+
+      return { regions, totalDocuments };
+    }
   }
 
   async findRegions() {

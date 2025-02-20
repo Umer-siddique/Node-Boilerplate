@@ -11,22 +11,32 @@ class CategoryRepository {
   async findAll(queryStr) {
     let query = Category.find({ deleted_at: null }).populate("parent", "name");
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name", "code"])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures but DO NOT apply pagination before counting
+      const features = new APIFeatures(query, queryStr, ["name", "code"])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await Category.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count **before applying pagination**
+      const totalDocuments = await Category.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Now apply pagination
+      features.paginate();
 
-    const categories = await features.query;
-    return { categories, totalDocuments };
+      const categories = await features.query;
+      return { categories, totalDocuments };
+    } else {
+      // If queryStr is empty, return all Instruments without filtering
+      const categories = await query;
+      const totalDocuments = await Category.countDocuments({
+        deleted_at: null,
+      });
+
+      return { categories, totalDocuments };
+    }
   }
 
   async findCategories() {

@@ -11,22 +11,32 @@ class InstrumentTypeRepository {
   async findAll(queryStr) {
     let query = InstrumentType.find({ deleted_at: null });
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name"])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures but DO NOT apply pagination before counting
+      const features = new APIFeatures(query, queryStr, ["name"])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await InstrumentType.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count **before applying pagination**
+      const totalDocuments = await InstrumentType.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Now apply pagination
+      features.paginate();
 
-    const instrumentTypes = await features.query;
-    return { instrumentTypes, totalDocuments };
+      const instrumentTypes = await features.query;
+      return { instrumentTypes, totalDocuments };
+    } else {
+      // If queryStr is empty, return all InstrumentTypes without filtering
+      const instrumentTypes = await query;
+      const totalDocuments = await InstrumentType.countDocuments({
+        deleted_at: null,
+      });
+
+      return { instrumentTypes, totalDocuments };
+    }
   }
 
   async findById(id) {

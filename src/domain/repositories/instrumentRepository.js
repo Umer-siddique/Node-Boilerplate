@@ -32,22 +32,32 @@ class InstrumentRepository {
       .populate("relatedTreaties", "name")
       .populate("groups", "name");
 
-    // Create an instance of APIFeatures but DO NOT apply pagination before counting
-    const features = new APIFeatures(query, queryStr, ["name"])
-      .filter()
-      .sort()
-      .limitFields();
+    if (queryStr && Object.keys(queryStr).length > 0) {
+      // Create an instance of APIFeatures but DO NOT apply pagination before counting
+      const features = new APIFeatures(query, queryStr, ["name"])
+        .filter()
+        .sort()
+        .limitFields();
 
-    // Get total count **before applying pagination**
-    const totalDocuments = await Instrument.countDocuments(
-      features.query.getFilter()
-    );
+      // Get total count **before applying pagination**
+      const totalDocuments = await Instrument.countDocuments(
+        features.query.getFilter()
+      );
 
-    // Now apply pagination
-    features.paginate();
+      // Now apply pagination
+      features.paginate();
 
-    const instruments = await features.query;
-    return { instruments, totalDocuments };
+      const instruments = await features.query;
+      return { instruments, totalDocuments };
+    } else {
+      // If queryStr is empty, return all Instruments without filtering
+      const instruments = await query;
+      const totalDocuments = await Instrument.countDocuments({
+        deleted_at: null,
+      });
+
+      return { instruments, totalDocuments };
+    }
   }
 
   async findById(id) {
