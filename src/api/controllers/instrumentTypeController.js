@@ -3,9 +3,11 @@ const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
 
 class InstrumentTypeController {
-  static addInstrumentType = AsyncHandler(async (req, res, next) => {
+  static addInstrumentType = AsyncHandler(async (req, res) => {
+    const user = req.user;
     const instrumentType = await InstrumentTypeService.addInstrumentType(
-      req.body
+      req.body,
+      user
     );
     sendResponse(res, 201, "InstrumentType Added successfully", instrumentType);
   });
@@ -35,21 +37,25 @@ class InstrumentTypeController {
   });
 
   static updateInstrumentType = AsyncHandler(async (req, res, next) => {
+    const user = req.user._id;
     const instrumentType = await InstrumentTypeService.updateInstrumentType(
       req.params.id,
-      req.body
+      req.body,
+      user
     );
     sendResponse(
       res,
       200,
-      "InstrumentType updated sucessfully",
+      "InstrumentType updated successfully",
       instrumentType
     );
   });
 
   static deleteInstrumentType = AsyncHandler(async (req, res, next) => {
+    const user = req.user._id;
     const instrumentType = await InstrumentTypeService.deleteInstrumentType(
-      req.params.id
+      req.params.id,
+      user
     );
     sendResponse(
       res,

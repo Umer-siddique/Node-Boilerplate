@@ -9,6 +9,7 @@ const groupRoutes = require("./groupRoutes");
 const categoryRoutes = require("./categoryRoutes");
 const instrumentRoutes = require("./instrumentRoutes");
 const instrumentTypeRoutes = require("./instrumentTypeRoutes");
+const activityLogRoutes = require("./activityLogRoutes");
 
 const routes = [
   { path: "/users", route: userRoutes },
@@ -19,6 +20,7 @@ const routes = [
   { path: "/categories", route: categoryRoutes },
   { path: "/instruments", route: instrumentRoutes },
   { path: "/instrument-types", route: instrumentTypeRoutes },
+  { path: "/activity-logs", route: activityLogRoutes },
 ];
 
 routes.forEach((route) => {

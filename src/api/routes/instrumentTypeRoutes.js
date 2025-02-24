@@ -1,8 +1,10 @@
 const express = require("express");
 const InstrumentTypeController = require("../controllers/instrumentTypeController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
+
+router.use(authProtect);
 
 router
   .route("/")

@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 const User = require("../../domain/entities/User");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
-const ErrorHandler = require("../../core/utils/ErrorHandler");
+const { AppError } = require("../../core/exceptions");
 
-const authMiddleware = AsyncHandler(async (req, res, next) => {
+const authProtect = AsyncHandler(async (req, res, next) => {
   // 1) Getting token and check of it's there
   let token;
   if (
@@ -17,10 +17,7 @@ const authMiddleware = AsyncHandler(async (req, res, next) => {
 
   if (!token) {
     return next(
-      new ErrorHandler(
-        "You are not logged in! Please log in to get access.",
-        401
-      )
+      new AppError("You are not logged in! Please log in to get access.", 401)
     );
   }
 
@@ -31,7 +28,7 @@ const authMiddleware = AsyncHandler(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
   if (!currentUser) {
     return next(
-      new ErrorHandler(
+      new AppError(
         "The user belonging to this token does no longer exist.",
         401
       )
@@ -39,18 +36,15 @@ const authMiddleware = AsyncHandler(async (req, res, next) => {
   }
 
   // 4) Check if user changed password after the token was issued
-  if (currentUser.changedPasswordAfter(decoded.iat)) {
-    return next(
-      new ErrorHandler(
-        "User recently changed password! Please log in again.",
-        401
-      )
-    );
-  }
+  // if (currentUser.changedPasswordAfter(decoded.iat)) {
+  //   return next(
+  //     new AppError("User recently changed password! Please log in again.", 401)
+  //   );
+  // }
 
   // GRANT ACCESS TO PROTECTED ROUTE
   req.user = currentUser;
   next();
 });
 
-module.exports = authMiddleware;
+module.exports = authProtect;

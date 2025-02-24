@@ -1,6 +1,6 @@
 const ErrorHandler = require("../utils/ErrorHandler");
 
-const authProtectMiddleware = (...roles) => {
+const permissionProtect = (...roles) => {
   return (req, res, next) => {
     // roles ['admin', 'lead-guide']. role='user'
     if (!roles.includes(req.user.role)) {
@@ -16,4 +16,4 @@ const authProtectMiddleware = (...roles) => {
   };
 };
 
-module.exports = authProtectMiddleware;
+module.exports = permissionProtect;
