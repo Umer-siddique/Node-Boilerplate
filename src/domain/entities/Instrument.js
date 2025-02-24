@@ -10,12 +10,10 @@ const instrumentSchema = new mongoose.Schema(
     },
     entryDate: {
       type: Date,
-      // required: [true, "Entry date is required"],
       default: null,
     },
     depositary: {
       type: String,
-      // required: [true, "Please enter depositary"],
       default: "",
     },
     signedDate: {
@@ -24,10 +22,8 @@ const instrumentSchema = new mongoose.Schema(
     },
     signedPlace: {
       type: String,
-      // required: [true, "Signed place is required"],
-      defualt: "",
+      default: "",
     },
-
     relevance: {
       type: Number,
       default: 0,
@@ -48,28 +44,21 @@ const instrumentSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-
     instrumentType: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "InstrumentType",
       default: null,
-      // required: [true, "Please select instrument type"],
     },
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
-      // required: [true, "Please select category"],
-      // index: true,
       default: null,
     },
     subCategory: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
-      // required: [true, "Please select sub category"],
-      // index: true,
       default: null,
     },
-
     relatedTreaties: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -95,33 +84,40 @@ const instrumentSchema = new mongoose.Schema(
           ratified: {
             type: Boolean,
             enum: [true, false],
-            // required: [true, "Ratification status is required"],
             default: false,
           },
           ratificationDate: {
             type: Date,
             required: function () {
               return this.ratified === true;
-            }, // Required only if ratified
+            },
             default: null,
           },
           statusChangeDate: {
             type: Date,
-            required: true, // Tracks when the ratification status changed
+            required: true,
           },
         },
       ],
       default: [],
     },
-
     deleted_at: {
       type: Date,
       default: null,
-      // select: false,
     },
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
+// Virtual for total unique ratifications
+instrumentSchema.virtual("totalRatifications").get(function () {
+  const uniqueCountries = new Set();
+  this.countryRatifications.forEach((ratification) => {
+    uniqueCountries.add(ratification.countryName.toString());
+  });
+  return uniqueCountries.size;
+});
+
 const Instrument = mongoose.model("Instrument", instrumentSchema);
+
 module.exports = Instrument;

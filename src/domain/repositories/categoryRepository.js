@@ -9,7 +9,10 @@ class CategoryRepository {
   }
 
   async findAll(queryStr) {
-    let query = Category.find({ deleted_at: null }).populate("parent", "name");
+    let query = Category.find({ deleted_at: null })
+      .populate("parent", "name")
+      .populate("instruments")
+      .populate("subCategoryInstruments");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting
@@ -26,13 +29,28 @@ class CategoryRepository {
       // Now apply pagination
       features.paginate();
 
-      const categories = await features.query;
-      return { categories, totalDocuments };
+      const _categories = await features.query;
+
+      // Modify the instruments field dynamically
+      _categories.forEach((category) => {
+        category.instruments = category.parent
+          ? category.subCategoryInstruments
+          : category.instruments;
+      });
+
+      return { categories: _categories, totalDocuments };
     } else {
-      // If queryStr is empty, return all Instruments without filtering
+      // If queryStr is empty, return all Categories without filtering
       const categories = await query;
       const totalDocuments = await Category.countDocuments({
         deleted_at: null,
+      });
+
+      // Modify the instruments field dynamically
+      categories.forEach((category) => {
+        category.instruments = category.parent
+          ? category.subCategoryInstruments
+          : category.instruments;
       });
 
       return { categories, totalDocuments };

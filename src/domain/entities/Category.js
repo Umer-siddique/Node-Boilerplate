@@ -23,10 +23,6 @@ const categorySchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    instruments: {
-      type: Number,
-      default: 0,
-    },
     parent: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category", // Self-referencing for hierarchical structure
@@ -60,8 +56,24 @@ const categorySchema = new mongoose.Schema(
       default: null,
     },
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
+
+// Virtual for counting instruments linked to categories
+categorySchema.virtual("instruments", {
+  ref: "Instrument", // Reference the Instrument model
+  localField: "_id", // Field in the Category model
+  foreignField: "category", // Field in the Instrument model
+  count: true, // Return the count of matching documents
+});
+
+// Virtual for counting instruments linked to subcategories
+categorySchema.virtual("subCategoryInstruments", {
+  ref: "Instrument", // Reference the Instrument model
+  localField: "_id", // Field in the Category model
+  foreignField: "subCategory", // Field in the Instrument model
+  count: true, // Return the count of matching documents
+});
 
 // Middleware to generate slug and set depth before saving
 categorySchema.pre("save", function (next) {
@@ -97,9 +109,6 @@ categorySchema.pre("findOneAndUpdate", async function (next) {
 
   next();
 });
-
-// Add a compound index to enforce uniqueness of `name` within the same `parent`
-// categorySchema.index({ name: 1, parent: 1 }, { unique: true });
 
 const Category = mongoose.model("Category", categorySchema);
 
