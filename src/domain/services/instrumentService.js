@@ -6,24 +6,17 @@ const InstrumentRepository = require("../repositories/instrumentRepository");
 const InstrumentTypeRepository = require("../repositories/instrumentTypeRepository");
 const CategoryRepository = require("../repositories/categoryRepository");
 const GroupRepository = require("../repositories/groupRepository");
+const CountryRepository = require("../repositories/countryRepository");
 const { excelSerialToDate } = require("../../core/utils/helpers");
+const { BadRequestError } = require("../../core/exceptions");
 
 const instrumentRepository = new InstrumentRepository();
 const instrumentTypeRepository = new InstrumentTypeRepository();
 const categoryRepository = new CategoryRepository();
 const groupRepository = new GroupRepository();
+const countryRepository = new CountryRepository();
 
 class InstrumentService {
-  // static async addRelatedTreaty(instrumentData) {
-  //   return await instrumentRepository.addTreaty(instrumentData);
-  // }
-  // static async addGroups(instrumentData) {
-  //   return await instrumentRepository.addRelatedGroups(instrumentData);
-  // }
-  // static async getInstrumentsDetails() {
-  //   return await instrumentRepository.findAllInstrumentsDetails();
-  // }
-
   static async importInstrumentsFromFile(filePath) {
     const instruments = [];
 
@@ -85,6 +78,45 @@ class InstrumentService {
   }
   // Helper function to transform and resolve references
   static async transformInstrumentData(instrument) {
+    // Helper function to parse countryRatifications
+    const parseCountryRatifications = async (countryRatifications) => {
+      if (!countryRatifications) return [];
+
+      // Split the comma-separated values into arrays
+      const countries = countryRatifications["Country"].split(",");
+      const ratifiedValues = countryRatifications["Ratified"].split(",");
+      const ratificationDates =
+        countryRatifications["Ratification Date"].split(",");
+
+      // Create an array of countryRatification objects
+      const countryRatificationsArray = await Promise.all(
+        countries.map(async (country, index) => {
+          // Find the country by name and get its ObjectId
+          const countryDoc = await countryRepository.findByName(country.trim());
+          if (!countryDoc) return null;
+
+          // Convert Ratified to boolean
+          const ratified =
+            ratifiedValues[index].trim().toLowerCase() === "true";
+
+          // Convert Ratification Date to a valid date
+          const ratificationDate = excelSerialToDate(
+            ratificationDates[index].trim()
+          );
+
+          return {
+            countryName: countryDoc._id, // Resolved ObjectId
+            ratified,
+            ratificationDate,
+            statusChangeDate: new Date(), // Set to current date or another logic
+          };
+        })
+      );
+
+      // Filter out null values (invalid countries)
+      return countryRatificationsArray.filter((item) => item !== null);
+    };
+
     // Resolve ObjectId references (return null if not found)
     const instrumentType = await instrumentTypeRepository.findByName(
       instrument["Instrument Type"]
@@ -111,6 +143,13 @@ class InstrumentService {
       })
     );
 
+    // Parse countryRatifications
+    const countryRatifications = await parseCountryRatifications({
+      Country: instrument["Country"],
+      Ratified: instrument["Ratified"],
+      "Ratification Date": instrument["Ratification Date"],
+    });
+
     // Transform the instrument data
     return {
       name: instrument["Name"],
@@ -126,6 +165,7 @@ class InstrumentService {
       subCategory: subCategory ? subCategory._id : null, // Allow null
       relatedTreaties: relatedTreaties.filter((id) => id !== null), // Filter out null values
       groups: groups.filter((id) => id !== null), // Filter out null values
+      countryRatifications,
     };
   }
 

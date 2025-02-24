@@ -55,6 +55,13 @@ class CountryRepository {
     }
     return country;
   }
+  async findByName(name) {
+    const country = await Country.findOne({ name });
+    if (!country) {
+      throw new AppError("Country not found", 404); // Throw error directly
+    }
+    return country;
+  }
 
   async update(id, updateData) {
     const country = await Country.findByIdAndUpdate(id, updateData, {
