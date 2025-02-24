@@ -45,6 +45,14 @@ class GroupRepository {
     return group;
   }
 
+  async findByName(name) {
+    const group = await Group.findOne({ name });
+    if (!group) {
+      throw new NotFoundError("Group not found"); // Throw error directly
+    }
+    return group;
+  }
+
   async update(id, updateData) {
     const group = await Group.findByIdAndUpdate(id, updateData, {
       new: true,

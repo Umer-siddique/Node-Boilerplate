@@ -72,6 +72,13 @@ class CategoryRepository {
     }
     return category;
   }
+  async findByName(name) {
+    const category = await Category.findOne({ name });
+    if (!category) {
+      throw new NotFoundError("Category not found");
+    }
+    return category;
+  }
 
   async update(id, updateData) {
     const category = await Category.findByIdAndUpdate(id, updateData, {

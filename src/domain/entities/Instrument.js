@@ -118,9 +118,11 @@ const instrumentSchema = new mongoose.Schema(
 // Virtual for total unique ratifications
 instrumentSchema.virtual("totalRatifications").get(function () {
   const uniqueCountries = new Set();
-  this.countryRatifications.forEach((ratification) => {
-    uniqueCountries.add(ratification.countryName.toString());
-  });
+  if (this.countryRatifications) {
+    this.countryRatifications.forEach((ratification) => {
+      uniqueCountries.add(ratification.countryName.toString());
+    });
+  }
   return uniqueCountries.size;
 });
 

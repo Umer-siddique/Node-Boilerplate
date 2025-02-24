@@ -1,9 +1,10 @@
+const { default: mongoose } = require("mongoose");
 const InstrumentService = require("../../domain/services/instrumentService");
+const { BadRequestError } = require("../../core/exceptions");
 const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
 const Country = require("../../domain/entities/Country");
 const Instrument = require("../../domain/entities/Instrument");
-const { default: mongoose } = require("mongoose");
 
 class InstrumentController {
   static addInstrument = AsyncHandler(async (req, res, next) => {
@@ -16,6 +17,21 @@ class InstrumentController {
       user
     );
     sendResponse(res, 201, "Instrument added successfully", instrument);
+  });
+
+  static importInstruments = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) {
+      throw new BadRequestError("Please upload a file!");
+    }
+
+    // Call the service to process the file
+    const result = await InstrumentService.importInstrumentsFromFile(file.path);
+
+    res.status(200).json({
+      message: "Instruments imported successfully",
+      data: result,
+    });
   });
 
   static getInstruments = AsyncHandler(async (req, res, next) => {

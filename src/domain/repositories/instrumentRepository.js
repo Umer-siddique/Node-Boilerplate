@@ -1,4 +1,4 @@
-const { AppError } = require("../../core/exceptions");
+const { AppError, NotFoundError } = require("../../core/exceptions");
 const APIFeatures = require("../../core/utils/APIFeatures");
 const Instrument = require("../entities/Instrument");
 // const RelatedInstrument = require("../entities/RelatedInstrument");
@@ -22,6 +22,11 @@ class InstrumentRepository {
   async add(instrumentData) {
     const instrument = await Instrument.create(instrumentData);
     return instrument;
+  }
+
+  async create(data) {
+    const instrument = new Instrument(data);
+    return await instrument.save({ runValidators: true, new: true });
   }
 
   async findAll(queryStr) {
@@ -63,6 +68,13 @@ class InstrumentRepository {
 
   async findById(id) {
     const instrument = await Instrument.findById(id);
+    if (!instrument) {
+      throw new AppError("Instrument not found", 404); // Throw error directly
+    }
+    return instrument;
+  }
+  async findByName(name) {
+    const instrument = await Instrument.findOne({ name });
     if (!instrument) {
       throw new AppError("Instrument not found", 404); // Throw error directly
     }
