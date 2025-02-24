@@ -4,7 +4,8 @@ const AsyncHandler = require("../../core/utils/AsyncHandler");
 
 class RegionController {
   static addRegion = AsyncHandler(async (req, res, next) => {
-    const region = await RegionService.addRegion(req.body);
+    const user = req.user._id;
+    const region = await RegionService.addRegion({ ...req.body, user });
     sendResponse(res, 201, "Region Added successfully", region);
   });
 
@@ -37,7 +38,11 @@ class RegionController {
   });
 
   static updateRegion = AsyncHandler(async (req, res, next) => {
-    const region = await RegionService.updateRegion(req.params.id, req.body);
+    const user = req.user._id;
+    const region = await RegionService.updateRegion(req.params.id, {
+      ...req.body,
+      user,
+    });
     sendResponse(res, 200, "Region updated sucessfully", region);
   });
 

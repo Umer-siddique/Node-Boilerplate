@@ -4,7 +4,11 @@ const AsyncHandler = require("../../core/utils/AsyncHandler");
 
 class CategoryController {
   static addCategory = AsyncHandler(async (req, res, next) => {
-    const category = await CategoryService.addCategory(req.body);
+    const user = req.user._id;
+    const category = await CategoryService.addCategory({
+      ...req.body,
+      user,
+    });
     sendResponse(res, 201, "Category Added successfully", category);
   });
 
@@ -42,10 +46,11 @@ class CategoryController {
   });
 
   static updateCategory = AsyncHandler(async (req, res, next) => {
-    const category = await CategoryService.updateCategory(
-      req.params.id,
-      req.body
-    );
+    const user = req.user._id;
+    const category = await CategoryService.updateCategory(req.params.id, {
+      ...req.body,
+      user,
+    });
     sendResponse(res, 200, "Category updated sucessfully", category);
   });
 

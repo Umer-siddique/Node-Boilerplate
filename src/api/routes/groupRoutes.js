@@ -1,8 +1,10 @@
 const express = require("express");
 const GroupController = require("../controllers/groupController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
+
+router.use(authProtect);
 
 router.route("/").get(GroupController.getGroups).post(GroupController.addGroup);
 

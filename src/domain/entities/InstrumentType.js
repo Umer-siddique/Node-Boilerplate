@@ -25,6 +25,11 @@ const instrumentTypeSchema = new mongoose.Schema(
         message: "Status must be either false (Inactive) or true (Active)",
       },
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
 
     deleted_at: {
       type: Date,

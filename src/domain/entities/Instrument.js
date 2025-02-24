@@ -101,6 +101,12 @@ const instrumentSchema = new mongoose.Schema(
       ],
       default: [],
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
+
     deleted_at: {
       type: Date,
       default: null,

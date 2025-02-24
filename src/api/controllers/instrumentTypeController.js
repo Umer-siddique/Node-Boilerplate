@@ -6,7 +6,7 @@ class InstrumentTypeController {
   static addInstrumentType = AsyncHandler(async (req, res) => {
     const user = req.user;
     const instrumentType = await InstrumentTypeService.addInstrumentType(
-      req.body,
+      { ...req.body, user },
       user
     );
     sendResponse(res, 201, "InstrumentType Added successfully", instrumentType);
@@ -40,7 +40,7 @@ class InstrumentTypeController {
     const user = req.user._id;
     const instrumentType = await InstrumentTypeService.updateInstrumentType(
       req.params.id,
-      req.body,
+      { ...req.body, user },
       user
     );
     sendResponse(
@@ -52,10 +52,9 @@ class InstrumentTypeController {
   });
 
   static deleteInstrumentType = AsyncHandler(async (req, res, next) => {
-    const user = req.user._id;
     const instrumentType = await InstrumentTypeService.deleteInstrumentType(
       req.params.id,
-      user
+      req.user._id
     );
     sendResponse(
       res,

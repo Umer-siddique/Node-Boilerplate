@@ -9,10 +9,9 @@ class CountryRepository {
   }
 
   async findAll(queryStr) {
-    let query = Country.find({ deleted_at: null }).populate(
-      "regions",
-      "name type"
-    );
+    let query = Country.find({ deleted_at: null })
+      .populate("user", "name email")
+      .populate("regions", "name type");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures only if queryStr exists

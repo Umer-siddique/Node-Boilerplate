@@ -4,7 +4,8 @@ const AsyncHandler = require("../../core/utils/AsyncHandler");
 
 class GroupController {
   static addGroup = AsyncHandler(async (req, res, next) => {
-    const group = await GroupService.addGroup(req.body);
+    const user = req.user._id;
+    const group = await GroupService.addGroup({ ...req.body, user });
     sendResponse(res, 201, "Group Added successfully", group);
   });
 
@@ -27,7 +28,11 @@ class GroupController {
   });
 
   static updateGroup = AsyncHandler(async (req, res, next) => {
-    const group = await GroupService.updateGroup(req.params.id, req.body);
+    const user = req.user._id;
+    const group = await GroupService.updateGroup(req.params.id, {
+      ...req.body,
+      user,
+    });
     sendResponse(res, 200, "Group updated sucessfully", group);
   });
 

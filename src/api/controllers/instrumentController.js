@@ -7,7 +7,14 @@ const { default: mongoose } = require("mongoose");
 
 class InstrumentController {
   static addInstrument = AsyncHandler(async (req, res, next) => {
-    const instrument = await InstrumentService.addInstrument(req.body);
+    const user = req.user._id;
+    const instrument = await InstrumentService.addInstrument(
+      {
+        ...req.body,
+        user,
+      },
+      user
+    );
     sendResponse(res, 201, "Instrument added successfully", instrument);
   });
 
@@ -30,15 +37,20 @@ class InstrumentController {
   });
 
   static updateInstrument = AsyncHandler(async (req, res, next) => {
+    const user = req.user._id;
     const instrument = await InstrumentService.updateInstrument(
       req.params.id,
-      req.body
+      { ...req.body, user },
+      user
     );
     sendResponse(res, 200, "Instrument updated sucessfully", instrument);
   });
 
   static deleteInstrument = AsyncHandler(async (req, res, next) => {
-    const instrument = await InstrumentService.deleteInstrument(req.params.id);
+    const instrument = await InstrumentService.deleteInstrument(
+      req.params.id,
+      req.user._id
+    );
     sendResponse(res, 204, "Instrument deleted sucessfully", instrument);
   });
 

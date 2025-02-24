@@ -9,7 +9,10 @@ class InstrumentTypeRepository {
   }
 
   async findAll(queryStr) {
-    let query = InstrumentType.find({ deleted_at: null });
+    let query = InstrumentType.find({ deleted_at: null }).populate(
+      "user",
+      "name email"
+    );
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting

@@ -9,7 +9,7 @@ class GroupRepository {
   }
 
   async findAll(queryStr) {
-    let query = Group.find({ deleted_at: null });
+    let query = Group.find({ deleted_at: null }).populate("user", "name email");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures only if queryStr exists

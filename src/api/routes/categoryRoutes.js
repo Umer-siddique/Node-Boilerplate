@@ -1,8 +1,10 @@
 const express = require("express");
 const CategoryController = require("../controllers/categoryController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
+
+router.use(authProtect);
 
 router.get("/parents", CategoryController.getParentCategories);
 router.get("/childs", CategoryController.getChildCategories);

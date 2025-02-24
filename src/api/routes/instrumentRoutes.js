@@ -1,6 +1,6 @@
 const express = require("express");
 const InstrumentController = require("../controllers/instrumentController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
@@ -8,6 +8,8 @@ const router = express.Router();
 // router.post("/create-detail", InstrumentController.addInstrumentDetail);
 // router.post("/add-related-treaty", InstrumentController.addRelatedTreaty);
 // router.post("/add-groups", InstrumentController.addGroups);
+
+router.use(authProtect);
 
 router.get(
   "/:id/ratification-history",

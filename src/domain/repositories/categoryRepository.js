@@ -10,6 +10,7 @@ class CategoryRepository {
 
   async findAll(queryStr) {
     let query = Category.find({ deleted_at: null })
+      .populate("user", "name email")
       .populate("parent", "name")
       .populate("instruments")
       .populate("subCategoryInstruments");

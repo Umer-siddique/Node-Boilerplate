@@ -9,7 +9,9 @@ class RegionRepository {
   }
 
   async findAll(queryStr) {
-    let query = Region.find({ deleted_at: null }).populate("parent", "name");
+    let query = Region.find({ deleted_at: null })
+      .populate("user", "name email")
+      .populate("parent", "name");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting

@@ -1,8 +1,10 @@
 const express = require("express");
 const RegionController = require("../controllers/regionController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
+
+router.use(authProtect);
 
 router.get("/parents", RegionController.getParentRegions);
 router.get("/childs", RegionController.getChildRegions);

@@ -1,8 +1,12 @@
 const express = require("express");
 const UserController = require("../controllers/userController");
-const authMiddleware = require("../middlewares/authMiddleware");
+const authProtect = require("../middlewares/authMiddleware");
+const permissionProtect = require("../middlewares/authProtectMiddleware");
 
 const router = express.Router();
+
+router.use(authProtect);
+// router.use(permissionProtect("super admin"));
 
 router.get("/", UserController.getUsers);
 

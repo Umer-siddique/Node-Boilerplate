@@ -4,7 +4,11 @@ const AsyncHandler = require("../../core/utils/AsyncHandler");
 
 class CountryController {
   static addCountry = AsyncHandler(async (req, res, next) => {
-    const country = await CountryService.addCountry(req.body);
+    const user = req.user._id;
+    const country = await CountryService.addCountry({
+      ...req.body,
+      user,
+    });
     sendResponse(res, 201, "Country Added successfully", country);
   });
 
@@ -33,7 +37,11 @@ class CountryController {
   });
 
   static updateCountry = AsyncHandler(async (req, res, next) => {
-    const country = await CountryService.updateCountry(req.params.id, req.body);
+    const user = req.user._id;
+    const country = await CountryService.updateCountry(req.params.id, {
+      ...req.body,
+      user,
+    });
     sendResponse(res, 200, "Country updated sucessfully", country);
   });
 
