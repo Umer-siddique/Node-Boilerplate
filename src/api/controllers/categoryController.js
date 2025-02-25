@@ -1,6 +1,7 @@
 const CategoryService = require("../../domain/services/categoryService");
 const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
+const { BadRequestError } = require("../../core/exceptions");
 
 class CategoryController {
   static addCategory = AsyncHandler(async (req, res, next) => {
@@ -10,6 +11,19 @@ class CategoryController {
       user,
     });
     sendResponse(res, 201, "Category Added successfully", category);
+  });
+
+  static importCategories = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) throw new BadRequestError("No file uploaded");
+
+    // Call the service to process the file
+    const result = await CategoryService.importCategoriesFromFile(file.path);
+
+    res.status(200).json({
+      message: "Categories imported successfully",
+      data: result,
+    });
   });
 
   static getCategories = AsyncHandler(async (req, res, next) => {

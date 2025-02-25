@@ -9,6 +9,21 @@ class RegionController {
     sendResponse(res, 201, "Region Added successfully", region);
   });
 
+  static importRegions = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) {
+      return res.status(400).json({ message: "No file uploaded" });
+    }
+
+    // Call the service to process the file
+    const result = await RegionService.importRegionsFromFile(file.path);
+
+    res.status(200).json({
+      message: "Regions imported successfully",
+      data: result,
+    });
+  });
+
   static getRegions = AsyncHandler(async (req, res, next) => {
     const { regions, totalDocuments } = await RegionService.getAllRegion(
       req.query

@@ -8,6 +8,11 @@ class RegionRepository {
     return region;
   }
 
+  async create(data) {
+    const region = new Region(data);
+    return await region.save({ runValidators: true, new: true });
+  }
+
   async findAll(queryStr) {
     let query = Region.find({ deleted_at: null })
       .populate("user", "name email")
@@ -54,6 +59,10 @@ class RegionRepository {
       throw new NotFoundError("Region not found");
     }
     return region;
+  }
+
+  async findByName(name) {
+    return await Region.findOne({ name });
   }
 
   async update(id, updateData) {

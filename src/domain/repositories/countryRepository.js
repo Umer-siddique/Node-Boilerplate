@@ -8,6 +8,11 @@ class CountryRepository {
     return country;
   }
 
+  async create(data) {
+    const country = new Country(data);
+    return await country.save({ runValidators: true, new: true });
+  }
+
   async findAll(queryStr) {
     let query = Country.find({ deleted_at: null })
       .populate("user", "name email")

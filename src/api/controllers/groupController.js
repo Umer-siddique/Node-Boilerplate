@@ -1,3 +1,4 @@
+const { BadRequestError } = require("../../core/exceptions");
 const GroupService = require("../../domain/services/groupService");
 const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
@@ -7,6 +8,21 @@ class GroupController {
     const user = req.user._id;
     const group = await GroupService.addGroup({ ...req.body, user });
     sendResponse(res, 201, "Group Added successfully", group);
+  });
+
+  static importGroups = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) {
+      return res.status(400).json({ message: "No file uploaded" });
+    }
+
+    // Call the service to process the file
+    const result = await GroupService.importGroupsFromFile(file.path);
+
+    res.status(200).json({
+      message: "Groups imported successfully",
+      data: result,
+    });
   });
 
   static getGroups = AsyncHandler(async (req, res, next) => {

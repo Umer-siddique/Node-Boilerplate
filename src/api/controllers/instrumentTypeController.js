@@ -1,6 +1,7 @@
 const InstrumentTypeService = require("../../domain/services/instrumentTypeService");
 const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
+const { BadRequestError } = require("../../core/exceptions");
 
 class InstrumentTypeController {
   static addInstrumentType = AsyncHandler(async (req, res) => {
@@ -10,6 +11,37 @@ class InstrumentTypeController {
       user
     );
     sendResponse(res, 201, "InstrumentType Added successfully", instrumentType);
+  });
+
+  static importInstrumentTypes = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) {
+      throw new BadRequestError("No file uploaded!");
+    }
+
+    // Call the service to process the file
+    const result = await InstrumentTypeService.importInstrumentTypeFromFile(
+      file.path
+    );
+
+    res.status(200).json({
+      message: "Instrument Types imported successfully",
+      data: result,
+    });
+  });
+
+  static getCountries = AsyncHandler(async (req, res, next) => {
+    const { countries, totalDocuments } = await CountryService.getAllCountry(
+      req.query
+    );
+
+    sendResponse(
+      res,
+      200,
+      "Countries fetched successfully",
+      countries,
+      totalDocuments
+    );
   });
 
   static getInstrumentTypes = AsyncHandler(async (req, res, next) => {

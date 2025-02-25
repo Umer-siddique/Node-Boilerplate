@@ -1,6 +1,7 @@
 const CountryService = require("../../domain/services/countryService");
 const { sendResponse } = require("../../core/utils/response");
 const AsyncHandler = require("../../core/utils/AsyncHandler");
+const { BadRequestError } = require("../../core/exceptions");
 
 class CountryController {
   static addCountry = AsyncHandler(async (req, res, next) => {
@@ -10,6 +11,21 @@ class CountryController {
       user,
     });
     sendResponse(res, 201, "Country Added successfully", country);
+  });
+
+  static importCountries = AsyncHandler(async (req, res, next) => {
+    const file = req.file;
+    if (!file) {
+      throw new BadRequestError("No file uploaded!");
+    }
+
+    // Call the service to process the file
+    const result = await CountryService.importCountriesFromFile(file.path);
+
+    res.status(200).json({
+      message: "Countries imported successfully",
+      data: result,
+    });
   });
 
   static getCountries = AsyncHandler(async (req, res, next) => {

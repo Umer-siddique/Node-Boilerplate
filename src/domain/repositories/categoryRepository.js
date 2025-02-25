@@ -8,6 +8,11 @@ class CategoryRepository {
     return category;
   }
 
+  async create(data) {
+    const category = new Category(data);
+    return await category.save({ runValidators: true, new: true });
+  }
+
   async findAll(queryStr) {
     let query = Category.find({ deleted_at: null })
       .populate("user", "name email")

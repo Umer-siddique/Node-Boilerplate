@@ -8,6 +8,11 @@ class InstrumentTypeRepository {
     return instrumentType;
   }
 
+  async create(data) {
+    const instrumentType = new InstrumentType(data);
+    return await instrumentType.save({ runValidators: true, new: true });
+  }
+
   async findAll(queryStr) {
     let query = InstrumentType.find({ deleted_at: null }).populate(
       "user",

@@ -1,9 +1,72 @@
 const InstrumentTypeRepository = require("../repositories/instrumentTypeRepository");
 const ActivityLogService = require("../services/activityLogService");
+const csv = require("csv-parser");
+const fs = require("fs");
+const XLSX = require("xlsx");
 
 const instrumentTypeRepository = new InstrumentTypeRepository();
 
 class InstrumentTypeService {
+  static async importInstrumentTypeFromFile(filePath) {
+    const instrumentTypes = [];
+
+    // Check the file extension
+    const fileExtension = filePath.split(".").pop().toLowerCase();
+
+    if (fileExtension === "csv") {
+      // Parse CSV file
+      await new Promise((resolve, reject) => {
+        fs.createReadStream(filePath)
+          .pipe(csv())
+          .on("data", (row) => instrumentTypes.push(row))
+          .on("end", resolve)
+          .on("error", reject);
+      });
+    } else if (fileExtension === "xlsx") {
+      // Parse Excel file
+      const workbook = XLSX.readFile(filePath);
+      const sheetName = workbook.SheetNames[0]; // Use the first sheet
+      const sheet = workbook.Sheets[sheetName];
+      instrumentTypes.push(...XLSX.utils.sheet_to_json(sheet));
+    } else {
+      throw new Error(
+        "Unsupported file type. Only CSV and Excel files are allowed."
+      );
+    }
+
+    // Transform and save each instrumentType
+    const savedInstrumentTypes = [];
+    for (const instrumentType of instrumentTypes) {
+      try {
+        const transformedInstrumentType =
+          this.transformInstrumentTypeData(instrumentType);
+
+        // Save the instrumentType
+        const savedInstrumentType = await instrumentTypeRepository.create(
+          transformedInstrumentType
+        );
+        savedInstrumentTypes.push(savedInstrumentType);
+      } catch (error) {
+        console.error(
+          `Error processing instrumentType: ${instrumentType.name}`,
+          error
+        );
+      }
+    }
+
+    return savedInstrumentTypes;
+  }
+
+  // Helper function to transform instrumentType data
+  static transformInstrumentTypeData(instrumentType) {
+    // console.log("InstrumentTypes", instrumentType);
+    return {
+      name: instrumentType["Name"],
+      order: instrumentType["Order"],
+      status: instrumentType["Active"] === "Yes",
+    };
+  }
+
   static async addInstrumentType(instrumentTypeData, userId) {
     const instrumentType = await instrumentTypeRepository.add(
       instrumentTypeData

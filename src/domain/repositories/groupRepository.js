@@ -8,6 +8,11 @@ class GroupRepository {
     return group;
   }
 
+  async create(data) {
+    const group = new Group(data);
+    return await group.save({ runValidators: true, new: true });
+  }
+
   async findAll(queryStr) {
     let query = Group.find({ deleted_at: null }).populate("user", "name email");
 
