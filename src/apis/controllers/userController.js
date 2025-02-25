@@ -5,10 +5,7 @@ const createSendToken = require("../../core/utils/createSendToken");
 
 class UserController {
   static createUser = AsyncHandler(async (req, res, next) => {
-    const user = await UserService.createUser({
-      ...req.body,
-      user: req.user._id,
-    });
+    const user = await UserService.createUser(req.body);
     sendResponse(res, 201, "User created successfully", user);
   });
 

@@ -4,7 +4,7 @@ const authProtect = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
-router.post("/signup", authProtect, UserController.createUser);
+router.post("/signup", UserController.createUser);
 router.post("/login", UserController.loginUser);
 
 module.exports = router;
