@@ -26,7 +26,10 @@ class InstrumentController {
     }
 
     // Call the service to process the file
-    const result = await InstrumentService.importInstrumentsFromFile(file.path);
+    const result = await InstrumentService.importInstrumentsFromFile(
+      req.user._id,
+      file.path
+    );
 
     res.status(200).json({
       message: "Instruments imported successfully",

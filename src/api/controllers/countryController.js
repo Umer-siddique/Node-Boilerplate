@@ -20,7 +20,10 @@ class CountryController {
     }
 
     // Call the service to process the file
-    const result = await CountryService.importCountriesFromFile(file.path);
+    const result = await CountryService.importCountriesFromFile(
+      req.user._id,
+      file.path
+    );
 
     res.status(200).json({
       message: "Countries imported successfully",

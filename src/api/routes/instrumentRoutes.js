@@ -11,12 +11,6 @@ const router = express.Router();
 // router.post("/add-groups", InstrumentController.addGroups);
 // Route for importing instruments via CSV/Excel
 
-router.post(
-  "/import",
-  upload.single("file"),
-  InstrumentController.importInstruments
-);
-
 router.get(
   "/:id/ratification-history",
   InstrumentController.getRatificationHistoryByCountries
@@ -26,7 +20,14 @@ router.get(
   "/:instrumentId/country-ratifications",
   InstrumentController.getInstrumentRatifiedByCountries
 );
+
 router.use(authProtect);
+
+router.post(
+  "/import",
+  upload.single("file"),
+  InstrumentController.importInstruments
+);
 
 router
   .route("/")

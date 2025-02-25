@@ -16,7 +16,10 @@ class RegionController {
     }
 
     // Call the service to process the file
-    const result = await RegionService.importRegionsFromFile(file.path);
+    const result = await RegionService.importRegionsFromFile(
+      req.user._id,
+      file.path
+    );
 
     res.status(200).json({
       message: "Regions imported successfully",

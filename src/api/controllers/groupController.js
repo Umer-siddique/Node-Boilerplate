@@ -17,7 +17,10 @@ class GroupController {
     }
 
     // Call the service to process the file
-    const result = await GroupService.importGroupsFromFile(file.path);
+    const result = await GroupService.importGroupsFromFile(
+      req.user._id,
+      file.path
+    );
 
     res.status(200).json({
       message: "Groups imported successfully",

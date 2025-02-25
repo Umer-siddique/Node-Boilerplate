@@ -18,7 +18,10 @@ class CategoryController {
     if (!file) throw new BadRequestError("No file uploaded");
 
     // Call the service to process the file
-    const result = await CategoryService.importCategoriesFromFile(file.path);
+    const result = await CategoryService.importCategoriesFromFile(
+      req.user._id,
+      file.path
+    );
 
     res.status(200).json({
       message: "Categories imported successfully",

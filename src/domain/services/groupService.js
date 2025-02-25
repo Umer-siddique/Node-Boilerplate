@@ -6,7 +6,7 @@ const XLSX = require("xlsx");
 const groupRepository = new GroupRepository();
 
 class GroupService {
-  static async importGroupsFromFile(filePath) {
+  static async importGroupsFromFile(user, filePath) {
     const groups = [];
 
     // Check the file extension
@@ -37,7 +37,7 @@ class GroupService {
     const savedGroups = [];
     for (const group of groups) {
       try {
-        const transformedGroup = this.transformGroupData(group);
+        const transformedGroup = this.transformGroupData(user, group);
 
         // Save the group
         const savedGroup = await groupRepository.create(transformedGroup);
@@ -51,11 +51,12 @@ class GroupService {
   }
 
   // Helper function to transform group data
-  static transformGroupData(group) {
+  static transformGroupData(user, group) {
     // console.log("Groups", group);
     return {
       name: group["Name"],
       status: group["Active"] === "Yes",
+      user,
     };
   }
 

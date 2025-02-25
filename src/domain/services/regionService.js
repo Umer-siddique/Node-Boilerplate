@@ -8,7 +8,7 @@ const regionRepository = new RegionRepository();
 const countryRepository = new CountryRepository();
 
 class RegionService {
-  static async importRegionsFromFile(filePath) {
+  static async importRegionsFromFile(user, filePath) {
     const regions = [];
 
     // Check the file extension
@@ -39,7 +39,7 @@ class RegionService {
     const savedRegions = [];
     for (const region of regions) {
       try {
-        const transformedRegion = await this.transformRegionData(region);
+        const transformedRegion = await this.transformRegionData(user, region);
 
         // Save the region
         const savedRegion = await regionRepository.create(transformedRegion);
@@ -53,7 +53,7 @@ class RegionService {
   }
 
   // Helper function to transform region data
-  static async transformRegionData(region) {
+  static async transformRegionData(user, region) {
     // Resolve parent region (if provided)
     let parent = null;
     if (region["Parent"]) {
@@ -85,6 +85,7 @@ class RegionService {
       regionType: region["Region Type"],
       type, // Set type based on parent
       countries, // Resolved array of ObjectId or empty array
+      user,
     };
   }
 

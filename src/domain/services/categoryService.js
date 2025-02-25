@@ -6,7 +6,7 @@ const XLSX = require("xlsx");
 const categoryRepository = new CategoryRepository();
 
 class CategoryService {
-  static async importCategoriesFromFile(filePath) {
+  static async importCategoriesFromFile(user, filePath) {
     const categories = [];
 
     // Check the file extension
@@ -37,7 +37,10 @@ class CategoryService {
     const savedCategories = [];
     for (const category of categories) {
       try {
-        const transformedCategory = await this.transformCategoryData(category);
+        const transformedCategory = await this.transformCategoryData(
+          user,
+          category
+        );
 
         // Save the category
         const savedCategory = await categoryRepository.create(
@@ -53,7 +56,7 @@ class CategoryService {
   }
 
   // Helper function to transform category data
-  static async transformCategoryData(category) {
+  static async transformCategoryData(user, category) {
     // Resolve parent category (if provided)
     let parent = null;
     if (category["Parent"]) {
@@ -72,6 +75,7 @@ class CategoryService {
       parent, // Resolved ObjectId or null
       status: category["Active"] === "Yes", // Convert to boolean
       type, // Set type based on parent
+      user,
     };
   }
 

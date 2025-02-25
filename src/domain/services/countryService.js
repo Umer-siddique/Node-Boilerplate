@@ -6,7 +6,7 @@ const XLSX = require("xlsx");
 const countryRepository = new CountryRepository();
 
 class CountryService {
-  static async importCountriesFromFile(filePath) {
+  static async importCountriesFromFile(user, filePath) {
     const countries = [];
 
     // Check the file extension
@@ -37,7 +37,7 @@ class CountryService {
     const savedCountries = [];
     for (const country of countries) {
       try {
-        const transformedCountry = this.transformCountryData(country);
+        const transformedCountry = this.transformCountryData(user, country);
 
         // Save the country
         const savedCountry = await countryRepository.create(transformedCountry);
@@ -51,7 +51,7 @@ class CountryService {
   }
 
   // Helper function to transform group data
-  static transformCountryData(country) {
+  static transformCountryData(user, country) {
     console.log("country", country);
     return {
       name: country["Name"]?.trim(),
@@ -60,6 +60,7 @@ class CountryService {
       iso_03_num: country["ISO 3 Num"]?.toString(),
       continent: country["Continent"]?.trim(),
       status: country["Active"]?.trim() === "Yes",
+      user,
     };
   }
 

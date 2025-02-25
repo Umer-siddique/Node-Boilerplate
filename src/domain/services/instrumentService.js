@@ -17,7 +17,7 @@ const groupRepository = new GroupRepository();
 const countryRepository = new CountryRepository();
 
 class InstrumentService {
-  static async importInstrumentsFromFile(filePath) {
+  static async importInstrumentsFromFile(user, filePath) {
     const instruments = [];
 
     // Check the file extension
@@ -49,6 +49,7 @@ class InstrumentService {
     for (const instrument of instruments) {
       try {
         const transformedInstrument = await this.transformInstrumentData(
+          user,
           instrument
         );
 
@@ -77,7 +78,7 @@ class InstrumentService {
     return savedInstruments;
   }
   // Helper function to transform and resolve references
-  static async transformInstrumentData(instrument) {
+  static async transformInstrumentData(user, instrument) {
     // Helper function to parse countryRatifications
     const parseCountryRatifications = async (countryRatifications) => {
       if (!countryRatifications) return [];
@@ -166,6 +167,7 @@ class InstrumentService {
       relatedTreaties: relatedTreaties.filter((id) => id !== null), // Filter out null values
       groups: groups.filter((id) => id !== null), // Filter out null values
       countryRatifications,
+      user,
     };
   }
 

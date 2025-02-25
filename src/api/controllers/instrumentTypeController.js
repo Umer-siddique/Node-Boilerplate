@@ -21,6 +21,7 @@ class InstrumentTypeController {
 
     // Call the service to process the file
     const result = await InstrumentTypeService.importInstrumentTypeFromFile(
+      req.user._id,
       file.path
     );
 

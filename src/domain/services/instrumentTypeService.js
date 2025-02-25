@@ -7,7 +7,7 @@ const XLSX = require("xlsx");
 const instrumentTypeRepository = new InstrumentTypeRepository();
 
 class InstrumentTypeService {
-  static async importInstrumentTypeFromFile(filePath) {
+  static async importInstrumentTypeFromFile(user, filePath) {
     const instrumentTypes = [];
 
     // Check the file extension
@@ -38,8 +38,10 @@ class InstrumentTypeService {
     const savedInstrumentTypes = [];
     for (const instrumentType of instrumentTypes) {
       try {
-        const transformedInstrumentType =
-          this.transformInstrumentTypeData(instrumentType);
+        const transformedInstrumentType = this.transformInstrumentTypeData(
+          user,
+          instrumentType
+        );
 
         // Save the instrumentType
         const savedInstrumentType = await instrumentTypeRepository.create(
@@ -58,12 +60,13 @@ class InstrumentTypeService {
   }
 
   // Helper function to transform instrumentType data
-  static transformInstrumentTypeData(instrumentType) {
+  static transformInstrumentTypeData(user, instrumentType) {
     // console.log("InstrumentTypes", instrumentType);
     return {
       name: instrumentType["Name"],
       order: instrumentType["Order"],
       status: instrumentType["Active"] === "Yes",
+      user,
     };
   }
 

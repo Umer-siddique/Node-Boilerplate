@@ -5,10 +5,9 @@ const upload = require("../../config/multer"); // Import the multer config
 
 const router = express.Router();
 
-router.post("/import", upload.single("file"), GroupController.importGroups);
-
 router.use(authProtect);
 
+router.post("/import", upload.single("file"), GroupController.importGroups);
 router.route("/").get(GroupController.getGroups).post(GroupController.addGroup);
 
 router

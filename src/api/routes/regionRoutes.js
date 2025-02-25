@@ -5,9 +5,9 @@ const upload = require("../../config/multer"); // Import the multer config
 
 const router = express.Router();
 
-router.post("/import", upload.single("file"), RegionController.importRegions);
-
 router.use(authProtect);
+
+router.post("/import", upload.single("file"), RegionController.importRegions);
 
 router.get("/parents", RegionController.getParentRegions);
 router.get("/childs", RegionController.getChildRegions);
