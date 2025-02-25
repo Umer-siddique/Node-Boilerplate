@@ -8,7 +8,10 @@ class UserRepository {
   }
 
   async findAll(queryStr) {
-    let query = User.find({ deleted_at: null, role: { $ne: "super admin" } });
+    let query = User.find({
+      deleted_at: null,
+      role: { $ne: "super admin" },
+    }).populate("user", "name email");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting

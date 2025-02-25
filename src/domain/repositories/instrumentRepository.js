@@ -36,7 +36,8 @@ class InstrumentRepository {
       .populate("subCategory", "name")
       .populate("instrumentType", "name")
       .populate("relatedTreaties", "name")
-      .populate("groups", "name");
+      .populate("groups", "name")
+      .populate("countryRatifications.countryName", "name");
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting

@@ -5,7 +5,10 @@ const createSendToken = require("../../core/utils/createSendToken");
 
 class UserController {
   static createUser = AsyncHandler(async (req, res, next) => {
-    const user = await UserService.createUser(req.body);
+    const user = await UserService.createUser({
+      ...req.body,
+      user: req.user._id,
+    });
     sendResponse(res, 201, "User created successfully", user);
   });
 
@@ -26,7 +29,10 @@ class UserController {
   });
 
   static updateUser = AsyncHandler(async (req, res, next) => {
-    const user = await UserService.updateUser(req.params.id, req.body);
+    const user = await UserService.updateUser(req.params.id, {
+      ...req.body,
+      user: req.user._id,
+    });
     sendResponse(res, 200, "User updated successfully", user);
   });
   static deleteUser = AsyncHandler(async (req, res, next) => {
