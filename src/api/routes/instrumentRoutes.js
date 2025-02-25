@@ -21,6 +21,11 @@ router.get(
   InstrumentController.getInstrumentRatifiedByCountries
 );
 
+router.get(
+  "/total-ratifications",
+  InstrumentController.getInstrumentsTotalRatificaitons
+);
+
 router.use(authProtect);
 
 router.post(

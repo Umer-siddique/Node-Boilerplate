@@ -115,7 +115,7 @@ const instrumentSchema = new mongoose.Schema(
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
-// Virtual for total unique ratifications
+// Virtual for total unique ratifications per instrument
 instrumentSchema.virtual("totalRatifications").get(function () {
   const uniqueCountries = new Set();
   if (this.countryRatifications) {
@@ -125,6 +125,23 @@ instrumentSchema.virtual("totalRatifications").get(function () {
   }
   return uniqueCountries.size;
 });
+
+// Static method to calculate total sum of ratifications across all instruments
+instrumentSchema.statics.getTotalRatificationsSum = async function () {
+  const instruments = await this.find({}).select("countryRatifications");
+
+  const uniqueCountries = new Set();
+
+  instruments.forEach((instrument) => {
+    if (instrument.countryRatifications) {
+      instrument.countryRatifications.forEach((ratification) => {
+        uniqueCountries.add(ratification.countryName.toString());
+      });
+    }
+  });
+
+  return uniqueCountries.size;
+};
 
 const Instrument = mongoose.model("Instrument", instrumentSchema);
 

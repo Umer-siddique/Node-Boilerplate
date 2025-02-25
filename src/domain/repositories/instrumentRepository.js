@@ -66,6 +66,11 @@ class InstrumentRepository {
     }
   }
 
+  async getTotalRatifications() {
+    const totalRatificationsSum = await Instrument.getTotalRatificationsSum();
+    return totalRatificationsSum;
+  }
+
   async findById(id) {
     const instrument = await Instrument.findById(id);
     if (!instrument) {

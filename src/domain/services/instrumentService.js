@@ -189,6 +189,9 @@ class InstrumentService {
   static async getAllInstrument(queryStr) {
     return await instrumentRepository.findAll(queryStr);
   }
+  static async getInstrumentsTotalRatificaitons(queryStr) {
+    return await instrumentRepository.getTotalRatifications();
+  }
 
   static async getInstrumentById(instrumentId) {
     return await instrumentRepository.findById(instrumentId);

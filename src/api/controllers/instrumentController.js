@@ -50,6 +50,18 @@ class InstrumentController {
     );
   });
 
+  static getInstrumentsTotalRatificaitons = AsyncHandler(
+    async (req, res, next) => {
+      const totalOverallRatificaitons =
+        await InstrumentService.getInstrumentsTotalRatificaitons();
+
+      res.status(200).json({
+        status: "success",
+        overallRatifications: totalOverallRatificaitons,
+      });
+    }
+  );
+
   static getInstrument = AsyncHandler(async (req, res, next) => {
     const instrument = await InstrumentService.getInstrumentById(req.params.id);
     sendResponse(res, 200, "Instrument fetched successfully", instrument);
