@@ -15,7 +15,7 @@ const { logger } = require("./core/logging/logger");
 const config = require("./config/env/develoment");
 const ErrorHandler = require("./core/utils/ErrorHandler");
 const { AppError } = require("./core/exceptions/index");
-const routes = require("./api/routes");
+const routes = require("./apis/routes");
 
 // Start express app
 const app = express();
@@ -72,7 +72,7 @@ app.use(compression());
 app.use("/", express.static(path.join(__dirname, "public")));
 
 // Our First Root Route
-app.use("/", require("./api/routes/root"));
+app.use("/", require("./apis/routes/root"));
 
 // Remaining App Routes
 app.use("/api/v1", routes);
