@@ -1,7 +1,7 @@
 const ActivityLogService = require("./activityLogService");
 const XLSX = require("xlsx");
 const csv = require("csv-parser");
-const fs = require("fs");
+const stream = require("stream");
 const InstrumentRepository = require("../repositories/instrumentRepository");
 const InstrumentTypeRepository = require("../repositories/instrumentTypeRepository");
 const CategoryRepository = require("../repositories/categoryRepository");
@@ -17,29 +17,34 @@ const groupRepository = new GroupRepository();
 const countryRepository = new CountryRepository();
 
 class InstrumentService {
-  static async importInstrumentsFromFile(user, filePath) {
+  static async importInstrumentsFromFile(user, fileBuffer, fileType) {
     const instruments = [];
 
-    // Check the file extension
-    const fileExtension = filePath.split(".").pop().toLowerCase();
-
-    if (fileExtension === "csv") {
-      // Parse CSV file
+    // Check the file type (MIME type)
+    if (fileType === "text/csv") {
+      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
-        fs.createReadStream(filePath)
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(fileBuffer);
+
+        bufferStream
           .pipe(csv())
           .on("data", (row) => instruments.push(row))
           .on("end", resolve)
           .on("error", reject);
       });
-    } else if (fileExtension === "xlsx") {
-      // Parse Excel file
-      const workbook = XLSX.readFile(filePath);
+    } else if (
+      fileType === "application/vnd.ms-excel" ||
+      fileType ===
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ) {
+      // Parse Excel file from buffer
+      const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
       instruments.push(...XLSX.utils.sheet_to_json(sheet));
     } else {
-      throw new Error(
+      throw new BadRequestError(
         "Unsupported file type. Only CSV and Excel files are allowed."
       );
     }
@@ -77,6 +82,7 @@ class InstrumentService {
 
     return savedInstruments;
   }
+
   // Helper function to transform and resolve references
   static async transformInstrumentData(user, instrument) {
     // Helper function to parse countryRatifications

@@ -6,24 +6,30 @@ const XLSX = require("xlsx");
 const countryRepository = new CountryRepository();
 
 class CountryService {
-  static async importCountriesFromFile(user, filePath) {
+  static async importCountriesFromFile(user, fileBuffer, fileType) {
     const countries = [];
 
-    // Check the file extension
-    const fileExtension = filePath.split(".").pop().toLowerCase();
-
-    if (fileExtension === "csv") {
-      // Parse CSV file
+    // Check the file type (MIME type)
+    if (fileType === "text/csv") {
+      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
-        fs.createReadStream(filePath)
+        const stream = require("stream");
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(fileBuffer);
+
+        bufferStream
           .pipe(csv())
           .on("data", (row) => countries.push(row))
           .on("end", resolve)
           .on("error", reject);
       });
-    } else if (fileExtension === "xlsx") {
-      // Parse Excel file
-      const workbook = XLSX.readFile(filePath);
+    } else if (
+      fileType === "application/vnd.ms-excel" ||
+      fileType ===
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ) {
+      // Parse Excel file from buffer
+      const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
       countries.push(...XLSX.utils.sheet_to_json(sheet));
@@ -50,9 +56,8 @@ class CountryService {
     return savedCountries;
   }
 
-  // Helper function to transform group data
+  // Helper function to transform country data
   static transformCountryData(user, country) {
-    console.log("country", country);
     return {
       name: country["Name"]?.trim(),
       iso_02: country["ISO 2"]?.trim(),

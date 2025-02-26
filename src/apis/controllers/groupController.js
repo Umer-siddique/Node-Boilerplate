@@ -13,13 +13,14 @@ class GroupController {
   static importGroups = AsyncHandler(async (req, res, next) => {
     const file = req.file;
     if (!file) {
-      return res.status(400).json({ message: "No file uploaded" });
+      throw new BadRequestError("No file uploaded!");
     }
 
     // Call the service to process the file
     const result = await GroupService.importGroupsFromFile(
       req.user._id,
-      file.path
+      file.buffer, // Pass the file buffer
+      file.mimetype // Pass the file MIME type
     );
 
     res.status(200).json({

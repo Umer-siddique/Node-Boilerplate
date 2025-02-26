@@ -1,5 +1,5 @@
 const csv = require("csv-parser");
-const fs = require("fs");
+const stream = require("stream");
 const XLSX = require("xlsx");
 const RegionRepository = require("../repositories/regionRepository");
 const CountryRepository = require("../repositories/countryRepository");
@@ -8,24 +8,30 @@ const regionRepository = new RegionRepository();
 const countryRepository = new CountryRepository();
 
 class RegionService {
-  static async importRegionsFromFile(user, filePath) {
+  static async importRegionsFromFile(user, fileBuffer, fileType) {
     const regions = [];
 
-    // Check the file extension
-    const fileExtension = filePath.split(".").pop().toLowerCase();
-
-    if (fileExtension === "csv") {
-      // Parse CSV file
+    // Check the file type (MIME type)
+    if (fileType === "text/csv") {
+      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
-        fs.createReadStream(filePath)
+        const stream = require("stream");
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(fileBuffer);
+
+        bufferStream
           .pipe(csv())
           .on("data", (row) => regions.push(row))
           .on("end", resolve)
           .on("error", reject);
       });
-    } else if (fileExtension === "xlsx") {
-      // Parse Excel file
-      const workbook = XLSX.readFile(filePath);
+    } else if (
+      fileType === "application/vnd.ms-excel" ||
+      fileType ===
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ) {
+      // Parse Excel file from buffer
+      const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
       regions.push(...XLSX.utils.sheet_to_json(sheet));
@@ -40,6 +46,12 @@ class RegionService {
     for (const region of regions) {
       try {
         const transformedRegion = await this.transformRegionData(user, region);
+
+        // Validate required fields
+        if (!transformedRegion.name || !transformedRegion.regionCode) {
+          console.error(`Skipping region: Missing required fields`, region);
+          continue; // Skip this region if required fields are missing
+        }
 
         // Save the region
         const savedRegion = await regionRepository.create(transformedRegion);
@@ -78,11 +90,11 @@ class RegionService {
     }
 
     return {
-      name: region["Name"],
-      regionCode: region["Region Code"],
+      name: region["Name"]?.trim(), // Ensure name is trimmed and not null
+      regionCode: region["Region Code"], // Ensure regionCode is trimmed and not null
       parent, // Resolved ObjectId or null
-      status: region["Active"].toString() === "Yes", // Convert to boolean
-      regionType: region["Region Type"],
+      status: region["Active"]?.toString() === "Yes", // Convert to boolean
+      regionType: region["Region Type"]?.trim(), // Ensure regionType is trimmed and not null
       type, // Set type based on parent
       countries, // Resolved array of ObjectId or empty array
       user,

@@ -20,13 +20,14 @@ class InstrumentTypeController {
     }
 
     // Call the service to process the file
-    const result = await InstrumentTypeService.importInstrumentTypeFromFile(
+    const result = await InstrumentTypeService.importInstrumentTypesFromFile(
       req.user._id,
-      file.path
+      file.buffer, // Pass the file buffer
+      file.mimetype // Pass the file MIME type
     );
 
     res.status(200).json({
-      message: "Instrument Types imported successfully",
+      message: "InstrumentTypes imported successfully",
       data: result,
     });
   });

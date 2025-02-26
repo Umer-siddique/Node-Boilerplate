@@ -20,7 +20,8 @@ class CategoryController {
     // Call the service to process the file
     const result = await CategoryService.importCategoriesFromFile(
       req.user._id,
-      file.path
+      file.buffer, // Pass the file buffer
+      file.mimetype // Pass the file MIME type
     );
 
     res.status(200).json({

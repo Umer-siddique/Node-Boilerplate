@@ -1,19 +1,7 @@
 const multer = require("multer");
-const path = require("path");
 
 // Configure storage for uploaded files
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    // Set the destination folder for uploaded files
-    cb(null, "src/uploads/");
-  },
-  filename: (req, file, cb) => {
-    // Set the filename to avoid conflicts (e.g., using a timestamp)
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    const ext = path.extname(file.originalname); // Get the file extension
-    cb(null, file.fieldname + "-" + uniqueSuffix + ext);
-  },
-});
+const storage = multer.memoryStorage();
 
 // Filter to allow only specific file types (e.g., CSV or Excel)
 const fileFilter = (req, file, cb) => {

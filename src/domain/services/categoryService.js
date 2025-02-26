@@ -1,29 +1,34 @@
 const CategoryRepository = require("../repositories/categoryRepository");
 const csv = require("csv-parser");
-const fs = require("fs");
 const XLSX = require("xlsx");
+const stream = require("stream");
 
 const categoryRepository = new CategoryRepository();
 
 class CategoryService {
-  static async importCategoriesFromFile(user, filePath) {
+  static async importCategoriesFromFile(user, fileBuffer, fileType) {
     const categories = [];
 
-    // Check the file extension
-    const fileExtension = filePath.split(".").pop().toLowerCase();
-
-    if (fileExtension === "csv") {
-      // Parse CSV file
+    // Check the file type (MIME type)
+    if (fileType === "text/csv") {
+      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
-        fs.createReadStream(filePath)
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(fileBuffer);
+
+        bufferStream
           .pipe(csv())
           .on("data", (row) => categories.push(row))
           .on("end", resolve)
           .on("error", reject);
       });
-    } else if (fileExtension === "xlsx") {
-      // Parse Excel file
-      const workbook = XLSX.readFile(filePath);
+    } else if (
+      fileType === "application/vnd.ms-excel" ||
+      fileType ===
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ) {
+      // Parse Excel file from buffer
+      const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
       categories.push(...XLSX.utils.sheet_to_json(sheet));
