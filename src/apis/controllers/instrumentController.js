@@ -104,10 +104,24 @@ class InstrumentController {
 
       // Convert ratifications into a map for easy lookup
       const ratificationMap = {};
-      instrument.countryRatifications.forEach((rat) => {
-        ratificationMap[rat.countryName] = {
-          ratified: rat.ratified,
-          ratificationDate: rat.ratified ? rat.ratificationDate : null,
+      instrument.countryRatifications.forEach((country) => {
+        // Find the latest ratification entry for the country
+        const latestRatification = country.ratifications.reduce(
+          (latest, current) => {
+            if (!latest || current.ratificationDate > latest.ratificationDate) {
+              return current;
+            }
+            return latest;
+          },
+          null
+        );
+
+        // Store the latest ratification status in the map
+        ratificationMap[country.countryName.toString()] = {
+          ratified: latestRatification ? latestRatification.ratified : false,
+          ratificationDate: latestRatification
+            ? latestRatification.ratificationDate
+            : null,
         };
       });
 
@@ -116,15 +130,15 @@ class InstrumentController {
         _id: country._id,
         countryName: country.name,
         isoCode: country.iso_02,
-        ratified: ratificationMap[country._id]?.ratified || false,
+        ratified: ratificationMap[country._id.toString()]?.ratified || false,
         ratificationDate:
-          ratificationMap[country._id]?.ratificationDate || null,
+          ratificationMap[country._id.toString()]?.ratificationDate || null,
       }));
 
       sendResponse(
         res,
         200,
-        "InstrumentRatifiedByCountries fetched sucessfully",
+        "InstrumentRatifiedByCountries fetched successfully",
         result
       );
     }
@@ -150,13 +164,23 @@ class InstrumentController {
       );
 
       const history = await Instrument.aggregate([
+        // Match the instrument by ID
         { $match: { _id: new mongoose.Types.ObjectId(id) } },
+
+        // Unwind the countryRatifications array
         { $unwind: "$countryRatifications" },
+
+        // Match only the specified countries
         {
           $match: {
-            "countryRatifications.countryName": { $in: countryObjectIds }, // Match multiple countries
+            "countryRatifications.countryName": { $in: countryObjectIds },
           },
         },
+
+        // Unwind the ratifications array for each country
+        { $unwind: "$countryRatifications.ratifications" },
+
+        // Lookup country details
         {
           $lookup: {
             from: "countries", // Ensure this matches the actual collection name
@@ -165,16 +189,25 @@ class InstrumentController {
             as: "countryDetails",
           },
         },
+
+        // Unwind the countryDetails array
         { $unwind: "$countryDetails" },
+
+        // Project the required fields
         {
           $project: {
             countryName: "$countryDetails.name",
-            ratified: "$countryRatifications.ratified",
-            ratificationDate: "$countryRatifications.ratificationDate",
+            ratified: "$countryRatifications.ratifications.ratified",
+            ratificationDate:
+              "$countryRatifications.ratifications.ratificationDate",
             signedDate: "$signedDate",
           },
         },
+
+        // Sort by ratificationDate
         { $sort: { ratificationDate: 1 } },
+
+        // Group by countryName and build the history array
         {
           $group: {
             _id: "$countryName",
@@ -188,7 +221,7 @@ class InstrumentController {
                       {
                         case: { $eq: ["$ratified", false] },
                         then: "Not Ratified",
-                      }, // Replace "De-Ratified" with "Not Ratified"
+                      },
                     ],
                     default: "Not Ratified",
                   },
@@ -201,6 +234,8 @@ class InstrumentController {
             },
           },
         },
+
+        // Add the initial "Not Ratified" period and calculate end dates
         {
           $project: {
             _id: 0,

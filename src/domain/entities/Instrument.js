@@ -95,25 +95,29 @@ const instrumentSchema = new mongoose.Schema(
             ref: "Country",
             required: [true, "Please provide a country"],
           },
-          ratified: {
-            type: Boolean,
-            enum: [true, false],
-            default: false,
-          },
-          ratificationDate: {
-            type: Date,
-            required: function () {
-              return this.ratified === true;
+          ratifications: [
+            {
+              ratified: {
+                type: Boolean,
+                enum: [true, false],
+                default: false,
+              },
+              ratificationDate: {
+                type: Date,
+                required: function () {
+                  return this.ratified === true;
+                },
+                default: null,
+              },
+              statusChangeDate: {
+                type: Date,
+                required: true,
+              },
             },
-            default: null,
-          },
-          statusChangeDate: {
-            type: Date,
-            required: true,
-          },
+          ],
         },
       ],
-      default: [],
+      default: [], // Correct placement of default
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -133,11 +137,11 @@ const instrumentSchema = new mongoose.Schema(
 instrumentSchema.virtual("totalRatifications").get(function () {
   const uniqueCountries = new Set();
   if (this.countryRatifications) {
-    this.countryRatifications.forEach((ratification) => {
-      uniqueCountries.add(ratification.countryName.toString());
+    this.countryRatifications.forEach((country) => {
+      uniqueCountries.add(country.countryName.toString()); // Add the country ID to the Set
     });
   }
-  return uniqueCountries.size;
+  return uniqueCountries.size; // Return the number of unique countries
 });
 
 // Static method to calculate total sum of ratifications across all instruments
@@ -148,13 +152,13 @@ instrumentSchema.statics.getTotalRatificationsSum = async function () {
 
   instruments.forEach((instrument) => {
     if (instrument.countryRatifications) {
-      instrument.countryRatifications.forEach((ratification) => {
-        uniqueCountries.add(ratification.countryName.toString());
+      instrument.countryRatifications.forEach((country) => {
+        uniqueCountries.add(country.countryName.toString()); // Add the country ID to the Set
       });
     }
   });
 
-  return uniqueCountries.size;
+  return uniqueCountries.size; // Return the number of unique countries
 };
 
 const Instrument = mongoose.model("Instrument", instrumentSchema);
