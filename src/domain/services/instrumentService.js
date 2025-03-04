@@ -2,6 +2,7 @@ const ActivityLogService = require("./activityLogService");
 const XLSX = require("xlsx");
 const csv = require("csv-parser");
 const stream = require("stream");
+const { generateUUID } = require("../../core/utils/helpers");
 const InstrumentRepository = require("../repositories/instrumentRepository");
 const InstrumentTypeRepository = require("../repositories/instrumentTypeRepository");
 const CategoryRepository = require("../repositories/categoryRepository");
@@ -49,34 +50,50 @@ class InstrumentService {
       );
     }
 
-    // Transform and save each instrument
+    // Transform and save/update each instrument
     const savedInstruments = [];
     for (const instrument of instruments) {
+      // console.log("ExcelInstrument", instrument);
       try {
-        const transformedInstrument = await this.transformInstrumentData(
-          user,
-          instrument
-        );
+        // console.log(
+        //   "InstrumentIDS",
+        //   instrument["Old ID"],
+        //   instrument["New ID"]
+        // );
 
-        // Check if required fields are valid
-        if (
-          transformedInstrument.name &&
-          transformedInstrument.signedDate &&
-          transformedInstrument.instrumentType &&
-          transformedInstrument.category &&
-          transformedInstrument.subCategory
-        ) {
-          const savedInstrument = await instrumentRepository.create(
+        // Check if the instrument has an Old ID and New ID
+        if (instrument["Old ID"] && instrument["New ID"]) {
+          const transformedInstrument = await this.transformInstrumentData(
+            user,
+            instrument
+          );
+          // console.log("TransformedInstrument", transformedInstrument);
+          // Perform update operation
+          const updatedInstrument = await instrumentRepository.update(
+            instrument["New ID"],
             transformedInstrument
           );
-          savedInstruments.push(savedInstrument);
+          savedInstruments.push(updatedInstrument);
         } else {
-          console.warn(
-            `Skipping invalid instrument: ${transformedInstrument.name}`
-          );
+          // Perform create operation
+          const { instrumentId, ...cleanInstrument } =
+            await this.transformInstrumentData(user, instrument);
+
+          // console.log("TransformedInstrument", cleanInstrument);
+
+          const _savedInstrument = await instrumentRepository.create({
+            ...cleanInstrument,
+            instrumentUUID: generateUUID(),
+          });
+          // console.log("CreatedInstrument", _savedInstrument);
+          savedInstruments.push(_savedInstrument);
         }
       } catch (error) {
-        console.error(`Error processing instrument: ${instrument.name}`, error);
+        console.error("Error processing instrument:", error);
+        throw new BadRequestError(
+          `Error processing instrument: ${instrument.Name}`,
+          error
+        );
       }
     }
 
@@ -86,8 +103,18 @@ class InstrumentService {
   // Helper function to transform and resolve references
   static async transformInstrumentData(user, instrument) {
     // Helper function to parse countryRatifications
+
+    console.log("Instrument", instrument);
+
     const parseCountryRatifications = async (countryRatifications) => {
-      if (!countryRatifications) return [];
+      if (
+        !countryRatifications ||
+        !countryRatifications["Country"] ||
+        !countryRatifications["Ratified"] ||
+        !countryRatifications["Ratification Date"]
+      ) {
+        return [];
+      }
 
       // Split the comma-separated values into arrays
       const countries = countryRatifications["Country"].split(",");
@@ -104,11 +131,11 @@ class InstrumentService {
 
           // Convert Ratified to boolean
           const ratified =
-            ratifiedValues[index].trim().toLowerCase() === "true";
+            ratifiedValues[index]?.trim().toLowerCase() === "true";
 
           // Convert Ratification Date to a valid date
           const ratificationDate = excelSerialToDate(
-            ratificationDates[index].trim()
+            ratificationDates[index]?.trim()
           );
 
           return {
@@ -125,30 +152,34 @@ class InstrumentService {
     };
 
     // Resolve ObjectId references (return null if not found)
-    const instrumentType = await instrumentTypeRepository.findByName(
-      instrument["Instrument Type"]
-    );
-    const category = await categoryRepository.findByName(
-      instrument["Category"]
-    );
-    const subCategory = await categoryRepository.findByName(
-      instrument["Sub Category"]
-    );
+    const instrumentType = instrument["Instrument Type"]
+      ? await instrumentTypeRepository.findByName(instrument["Instrument Type"])
+      : null;
+    const category = instrument["Category"]
+      ? await categoryRepository.findByName(instrument["Category"])
+      : null;
+    const subCategory = instrument["Sub Category"]
+      ? await categoryRepository.findByName(instrument["Sub Category"])
+      : null;
 
     // Resolve Related Treaties and Groups (comma-separated names)
-    const relatedTreaties = await Promise.all(
-      instrument["Related Treaties"].split(",").map(async (name) => {
-        const treaty = await instrumentRepository.findByName(name.trim());
-        return treaty ? treaty._id : null; // Return null if not found
-      })
-    );
+    const relatedTreaties = instrument["Related Treaties"]
+      ? await Promise.all(
+          instrument["Related Treaties"].split(",").map(async (name) => {
+            const treaty = await instrumentRepository.findByName(name.trim());
+            return treaty ? treaty._id : null; // Return null if not found
+          })
+        )
+      : [];
 
-    const groups = await Promise.all(
-      instrument["Groups"].split(",").map(async (name) => {
-        const group = await groupRepository.findByName(name.trim());
-        return group ? group._id : null; // Return null if not found
-      })
-    );
+    const groups = instrument["Groups"]
+      ? await Promise.all(
+          instrument["Groups"].split(",").map(async (name) => {
+            const group = await groupRepository.findByName(name.trim());
+            return group ? group._id : null; // Return null if not found
+          })
+        )
+      : [];
 
     // Parse countryRatifications
     const countryRatifications = await parseCountryRatifications({
@@ -159,14 +190,22 @@ class InstrumentService {
 
     // Transform the instrument data
     return {
-      name: instrument["Name"],
-      entryDate: excelSerialToDate(instrument["Entry Date"]), // Convert Excel serial to date
-      depositary: instrument["Depositary"],
-      signedDate: excelSerialToDate(instrument["Signed Date"]), // Convert Excel serial to date
-      signedPlace: instrument["SignedPlace"],
-      aboutInfo: instrument["About Info"],
-      relevantInfo: instrument["Relevant Info"],
-      additionalInfo: instrument["Additional Info"],
+      name: instrument["Name"]?.trim(),
+      entryDate: instrument["Entry Into Force"]
+        ? excelSerialToDate(instrument["Entry Into Force"])
+        : null,
+      depositary: instrument["Depositary"]?.trim(),
+      signedDate: instrument["Signed Date"]
+        ? excelSerialToDate(instrument["Signed Date"])
+        : null,
+
+      instrumentUUID: instrument["UUID"]?.trim(),
+      signedPlace: instrument["Signed Place"]?.trim(),
+      relevance: instrument["Relevance"],
+      ratification: instrument["Ratification"]?.trim(),
+      aboutInfo: instrument["About Info"]?.trim(),
+      relevantInfo: instrument["Relevant Info"]?.trim(),
+      additionalInfo: instrument["Additional Info"]?.trim(),
       instrumentType: instrumentType ? instrumentType._id : null, // Allow null
       category: category ? category._id : null, // Allow null
       subCategory: subCategory ? subCategory._id : null, // Allow null
@@ -174,6 +213,7 @@ class InstrumentService {
       groups: groups.filter((id) => id !== null), // Filter out null values
       countryRatifications,
       user,
+      instrumentId: instrument["Old ID"], // Include Old ID
     };
   }
 

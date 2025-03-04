@@ -1,3 +1,5 @@
+const { customAlphabet } = require("nanoid");
+
 const generateRandomString = (length) => {
   const chars =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -6,6 +8,13 @@ const generateRandomString = (length) => {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   return result;
+};
+
+// Only digits, 6 characters long
+
+const generateUUID = () => {
+  const generator = customAlphabet("0123456789", 6);
+  return generator();
 };
 
 // Helper function to convert Excel serial numbers to dates
@@ -37,4 +46,4 @@ const excelSerialToDate = (serial) => {
   return null;
 };
 
-module.exports = { generateRandomString, excelSerialToDate };
+module.exports = { generateRandomString, excelSerialToDate, generateUUID };

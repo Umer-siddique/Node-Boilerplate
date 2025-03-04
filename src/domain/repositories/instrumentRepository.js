@@ -1,6 +1,7 @@
 const { AppError, NotFoundError } = require("../../core/exceptions");
 const APIFeatures = require("../../core/utils/APIFeatures");
 const Instrument = require("../entities/Instrument");
+const Counter = require("../entities/Counter");
 // const RelatedInstrument = require("../entities/RelatedInstrument");
 // const InstrumentDetail = require("../entities/InstrumentDetail");
 // const InstrumentGroup = require("../entities/InstrumentGroup");
@@ -19,12 +20,23 @@ class InstrumentRepository {
   //   return await InstrumentDetail.find();
   // }
 
-  async add(instrumentData) {
-    const instrument = await Instrument.create(instrumentData);
-    return instrument;
-  }
+  // async add(instrumentData) {
+  //   const instrument = await Instrument.create(instrumentData);
+  //   return instrument;
+  // }
 
   async create(data) {
+    // Find and update the counter in one atomic operation
+    const counter = await Counter.findOneAndUpdate(
+      { model: "Instrument" }, // Identify the counter by model name
+      { $inc: { count: 1 } }, // Increment the count by 1
+      { new: true, upsert: true } // Return the updated document and create if not exists
+    );
+
+    // Assign the incremented instrumentId to the new document
+    data.instrumentId = counter.count;
+
+    // Create and save the instrument
     const instrument = new Instrument(data);
     return await instrument.save({ runValidators: true, new: true });
   }
@@ -52,7 +64,7 @@ class InstrumentRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const instruments = await features.query;
       return { instruments, totalDocuments };
@@ -80,7 +92,10 @@ class InstrumentRepository {
     return instrument;
   }
   async findByName(name) {
-    const instrument = await Instrument.findOne({ name });
+    return await Instrument.findOne({ name });
+  }
+  async findByUUID(uuid) {
+    const instrument = await Instrument.findOne({ instrumentUUID: uuid });
     if (!instrument) {
       throw new AppError("Instrument not found", 404); // Throw error directly
     }

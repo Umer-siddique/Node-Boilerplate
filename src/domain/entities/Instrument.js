@@ -2,6 +2,16 @@ const mongoose = require("mongoose");
 
 const instrumentSchema = new mongoose.Schema(
   {
+    instrumentUUID: {
+      type: String,
+      required: [true, "Instrument UUID is required"],
+      unique: true,
+      index: true,
+    },
+    instrumentId: {
+      type: Number,
+      default: null,
+    },
     name: {
       type: String,
       required: [true, "Instrument name is required"],
@@ -18,13 +28,17 @@ const instrumentSchema = new mongoose.Schema(
     },
     signedDate: {
       type: Date,
-      required: [true, "Signed date is required"],
+      // required: [true, "Signed date is required"],
     },
     signedPlace: {
       type: String,
       default: "",
     },
     relevance: {
+      type: Number,
+      default: 0,
+    },
+    ratification: {
       type: Number,
       default: 0,
     },
