@@ -53,7 +53,10 @@ class InstrumentRepository {
 
     if (queryStr && Object.keys(queryStr).length > 0) {
       // Create an instance of APIFeatures but DO NOT apply pagination before counting
-      const features = new APIFeatures(query, queryStr, ["name"])
+      const features = new APIFeatures(query, queryStr, [
+        "name",
+        "instrumentUUID",
+      ])
         .filter()
         .sort()
         .limitFields();
