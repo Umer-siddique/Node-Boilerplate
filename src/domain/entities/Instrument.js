@@ -136,11 +136,28 @@ const instrumentSchema = new mongoose.Schema(
 // Virtual for total unique ratifications per instrument
 instrumentSchema.virtual("totalRatifications").get(function () {
   const uniqueCountries = new Set();
+
   if (this.countryRatifications) {
     this.countryRatifications.forEach((country) => {
-      uniqueCountries.add(country.countryName.toString()); // Add the country ID to the Set
+      if (country.ratifications && country.ratifications.length > 0) {
+        // Find the latest ratification based on statusChangeDate
+        const latestRatification = country.ratifications.reduce(
+          (latest, current) => {
+            return new Date(current.statusChangeDate) >
+              new Date(latest.statusChangeDate)
+              ? current
+              : latest;
+          }
+        );
+
+        // Check if the latest ratification is ratified
+        if (latestRatification.ratified === true) {
+          uniqueCountries.add(country.countryName.toString()); // Add the country to the Set
+        }
+      }
     });
   }
+
   return uniqueCountries.size; // Return the number of unique countries
 });
 
@@ -153,7 +170,22 @@ instrumentSchema.statics.getTotalRatificationsSum = async function () {
   instruments.forEach((instrument) => {
     if (instrument.countryRatifications) {
       instrument.countryRatifications.forEach((country) => {
-        uniqueCountries.add(country.countryName.toString()); // Add the country ID to the Set
+        if (country.ratifications && country.ratifications.length > 0) {
+          // Find the latest ratification based on statusChangeDate
+          const latestRatification = country.ratifications.reduce(
+            (latest, current) => {
+              return new Date(current.statusChangeDate) >
+                new Date(latest.statusChangeDate)
+                ? current
+                : latest;
+            }
+          );
+
+          // Check if the latest ratification is ratified
+          if (latestRatification.ratified === true) {
+            uniqueCountries.add(country.countryName.toString()); // Add the country to the Set
+          }
+        }
       });
     }
   });
