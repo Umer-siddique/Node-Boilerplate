@@ -144,6 +144,178 @@ class InstrumentController {
     }
   );
 
+  // static getRatificationHistoryByCountries = AsyncHandler(
+  //   async (req, res, next) => {
+  //     const { id } = req.params;
+  //     let { countryIds } = req.query;
+
+  //     if (!countryIds) {
+  //       return res
+  //         .status(400)
+  //         .json({ message: "countryIds query parameter is required" });
+  //     }
+
+  //     countryIds = countryIds.split(",");
+  //     const countryObjectIds = countryIds.map(
+  //       (id) => new mongoose.Types.ObjectId(id)
+  //     );
+
+  //     const history = await Instrument.aggregate([
+  //       { $match: { _id: new mongoose.Types.ObjectId(id) } },
+  //       { $unwind: "$countryRatifications" },
+  //       {
+  //         $match: {
+  //           "countryRatifications.countryName": { $in: countryObjectIds },
+  //         },
+  //       },
+  //       { $unwind: "$countryRatifications.ratifications" },
+  //       {
+  //         $lookup: {
+  //           from: "countries",
+  //           localField: "countryRatifications.countryName",
+  //           foreignField: "_id",
+  //           as: "countryDetails",
+  //         },
+  //       },
+  //       { $unwind: "$countryDetails" },
+
+  //       // Project necessary fields including ratification status and statusChangeDate
+  //       {
+  //         $project: {
+  //           countryName: "$countryDetails.name",
+  //           ratified: "$countryRatifications.ratifications.ratified",
+  //           ratificationDate:
+  //             "$countryRatifications.ratifications.ratificationDate",
+  //           statusChangeDate:
+  //             "$countryRatifications.ratifications.statusChangeDate",
+  //           signedDate: "$signedDate",
+  //         },
+  //       },
+
+  //       // Sort by countryName and statusChangeDate to detect consecutive statuses
+  //       { $sort: { countryName: 1, statusChangeDate: 1 } },
+
+  //       // Group consecutive identical statuses into single entries (keep the latest date per block)
+  //       {
+  //         $group: {
+  //           _id: { countryName: "$countryName", ratified: "$ratified" },
+  //           signedDate: { $first: "$signedDate" }, // Retain signedDate for later
+  //           ratificationDate: { $last: "$ratificationDate" }, // Get the latest date in each block
+  //           statusChangeDate: { $last: "$statusChangeDate" }, // This helps identify latest change in a block
+  //         },
+  //       },
+
+  //       // Resort after grouping so history forms correctly
+  //       { $sort: { "_id.countryName": 1, statusChangeDate: 1 } },
+
+  //       // Reshape data to prepare for building history
+  //       {
+  //         $project: {
+  //           countryName: "$_id.countryName",
+  //           ratified: "$_id.ratified",
+  //           ratificationDate: 1,
+  //           signedDate: 1,
+  //         },
+  //       },
+
+  //       // Group by country to build history array with deduplicated ratification periods
+  //       {
+  //         $group: {
+  //           _id: "$countryName",
+  //           signedDate: { $first: "$signedDate" },
+  //           history: {
+  //             $push: {
+  //               status: {
+  //                 $cond: {
+  //                   if: { $eq: ["$ratified", true] },
+  //                   then: "Ratified",
+  //                   else: "Not Ratified",
+  //                 },
+  //               },
+  //               period: {
+  //                 start: "$ratificationDate",
+  //                 end: null,
+  //               },
+  //             },
+  //           },
+  //         },
+  //       },
+
+  //       // Add initial period and calculate period end dates
+  //       {
+  //         $project: {
+  //           _id: 0,
+  //           countryName: "$_id",
+  //           history: {
+  //             $concatArrays: [
+  //               [
+  //                 {
+  //                   status: "Not Ratified",
+  //                   period: {
+  //                     start: "$signedDate",
+  //                     end: { $arrayElemAt: ["$history.period.start", 0] },
+  //                   },
+  //                 },
+  //               ],
+  //               {
+  //                 $map: {
+  //                   input: "$history",
+  //                   as: "h",
+  //                   in: {
+  //                     status: "$$h.status",
+  //                     period: {
+  //                       start: "$$h.period.start",
+  //                       end: {
+  //                         $cond: {
+  //                           if: {
+  //                             $gt: [
+  //                               {
+  //                                 $indexOfArray: [
+  //                                   "$history.period.start",
+  //                                   "$$h.period.start",
+  //                                 ],
+  //                               },
+  //                               -1,
+  //                             ],
+  //                           },
+  //                           then: {
+  //                             $arrayElemAt: [
+  //                               "$history.period.start",
+  //                               {
+  //                                 $add: [
+  //                                   {
+  //                                     $indexOfArray: [
+  //                                       "$history.period.start",
+  //                                       "$$h.period.start",
+  //                                     ],
+  //                                   },
+  //                                   1,
+  //                                 ],
+  //                               },
+  //                             ],
+  //                           },
+  //                           else: null,
+  //                         },
+  //                       },
+  //                     },
+  //                   },
+  //                 },
+  //               },
+  //             ],
+  //           },
+  //         },
+  //       },
+  //     ]);
+
+  //     sendResponse(
+  //       res,
+  //       200,
+  //       "Instrument Ratification History fetched successfully",
+  //       history
+  //     );
+  //   }
+  // );
+
   static getRatificationHistoryByCountries = AsyncHandler(
     async (req, res, next) => {
       const { id } = req.params;
