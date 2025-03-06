@@ -79,9 +79,9 @@ class CategoryRepository {
   }
   async findByName(name) {
     const category = await Category.findOne({ name });
-    if (!category) {
-      throw new NotFoundError("Category not found");
-    }
+    // if (!category) {
+    //   throw new NotFoundError("Category not found");
+    // }
     return category;
   }
 

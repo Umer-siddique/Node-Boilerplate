@@ -140,15 +140,9 @@ instrumentSchema.virtual("totalRatifications").get(function () {
   if (this.countryRatifications) {
     this.countryRatifications.forEach((country) => {
       if (country.ratifications && country.ratifications.length > 0) {
-        // Find the latest ratification based on statusChangeDate
-        const latestRatification = country.ratifications.reduce(
-          (latest, current) => {
-            return new Date(current.statusChangeDate) >
-              new Date(latest.statusChangeDate)
-              ? current
-              : latest;
-          }
-        );
+        // Pick the last ratification in the array as the latest
+        const latestRatification =
+          country.ratifications[country.ratifications.length - 1];
 
         // Check if the latest ratification is ratified
         if (latestRatification.ratified === true) {
@@ -171,15 +165,9 @@ instrumentSchema.statics.getTotalRatificationsSum = async function () {
     if (instrument.countryRatifications) {
       instrument.countryRatifications.forEach((country) => {
         if (country.ratifications && country.ratifications.length > 0) {
-          // Find the latest ratification based on statusChangeDate
-          const latestRatification = country.ratifications.reduce(
-            (latest, current) => {
-              return new Date(current.statusChangeDate) >
-                new Date(latest.statusChangeDate)
-                ? current
-                : latest;
-            }
-          );
+          // Pick the last ratification in the array as the latest
+          const latestRatification =
+            country.ratifications[country.ratifications.length - 1];
 
           // Check if the latest ratification is ratified
           if (latestRatification.ratified === true) {

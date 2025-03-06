@@ -20,10 +20,17 @@ class InstrumentRepository {
   //   return await InstrumentDetail.find();
   // }
 
-  // async add(instrumentData) {
-  //   const instrument = await Instrument.create(instrumentData);
-  //   return instrument;
-  // }
+  async add(instrumentData) {
+    // Find and update the counter in one atomic operation
+    const counter = await Counter.findOneAndUpdate(
+      { model: "Instrument" }, // Identify the counter by model name
+      { $inc: { count: 1 } }, // Increment the count by 1
+      { new: true, upsert: true } // Return the updated document and create if not exists
+    );
+    instrumentData.instrumentId = counter.count;
+
+    return await Instrument.create(instrumentData);
+  }
 
   async create(data) {
     // Find and update the counter in one atomic operation

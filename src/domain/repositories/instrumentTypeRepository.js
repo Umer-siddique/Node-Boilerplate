@@ -56,9 +56,9 @@ class InstrumentTypeRepository {
   }
   async findByName(name) {
     const instrumentType = await InstrumentType.findOne({ name });
-    if (!instrumentType) {
-      throw new NotFoundError("InstrumentType not found with the given name");
-    }
+    // if (!instrumentType) {
+    //   throw new NotFoundError("InstrumentType not found with the given name");
+    // }
     return instrumentType;
   }
 

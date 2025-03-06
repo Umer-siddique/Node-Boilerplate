@@ -62,9 +62,9 @@ class CountryRepository {
   }
   async findByName(name) {
     const country = await Country.findOne({ name });
-    if (!country) {
-      throw new AppError("Country not found", 404); // Throw error directly
-    }
+    // if (!country) {
+    //   throw new AppError("Country not found", 404); // Throw error directly
+    // }
     return country;
   }
 

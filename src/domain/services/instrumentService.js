@@ -102,8 +102,6 @@ class InstrumentService {
 
   // Helper function to transform and resolve references
   static async transformInstrumentData(user, instrument) {
-    // Helper function to parse countryRatifications
-
     console.log("Instrument", instrument);
 
     const parseCountryRatifications = async (countryRatifications) => {
@@ -116,42 +114,76 @@ class InstrumentService {
         return [];
       }
 
-      // Split the comma-separated values into arrays
-      const countries = countryRatifications["Country"].split(",");
-      const ratifiedValues = countryRatifications["Ratified"].split(",");
-      const ratificationDates =
-        countryRatifications["Ratification Date"].split(",");
+      const countries = countryRatifications["Country"]
+        .split(",")
+        .map((c) => c.trim());
 
-      // Create an array of countryRatification objects
+      // Use regex to correctly extract bracketed arrays for Ratified and Ratification Date
+      const extractBracketedArrays = (input) => {
+        const regex = /\[.*?\]/g; // Matches content inside square brackets
+        return (input.match(regex) || []).map((item) =>
+          item
+            .replace(/^\[|\]$/g, "") // Remove outer brackets
+            .split(",")
+            .map((value) => value.trim())
+        );
+      };
+
+      const ratifiedArray = extractBracketedArrays(
+        countryRatifications["Ratified"]
+      );
+      const ratificationDatesArray = extractBracketedArrays(
+        countryRatifications["Ratification Date"]
+      );
+
+      if (
+        countries.length !== ratifiedArray.length ||
+        countries.length !== ratificationDatesArray.length
+      ) {
+        throw new Error(
+          "Mismatch between countries, ratified, and ratification date counts"
+        );
+      }
+
       const countryRatificationsArray = await Promise.all(
         countries.map(async (country, index) => {
-          // Find the country by name and get its ObjectId
           const countryDoc = await countryRepository.findByName(country.trim());
-          if (!countryDoc) return null;
+          if (!countryDoc) return null; // Skip if country not found
 
-          // Convert Ratified to boolean
-          const ratified =
-            ratifiedValues[index]?.trim().toLowerCase() === "true";
-
-          // Convert Ratification Date to a valid date
-          const ratificationDate = excelSerialToDate(
-            ratificationDates[index]?.trim()
+          const ratifiedValues = ratifiedArray[index].map(
+            (value) => value.toLowerCase() === "true"
           );
 
-          return {
-            countryName: countryDoc._id, // Resolved ObjectId
+          const ratificationDates = ratificationDatesArray[index].map(
+            (dateStr) => {
+              const parsedDate = new Date(dateStr);
+              return isNaN(parsedDate) ? null : parsedDate;
+            }
+          );
+
+          if (ratifiedValues.length !== ratificationDates.length) {
+            throw new Error(
+              `Mismatched ratified and date count for country ${country.trim()}`
+            );
+          }
+
+          const ratifications = ratifiedValues.map((ratified, i) => ({
             ratified,
-            ratificationDate,
-            statusChangeDate: new Date(), // Set to current date or another logic
+            ratificationDate: ratificationDates[i],
+            statusChangeDate: new Date(), // Current date
+          }));
+
+          return {
+            countryName: countryDoc._id,
+            ratifications,
           };
         })
       );
 
-      // Filter out null values (invalid countries)
-      return countryRatificationsArray.filter((item) => item !== null);
+      return countryRatificationsArray.filter(Boolean); // Remove nulls for missing countries
     };
 
-    // Resolve ObjectId references (return null if not found)
+    // Resolve object references
     const instrumentType = instrument["Instrument Type"]
       ? await instrumentTypeRepository.findByName(instrument["Instrument Type"])
       : null;
@@ -162,33 +194,34 @@ class InstrumentService {
       ? await categoryRepository.findByName(instrument["Sub Category"])
       : null;
 
-    // Resolve Related Treaties and Groups (comma-separated names)
+    // Resolve related treaties
     const relatedTreaties = instrument["Related Treaties"]
       ? await Promise.all(
           instrument["Related Treaties"].split(",").map(async (name) => {
             const treaty = await instrumentRepository.findByName(name.trim());
-            return treaty ? treaty._id : null; // Return null if not found
+            return treaty ? treaty._id : null;
           })
         )
       : [];
 
+    // Resolve groups
     const groups = instrument["Groups"]
       ? await Promise.all(
           instrument["Groups"].split(",").map(async (name) => {
             const group = await groupRepository.findByName(name.trim());
-            return group ? group._id : null; // Return null if not found
+            return group ? group._id : null;
           })
         )
       : [];
 
-    // Parse countryRatifications
+    // Parse updated countryRatifications structure
     const countryRatifications = await parseCountryRatifications({
       Country: instrument["Country"],
       Ratified: instrument["Ratified"],
       "Ratification Date": instrument["Ratification Date"],
     });
 
-    // Transform the instrument data
+    // Final transformed object
     return {
       name: instrument["Name"]?.trim(),
       entryDate: instrument["Entry Into Force"]
@@ -202,23 +235,26 @@ class InstrumentService {
       instrumentUUID: instrument["UUID"]?.trim(),
       signedPlace: instrument["Signed Place"]?.trim(),
       relevance: instrument["Relevance"],
-      ratification: instrument["Ratification"]?.trim(),
+      ratification: instrument["Ratification"],
       aboutInfo: instrument["About Info"]?.trim(),
       relevantInfo: instrument["Relevant Info"]?.trim(),
       additionalInfo: instrument["Additional Info"]?.trim(),
-      instrumentType: instrumentType ? instrumentType._id : null, // Allow null
-      category: category ? category._id : null, // Allow null
-      subCategory: subCategory ? subCategory._id : null, // Allow null
-      relatedTreaties: relatedTreaties.filter((id) => id !== null), // Filter out null values
-      groups: groups.filter((id) => id !== null), // Filter out null values
-      countryRatifications,
+      instrumentType: instrumentType ? instrumentType._id : null,
+      category: category ? category._id : null,
+      subCategory: subCategory ? subCategory._id : null,
+      relatedTreaties: relatedTreaties.filter((id) => id !== null),
+      groups: groups.filter((id) => id !== null),
+      countryRatifications, // Updated structure
       user,
-      instrumentId: instrument["Old ID"], // Include Old ID
+      instrumentId: instrument["Old ID"],
     };
   }
 
   static async addInstrument(instrumentData, userId) {
-    const instrument = await instrumentRepository.add(instrumentData);
+    const instrument = await instrumentRepository.add({
+      ...instrumentData,
+      instrumentUUID: generateUUID(),
+    });
 
     // Log the activity
     await ActivityLogService.logActivity({
