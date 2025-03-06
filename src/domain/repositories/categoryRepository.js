@@ -33,7 +33,7 @@ class CategoryRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const _categories = await features.query;
 

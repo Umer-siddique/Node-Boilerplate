@@ -36,7 +36,7 @@ class CountryRepository {
       );
 
       // Apply pagination
-      features.paginate();
+      // features.paginate();
 
       const countries = await features.query;
       return { countries, totalDocuments };

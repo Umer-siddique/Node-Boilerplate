@@ -32,7 +32,7 @@ class InstrumentTypeRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const instrumentTypes = await features.query;
       return { instrumentTypes, totalDocuments };

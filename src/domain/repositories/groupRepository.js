@@ -29,7 +29,7 @@ class GroupRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const groups = await features.query;
       return { groups, totalDocuments };

@@ -38,7 +38,7 @@ class CategoryService {
       );
     }
 
-    // Transform and save each category
+    // Transform and save/update each category
     const savedCategories = [];
     for (const category of categories) {
       try {
@@ -47,10 +47,23 @@ class CategoryService {
           category
         );
 
-        // Save the category
-        const savedCategory = await categoryRepository.create(
-          transformedCategory
+        // Check if the category already exists by name
+        const existingCategory = await categoryRepository.findByName(
+          transformedCategory.name
         );
+
+        let savedCategory;
+        if (existingCategory) {
+          // If the category exists, update it
+          savedCategory = await categoryRepository.update(
+            existingCategory._id,
+            transformedCategory
+          );
+        } else {
+          // If the category does not exist, create it
+          savedCategory = await categoryRepository.create(transformedCategory);
+        }
+
         savedCategories.push(savedCategory);
       } catch (error) {
         console.error(`Error processing category: ${category.name}`, error);
@@ -75,10 +88,11 @@ class CategoryService {
     const type = parent ? "sub-category" : "category";
 
     return {
-      name: category["Name"],
+      name: category["Name"]?.trim(),
       code: category["Code"]?.toString(),
       parent, // Resolved ObjectId or null
-      status: category["Active"] === "Yes", // Convert to boolean
+      weight: category["Weight"],
+      status: Boolean(category["Active"]?.toLowerCase()),
       type, // Set type based on parent
       user,
     };

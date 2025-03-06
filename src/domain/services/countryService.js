@@ -11,7 +11,6 @@ class CountryService {
 
     // Check the file type (MIME type)
     if (fileType === "text/csv") {
-      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
         const stream = require("stream");
         const bufferStream = new stream.PassThrough();
@@ -28,9 +27,8 @@ class CountryService {
       fileType ===
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ) {
-      // Parse Excel file from buffer
       const workbook = XLSX.read(fileBuffer, { type: "buffer" });
-      const sheetName = workbook.SheetNames[0]; // Use the first sheet
+      const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
       countries.push(...XLSX.utils.sheet_to_json(sheet));
     } else {
@@ -39,17 +37,32 @@ class CountryService {
       );
     }
 
-    // Transform and save each country
+    // Transform and save/update each country
     const savedCountries = [];
     for (const country of countries) {
       try {
         const transformedCountry = this.transformCountryData(user, country);
 
-        // Save the country
-        const savedCountry = await countryRepository.create(transformedCountry);
+        // Check if the country already exists by name (or ISO 2 if preferred)
+        const existingCountry = await countryRepository.findByName(
+          transformedCountry.name
+        );
+
+        let savedCountry;
+        if (existingCountry) {
+          // Update existing country
+          savedCountry = await countryRepository.update(
+            existingCountry._id,
+            transformedCountry
+          );
+        } else {
+          // Create new country
+          savedCountry = await countryRepository.create(transformedCountry);
+        }
+
         savedCountries.push(savedCountry);
       } catch (error) {
-        console.error(`Error processing country: ${country.name}`, error);
+        console.error(`Error processing country: ${country.Name}`, error);
       }
     }
 
@@ -64,7 +77,7 @@ class CountryService {
       iso_03: country["ISO 3"]?.trim(),
       iso_03_num: country["ISO 3 Num"]?.toString(),
       continent: country["Continent"]?.trim(),
-      status: country["Active"]?.trim() === "Yes",
+      status: Boolean(country["Active"]?.toLowerCase()),
       user,
     };
   }

@@ -11,7 +11,6 @@ class GroupService {
 
     // Check the file type (MIME type)
     if (fileType === "text/csv") {
-      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
         const bufferStream = new stream.PassThrough();
         bufferStream.end(fileBuffer);
@@ -27,7 +26,6 @@ class GroupService {
       fileType ===
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ) {
-      // Parse Excel file from buffer
       const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
@@ -38,17 +36,32 @@ class GroupService {
       );
     }
 
-    // Transform and save each group
+    // Transform and save/update each group
     const savedGroups = [];
     for (const group of groups) {
       try {
         const transformedGroup = this.transformGroupData(user, group);
 
-        // Save the group
-        const savedGroup = await groupRepository.create(transformedGroup);
+        // Check if group already exists by name
+        const existingGroup = await groupRepository.findByName(
+          transformedGroup.name
+        );
+
+        let savedGroup;
+        if (existingGroup) {
+          // Update existing group
+          savedGroup = await groupRepository.update(
+            existingGroup._id,
+            transformedGroup
+          );
+        } else {
+          // Create new group
+          savedGroup = await groupRepository.create(transformedGroup);
+        }
+
         savedGroups.push(savedGroup);
       } catch (error) {
-        console.error(`Error processing group: ${group.name}`, error);
+        console.error(`Error processing group: ${group.Name}`, error);
       }
     }
 
@@ -57,10 +70,9 @@ class GroupService {
 
   // Helper function to transform group data
   static transformGroupData(user, group) {
-    // console.log("Groups", group);
     return {
-      name: group["Name"],
-      status: group["Active"] === "Yes",
+      name: group["Name"]?.trim(),
+      status: Boolean(group["Active"]?.toLowerCase()),
       user,
     };
   }

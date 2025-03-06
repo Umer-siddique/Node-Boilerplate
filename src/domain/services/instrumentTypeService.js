@@ -12,7 +12,6 @@ class InstrumentTypeService {
 
     // Check the file type (MIME type)
     if (fileType === "text/csv") {
-      // Parse CSV file from buffer
       await new Promise((resolve, reject) => {
         const bufferStream = new stream.PassThrough();
         bufferStream.end(fileBuffer);
@@ -28,7 +27,6 @@ class InstrumentTypeService {
       fileType ===
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ) {
-      // Parse Excel file from buffer
       const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
@@ -39,7 +37,7 @@ class InstrumentTypeService {
       );
     }
 
-    // Transform and save each instrumentType
+    // Transform and save/update each instrumentType
     const savedInstrumentTypes = [];
     for (const instrumentType of instrumentTypes) {
       try {
@@ -48,14 +46,30 @@ class InstrumentTypeService {
           instrumentType
         );
 
-        // Save the instrumentType
-        const savedInstrumentType = await instrumentTypeRepository.create(
-          transformedInstrumentType
-        );
+        // Check if instrument type already exists by name
+        const existingInstrumentType =
+          await instrumentTypeRepository.findByName(
+            transformedInstrumentType.name
+          );
+
+        let savedInstrumentType;
+        if (existingInstrumentType) {
+          // Update existing instrument type
+          savedInstrumentType = await instrumentTypeRepository.update(
+            existingInstrumentType._id,
+            transformedInstrumentType
+          );
+        } else {
+          // Create new instrument type
+          savedInstrumentType = await instrumentTypeRepository.create(
+            transformedInstrumentType
+          );
+        }
+
         savedInstrumentTypes.push(savedInstrumentType);
       } catch (error) {
         console.error(
-          `Error processing instrumentType: ${instrumentType.name}`,
+          `Error processing instrumentType: ${instrumentType.Name}`,
           error
         );
       }
@@ -66,11 +80,10 @@ class InstrumentTypeService {
 
   // Helper function to transform instrumentType data
   static transformInstrumentTypeData(user, instrumentType) {
-    // console.log("InstrumentTypes", instrumentType);
     return {
-      name: instrumentType["Name"],
+      name: instrumentType["Name"]?.trim(),
       order: instrumentType["Order"],
-      status: instrumentType["Active"] === "Yes",
+      status: Boolean(instrumentType["Active"]?.toLowerCase()),
       user,
     };
   }

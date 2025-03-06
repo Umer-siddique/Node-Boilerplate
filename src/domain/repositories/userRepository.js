@@ -26,7 +26,7 @@ class UserRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const users = await features.query;
       return { users, totalDocuments };

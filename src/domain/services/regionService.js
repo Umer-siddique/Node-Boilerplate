@@ -13,9 +13,8 @@ class RegionService {
 
     // Check the file type (MIME type)
     if (fileType === "text/csv") {
-      // Parse CSV file from buffer
+      const stream = require("stream");
       await new Promise((resolve, reject) => {
-        const stream = require("stream");
         const bufferStream = new stream.PassThrough();
         bufferStream.end(fileBuffer);
 
@@ -30,7 +29,6 @@ class RegionService {
       fileType ===
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ) {
-      // Parse Excel file from buffer
       const workbook = XLSX.read(fileBuffer, { type: "buffer" });
       const sheetName = workbook.SheetNames[0]; // Use the first sheet
       const sheet = workbook.Sheets[sheetName];
@@ -41,23 +39,32 @@ class RegionService {
       );
     }
 
-    // Transform and save each region
+    // Transform and save/update each region
     const savedRegions = [];
     for (const region of regions) {
       try {
         const transformedRegion = await this.transformRegionData(user, region);
 
-        // Validate required fields
-        if (!transformedRegion.name || !transformedRegion.regionCode) {
-          console.error(`Skipping region: Missing required fields`, region);
-          continue; // Skip this region if required fields are missing
+        // Check if region already exists by name or region code
+        const existingRegion = await regionRepository.findByName(
+          transformedRegion.name
+        );
+
+        let savedRegion;
+        if (existingRegion) {
+          // Update existing region
+          savedRegion = await regionRepository.update(
+            existingRegion._id,
+            transformedRegion
+          );
+        } else {
+          // Create new region
+          savedRegion = await regionRepository.create(transformedRegion);
         }
 
-        // Save the region
-        const savedRegion = await regionRepository.create(transformedRegion);
         savedRegions.push(savedRegion);
       } catch (error) {
-        console.error(`Error processing region: ${region.name}`, error);
+        console.error(`Error processing region: ${region.Name}`, error);
       }
     }
 
@@ -67,6 +74,9 @@ class RegionService {
   // Helper function to transform region data
   static async transformRegionData(user, region) {
     // Resolve parent region (if provided)
+
+    console.log("Region", region);
+
     let parent = null;
     if (region["Parent"]) {
       const parentRegion = await regionRepository.findByName(region["Parent"]);
@@ -90,13 +100,13 @@ class RegionService {
     }
 
     return {
-      name: region["Name"]?.trim(), // Ensure name is trimmed and not null
-      regionCode: region["Region Code"], // Ensure regionCode is trimmed and not null
-      parent, // Resolved ObjectId or null
-      status: region["Active"]?.toString() === "Yes", // Convert to boolean
-      regionType: region["Region Type"]?.trim(), // Ensure regionType is trimmed and not null
-      type, // Set type based on parent
-      countries, // Resolved array of ObjectId or empty array
+      name: region["Name"]?.trim(),
+      regionCode: region["Code"]?.toString()?.trim(),
+      parent,
+      status: Boolean(region["Active"]?.toLowerCase()),
+      regionType: region["Type"]?.trim(),
+      type,
+      countries,
       user,
     };
   }

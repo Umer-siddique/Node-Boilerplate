@@ -31,7 +31,7 @@ class RegionRepository {
       );
 
       // Now apply pagination
-      features.paginate();
+      // features.paginate();
 
       const regions = await features.query;
       return { regions, totalDocuments };
