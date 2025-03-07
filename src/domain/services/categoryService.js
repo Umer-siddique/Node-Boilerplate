@@ -92,7 +92,7 @@ class CategoryService {
       code: category["Code"]?.toString(),
       parent, // Resolved ObjectId or null
       weight: category["Weight"],
-      status: Boolean(category["Active"]?.toLowerCase()),
+      status: Boolean(category["Active"]),
       type, // Set type based on parent
       user,
     };

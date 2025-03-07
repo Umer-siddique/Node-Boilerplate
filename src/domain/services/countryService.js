@@ -77,7 +77,7 @@ class CountryService {
       iso_03: country["ISO 3"]?.trim(),
       iso_03_num: country["ISO 3 Num"]?.toString(),
       continent: country["Continent"]?.trim(),
-      status: Boolean(country["Active"]?.toLowerCase()),
+      status: Boolean(country["Active"]),
       user,
     };
   }

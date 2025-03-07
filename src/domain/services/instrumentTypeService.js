@@ -80,10 +80,11 @@ class InstrumentTypeService {
 
   // Helper function to transform instrumentType data
   static transformInstrumentTypeData(user, instrumentType) {
+    console.log("InstruemntType", instrumentType);
     return {
       name: instrumentType["Name"]?.trim(),
       order: instrumentType["Order"],
-      status: Boolean(instrumentType["Active"]?.toLowerCase()),
+      status: Boolean(instrumentType["Active"]),
       user,
     };
   }

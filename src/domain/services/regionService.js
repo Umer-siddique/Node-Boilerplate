@@ -103,7 +103,7 @@ class RegionService {
       name: region["Name"]?.trim(),
       regionCode: region["Code"]?.toString()?.trim(),
       parent,
-      status: Boolean(region["Active"]?.toLowerCase()),
+      status: Boolean(region["Active"]),
       regionType: region["Type"]?.trim(),
       type,
       countries,

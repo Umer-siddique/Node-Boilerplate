@@ -72,7 +72,7 @@ class GroupService {
   static transformGroupData(user, group) {
     return {
       name: group["Name"]?.trim(),
-      status: Boolean(group["Active"]?.toLowerCase()),
+      status: Boolean(group["Active"]),
       user,
     };
   }
