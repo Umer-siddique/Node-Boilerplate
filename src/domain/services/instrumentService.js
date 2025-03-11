@@ -10,6 +10,13 @@ const GroupRepository = require("../repositories/groupRepository");
 const CountryRepository = require("../repositories/countryRepository");
 const { excelSerialToDate } = require("../../core/utils/helpers");
 const { BadRequestError } = require("../../core/exceptions");
+const {
+  calculateRatifiedInstruments,
+  calculateCountryScore,
+  calculateWorldAvgScore,
+  calculateCountryRank,
+  calculateStrength,
+} = require("../../core/utils/calculations");
 
 const instrumentRepository = new InstrumentRepository();
 const instrumentTypeRepository = new InstrumentTypeRepository();
@@ -18,6 +25,73 @@ const groupRepository = new GroupRepository();
 const countryRepository = new CountryRepository();
 
 class InstrumentService {
+  static async getCountryData(countryId) {
+    const { instruments } = await instrumentRepository.findAll();
+    const { countries } = await countryRepository.findAll();
+
+    // Group by category and subcategory
+    const categoryMap = new Map();
+
+    instruments.forEach((instrument) => {
+      const { category, subCategory } = instrument;
+
+      if (!categoryMap.has(category)) {
+        categoryMap.set(category, new Map());
+      }
+
+      const subCategoryMap = categoryMap.get(category);
+
+      if (!subCategoryMap.has(subCategory)) {
+        subCategoryMap.set(subCategory, []);
+      }
+
+      subCategoryMap.get(subCategory).push(instrument);
+    });
+
+    // Prepare the result
+    const result = [];
+
+    for (const [category, subCategoryMap] of categoryMap) {
+      const categoryData = {
+        category,
+        subCategories: [],
+      };
+
+      for (const [subCategory, instruments] of subCategoryMap) {
+        // Calculate countryScore and worldAvgScore before using them
+        const countryScore = calculateCountryScore(instruments, countryId);
+        const worldAvgScore = calculateWorldAvgScore(
+          countries,
+          instruments,
+          subCategory
+        );
+
+        const subCategoryData = {
+          subCategory,
+          instrumentsRatified: calculateRatifiedInstruments(
+            instruments,
+            countryId
+          ),
+          countryScore: countryScore, // Use the pre-calculated value
+          worldAvgScore: worldAvgScore, // Use the pre-calculated value
+          countryRankInWorld: calculateCountryRank(
+            countries,
+            instruments,
+            subCategory,
+            countryId
+          ),
+          strength: calculateStrength(countryScore, worldAvgScore), // Use the pre-calculated values
+        };
+
+        categoryData.subCategories.push(subCategoryData);
+      }
+
+      result.push(categoryData);
+    }
+
+    return result;
+  }
+
   static async importInstrumentsFromFile(user, fileBuffer, fileType) {
     const instruments = [];
 
@@ -102,7 +176,7 @@ class InstrumentService {
 
   // Helper function to transform and resolve references
   static async transformInstrumentData(user, instrument) {
-    console.log("Instrument", instrument);
+    // console.log("Instrument", instrument);
 
     const parseCountryRatifications = async (countryRatifications) => {
       if (

@@ -7,6 +7,12 @@ const Country = require("../../domain/entities/Country");
 const Instrument = require("../../domain/entities/Instrument");
 
 class InstrumentController {
+  static getCountryProfileData = AsyncHandler(async (req, res, next) => {
+    const { countryId } = req.params;
+    const data = await InstrumentService.getCountryData(countryId);
+    res.status(200).json(data);
+  });
+
   static addInstrument = AsyncHandler(async (req, res, next) => {
     const user = req.user._id;
     const instrument = await InstrumentService.addInstrument(

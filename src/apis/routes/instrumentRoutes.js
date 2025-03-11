@@ -12,6 +12,11 @@ const router = express.Router();
 // Route for importing instruments via CSV/Excel
 
 router.get(
+  "/country-profile-data/:countryId",
+  InstrumentController.getCountryProfileData
+);
+
+router.get(
   "/:id/ratification-history",
   InstrumentController.getRatificationHistoryByCountries
 );
