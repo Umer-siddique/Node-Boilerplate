@@ -51,7 +51,7 @@ class InstrumentRepository {
   async findAll(queryStr) {
     let query = Instrument.find({ deleted_at: null })
       .populate("user", "name email")
-      .populate("category", "name")
+      .populate("category", "name weight")
       .populate("subCategory", "name")
       .populate("instrumentType", "name")
       .populate("relatedTreaties", "name")

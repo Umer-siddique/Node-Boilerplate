@@ -2,6 +2,7 @@ const ActivityLogService = require("./activityLogService");
 const XLSX = require("xlsx");
 const csv = require("csv-parser");
 const stream = require("stream");
+const { ObjectId } = require("mongodb");
 const { generateUUID } = require("../../core/utils/helpers");
 const InstrumentRepository = require("../repositories/instrumentRepository");
 const InstrumentTypeRepository = require("../repositories/instrumentTypeRepository");
@@ -52,6 +53,8 @@ class InstrumentService {
     const result = [];
 
     for (const [category, subCategoryMap] of categoryMap) {
+      // Prepare the category data object
+
       const categoryData = {
         category,
         subCategories: [],
@@ -65,6 +68,26 @@ class InstrumentService {
           instruments,
           subCategory
         );
+
+        // Extract instrument details for the subcategory
+        const instrumentDetails = instruments.map((instrument) => {
+          // Find the ratification date for the specific country
+          const ratification = instrument.countryRatifications.find((rat) =>
+            rat.countryName.equals(new ObjectId(countryId))
+          );
+
+          return {
+            name: instrument.name,
+            signedDate: instrument.signedDate,
+            signedPlace: instrument.signedPlace,
+            relevance: instrument.relevance,
+            ratificationDate: ratification
+              ? ratification.ratifications[
+                  ratification.ratifications.length - 1
+                ].ratificationDate
+              : null, // Use the last ratification date
+          };
+        });
 
         const subCategoryData = {
           subCategory,
@@ -81,6 +104,7 @@ class InstrumentService {
             countryId
           ),
           strength: calculateStrength(countryScore, worldAvgScore), // Use the pre-calculated values
+          instruments: instrumentDetails, // Include instrument details
         };
 
         categoryData.subCategories.push(subCategoryData);
@@ -91,7 +115,6 @@ class InstrumentService {
 
     return result;
   }
-
   static async importInstrumentsFromFile(user, fileBuffer, fileType) {
     const instruments = [];
 
