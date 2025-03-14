@@ -7,6 +7,18 @@ const Country = require("../../domain/entities/Country");
 const Instrument = require("../../domain/entities/Instrument");
 
 class InstrumentController {
+  static getRatificaitonCountsByYears = AsyncHandler(async (req, res, next) => {
+    const { instrumentId } = req.query; // Get the instrument _id (as a string) from query parameters
+
+    if (!instrumentId) {
+      return res.status(400).json({ message: "Instrument ID is required" });
+    }
+
+    const ratificationsCountByYear =
+      await InstrumentService.getRatificationsCountByYear(instrumentId);
+    res.json(ratificationsCountByYear);
+  });
+
   static getCountryProfileData = AsyncHandler(async (req, res, next) => {
     const { countryId } = req.params;
     const data = await InstrumentService.getCountryData(countryId);

@@ -26,6 +26,11 @@ const groupRepository = new GroupRepository();
 const countryRepository = new CountryRepository();
 
 class InstrumentService {
+  static async getRatificationsCountByYear(instrumentId) {
+    return await instrumentRepository.getRatificationsCountByYearForInstrument(
+      instrumentId
+    );
+  }
   static async getCountryData(countryId) {
     const { instruments } = await instrumentRepository.findAll();
     const { countries } = await countryRepository.findAll();

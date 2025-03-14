@@ -19,7 +19,13 @@ function calculateRatifiedInstruments(instruments, countryId) {
     }
   });
 
-  return `${ratifiedCount}/${totalInstruments}`;
+  const ratificationPercent = (ratifiedCount / totalInstruments) * 100;
+
+  return ratificationPercent !== 0
+    ? `${ratifiedCount}/${totalInstruments} (${ratificationPercent.toFixed(
+        2
+      )}%)`
+    : `${ratifiedCount}/${totalInstruments}`;
 }
 
 function calculateCountryScore(instruments, countryId) {

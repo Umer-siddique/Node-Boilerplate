@@ -9,7 +9,10 @@ const MONGO_URI =
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(MONGO_URI);
+    await mongoose.connect(MONGO_URI, {
+      serverSelectionTimeoutMS: 5000, // Wait 5s before timing out
+      socketTimeoutMS: 45000, // Keep sockets open for 45s
+    });
     console.log("Database connected sucessfully!");
   } catch (err) {
     console.log("Db connection error💥", err);

@@ -1,7 +1,9 @@
+const mongoose = require("mongoose");
 const { AppError, NotFoundError } = require("../../core/exceptions");
 const APIFeatures = require("../../core/utils/APIFeatures");
 const Instrument = require("../entities/Instrument");
 const Counter = require("../entities/Counter");
+
 // const RelatedInstrument = require("../entities/RelatedInstrument");
 // const InstrumentDetail = require("../entities/InstrumentDetail");
 // const InstrumentGroup = require("../entities/InstrumentGroup");
@@ -19,6 +21,49 @@ class InstrumentRepository {
   // async findAllInstrumentsDetails() {
   //   return await InstrumentDetail.find();
   // }
+
+  async getRatificationsCountByYearForInstrument(instrumentId) {
+    return await Instrument.aggregate([
+      {
+        $match: {
+          _id: new mongoose.Types.ObjectId(instrumentId), // Convert string _id to ObjectId
+        },
+      },
+      {
+        $unwind: "$countryRatifications",
+      },
+      {
+        $project: {
+          lastRatification: {
+            $arrayElemAt: ["$countryRatifications.ratifications", -1], // Get the last ratification object
+          },
+        },
+      },
+      {
+        $match: {
+          "lastRatification.ratified": true, // Filter only ratified ratifications
+        },
+      },
+      {
+        $group: {
+          _id: {
+            $year: "$lastRatification.ratificationDate", // Group by year
+          },
+          ratificationCount: { $sum: 1 }, // Count ratifications per year
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          year: "$_id",
+          ratificationCount: 1,
+        },
+      },
+      {
+        $sort: { year: 1 }, // Sort by year
+      },
+    ]);
+  }
 
   async add(instrumentData) {
     // Find and update the counter in one atomic operation
@@ -95,7 +140,13 @@ class InstrumentRepository {
   }
 
   async findById(id) {
-    const instrument = await Instrument.findById(id);
+    const instrument = await Instrument.findById(id)
+      .populate("category", "name")
+      .populate("subCategory", "name")
+      .populate("instrumentType", "name")
+      .populate("relatedTreaties", "name")
+      .populate("groups", "name")
+      .populate("countryRatifications.countryName", "name");
     if (!instrument) {
       throw new AppError("Instrument not found", 404); // Throw error directly
     }

@@ -12,6 +12,11 @@ const router = express.Router();
 // Route for importing instruments via CSV/Excel
 
 router.get(
+  "/ratifications-count-by-year",
+  InstrumentController.getRatificaitonCountsByYears
+);
+
+router.get(
   "/country-profile-data/:countryId",
   InstrumentController.getCountryProfileData
 );
@@ -31,23 +36,22 @@ router.get(
   InstrumentController.getInstrumentsTotalRatificaitons
 );
 
-router.use(authProtect);
-
 router.post(
   "/import",
   upload.single("file"),
+  authProtect,
   InstrumentController.importInstruments
 );
 
 router
   .route("/")
   .get(InstrumentController.getInstruments)
-  .post(InstrumentController.addInstrument);
+  .post(authProtect, InstrumentController.addInstrument);
 
 router
   .route("/:id")
   .get(InstrumentController.getInstrument)
-  .patch(InstrumentController.updateInstrument)
-  .delete(InstrumentController.deleteInstrument);
+  .patch(authProtect, InstrumentController.updateInstrument)
+  .delete(authProtect, InstrumentController.deleteInstrument);
 
 module.exports = router;
