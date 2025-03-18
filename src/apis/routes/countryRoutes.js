@@ -5,6 +5,8 @@ const upload = require("../../config/multer"); // Import the multer config
 
 const router = express.Router();
 
+router.get("/metrics", CountryController.getCountriesAndRankings);
+
 router.use(authProtect);
 
 router.post(

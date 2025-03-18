@@ -4,6 +4,11 @@ const AsyncHandler = require("../../core/utils/AsyncHandler");
 const { BadRequestError } = require("../../core/exceptions");
 
 class CountryController {
+  static getCountriesAndRankings = AsyncHandler(async (req, res, next) => {
+    const countriesAndRankings = await CountryService.getAllCountriesMetrics();
+    res.status(200).json(countriesAndRankings);
+  });
+
   static addCountry = AsyncHandler(async (req, res, next) => {
     const user = req.user._id;
     const country = await CountryService.addCountry({

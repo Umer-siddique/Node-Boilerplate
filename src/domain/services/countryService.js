@@ -1,11 +1,93 @@
 const CountryRepository = require("../repositories/countryRepository");
+const InstrumentRepository = require("../repositories/instrumentRepository");
 const csv = require("csv-parser");
-const fs = require("fs");
 const XLSX = require("xlsx");
+const { ObjectId } = require("mongodb");
 
 const countryRepository = new CountryRepository();
+const instrumentRepository = new InstrumentRepository();
 
 class CountryService {
+  static async getAllCountriesMetrics() {
+    const { countries } = await countryRepository.findAll({});
+    const { instruments } = await instrumentRepository.findAll({});
+    const totalInstruments = instruments.length;
+    let totalRelevance = 0;
+
+    // Calculate total relevance of all instruments
+    instruments.forEach((instrument) => {
+      totalRelevance += instrument.relevance;
+    });
+
+    const countryMetrics = [];
+
+    // Calculate metrics for each country
+    for (const country of countries) {
+      let ratifiedCount = 0;
+      let ratifiedRelevanceSum = 0;
+
+      instruments.forEach((instrument) => {
+        const ratification = instrument.countryRatifications.find((rat) =>
+          rat.countryName.equals(new ObjectId(country._id))
+        );
+
+        if (ratification) {
+          const lastRatification =
+            ratification.ratifications[ratification.ratifications.length - 1];
+          if (lastRatification.ratified) {
+            ratifiedCount++;
+            ratifiedRelevanceSum += instrument.relevance;
+          }
+        }
+      });
+
+      const ratificationRate = (
+        (ratifiedCount / totalInstruments) *
+        100
+      ).toFixed(2);
+      const countryScore = (
+        (ratifiedRelevanceSum / totalRelevance) *
+        100
+      ).toFixed(2);
+      const averageRelevance =
+        ratifiedCount > 0
+          ? (ratifiedRelevanceSum / ratifiedCount).toFixed(2)
+          : 0;
+
+      countryMetrics.push({
+        name: country.name,
+        iso_02Code: country.iso_02,
+        iso_03Code: country.iso_03,
+        instruments: ratifiedCount,
+        rate: parseFloat(ratificationRate),
+        score: parseFloat(countryScore),
+        relevants: parseFloat(averageRelevance),
+      });
+    }
+
+    // **Step 4: Calculate Rank**
+    countryMetrics.sort((a, b) => b.score - a.score); // Sort by score (highest first)
+
+    let rank = 1;
+    let prevScore = null;
+    let rankMap = new Map();
+
+    countryMetrics.forEach((country, index) => {
+      if (prevScore !== country.score) {
+        rank = index + 1; // Assign rank only if score is different
+      }
+      rankMap.set(country.name, rank);
+      prevScore = country.score;
+    });
+
+    // Assign ranks to countryMetrics
+    countryMetrics.forEach((country) => {
+      country.rank = rankMap.get(country.name);
+    });
+
+    return countryMetrics;
+  }
+
   static async importCountriesFromFile(user, fileBuffer, fileType) {
     const countries = [];
 

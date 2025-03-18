@@ -32,8 +32,8 @@ class InstrumentService {
     );
   }
   static async getCountryData(countryId) {
-    const { instruments } = await instrumentRepository.findAll();
-    const { countries } = await countryRepository.findAll();
+    const { instruments } = await instrumentRepository.findAll({});
+    const { countries } = await countryRepository.findAll({});
 
     // Group by category and subcategory
     const categoryMap = new Map();
